@@ -1,25 +1,25 @@
 {
   "symbol": "TLN",
-  "latest_price": 302.56,
-  "as_of": "2026-09-25T12:43:41.665579+00:00",
+  "latest_price": 306.71,
+  "as_of": "2026-09-27T08:27:20.190426+00:00",
   "resistances": [
     {
       "type": "52_week_high",
       "level": 451.28,
-      "distance": 49.15,
+      "distance": 47.14,
       "strength_score": 8.0,
-      "notes": "Re-test #4 (pendiente) — señal débil (γ-$ bajo)",
+      "notes": "Re-test #3 (pendiente) — señal débil (γ-$ bajo)",
       "meta": {
         "level_date": "2025-10-03",
-        "atr10": 13.4185,
-        "tolerance": 2.6837,
-        "retests_since_origin": 3,
+        "atr10": 13.265,
+        "tolerance": 2.653,
+        "retests_since_origin": 2,
         "testing_now": false,
         "low_signal": true,
         "touch_prob_1w": {
-          "sigma_pct": 5.73,
+          "sigma_pct": 5.44,
           "sigma_source": "em_pct_1w",
-          "z": 8.578
+          "z": 8.665
         }
       },
       "prob_touch_1w_pct": 0.0,
@@ -28,7 +28,7 @@
     {
       "type": "range_top_3_6m",
       "level": 331.5575,
-      "distance": 9.58,
+      "distance": 8.1,
       "strength_score": 8.0,
       "notes": "Techo de rango 3–6m con 2 toques; último 2026-09-08 (pendiente)",
       "meta": {
@@ -36,48 +36,48 @@
         "last_touch_date": "2026-09-08",
         "touches": 2,
         "vol_factor_vs_median": 0.92,
-        "tolerance": 2.6837,
+        "tolerance": 2.653,
         "testing_now": false,
         "touch_prob_1w": {
-          "sigma_pct": 5.73,
+          "sigma_pct": 5.44,
           "sigma_source": "em_pct_1w",
-          "z": 1.672
+          "z": 1.489
         }
       },
-      "prob_touch_1w_pct": 4.7,
+      "prob_touch_1w_pct": 6.8,
       "unit": "pct"
     },
     {
       "type": "gap_down_upper",
       "level": 352.03,
-      "distance": 16.35,
+      "distance": 14.78,
       "strength_score": 7.2,
-      "notes": "Gap bajista del 2026-03-03 (tam. 1.93%); relleno (pendiente)",
+      "notes": "Gap bajista del 2026-03-03 (tam. 1.9%); relleno (pendiente)",
       "meta": {
         "gap_date": "2026-03-03",
         "gap_upper": 352.03,
         "gap_lower": 346.19,
         "gap_size": 5.84,
-        "gap_size_pct_vs_price": 1.93,
+        "gap_size_pct_vs_price": 1.9,
         "vol_factor_vs_median": 1.36,
         "touches_since_gap": 6,
         "last_touch_date": "2026-08-10",
-        "tolerance": 2.6837,
+        "tolerance": 2.653,
         "testing_now": false,
         "filled": true,
         "touch_prob_1w": {
-          "sigma_pct": 5.73,
+          "sigma_pct": 5.44,
           "sigma_source": "em_pct_1w",
-          "z": 2.853
+          "z": 2.717
         }
       },
-      "prob_touch_1w_pct": 0.2,
+      "prob_touch_1w_pct": 0.3,
       "unit": "pct"
     },
     {
       "type": "avwap_event",
-      "level": 361.766,
-      "distance": 19.57,
+      "level": 361.6095,
+      "distance": 17.9,
       "strength_score": 8.5,
       "notes": "AVWAP anclado a 52w high 2025-10-03 (pendiente)",
       "meta": {
@@ -86,14 +86,54 @@
         "vol_factor_vs_median": 1.27,
         "gap_size_atr": null,
         "touches": null,
-        "tolerance": 2.6837,
+        "tolerance": 2.653,
         "testing_now": false,
         "min_distance_pct": 0.05,
         "method": "daily_typical_price_vwap",
         "touch_prob_1w": {
-          "sigma_pct": 5.73,
+          "sigma_pct": 5.44,
           "sigma_source": "em_pct_1w",
-          "z": 3.415
+          "z": 3.29
+        }
+      },
+      "prob_touch_1w_pct": 0.1,
+      "unit": "pct"
+    },
+    {
+      "type": "call_wall_gamma",
+      "level": 370.0,
+      "distance": 20.64,
+      "strength_score": 9.0,
+      "notes": "Call wall (γ-$) exp 2026-10-16; dominante (15.2% del lado call) — pendiente",
+      "meta": {
+        "expiration": "2026-10-16",
+        "gamma_usd": 50.571,
+        "gamma_usd_units": "millions",
+        "gamma_usd_total_calls": 333.189,
+        "gamma_usd_share_pct": 15.2,
+        "oi": 1529,
+        "oi_share_pct": 14.2,
+        "atr10": 13.265,
+        "tolerance": 2.653,
+        "window": "calls agregadas en top 3 expiraciones; sin filtro de distancia",
+        "testing_now": false,
+        "cluster": {
+          "neighbors": [
+            357.5,
+            360.0,
+            365.0,
+            370.0,
+            375.0,
+            380.0
+          ],
+          "cluster_gamma_usd": 70.376,
+          "cluster_share_pct": 21.1
+        },
+        "method": "sum(|γ|·OI·spot²) por strike multi-exp (sin límites de distancia)",
+        "touch_prob_1w": {
+          "sigma_pct": 5.44,
+          "sigma_source": "em_pct_1w",
+          "z": 3.794
         }
       },
       "prob_touch_1w_pct": 0.0,
@@ -104,19 +144,19 @@
     {
       "type": "52_week_low",
       "level": 279.77,
-      "distance": 7.53,
+      "distance": 8.78,
       "strength_score": 9.5,
       "notes": "Primer test (pendiente)",
       "meta": {
         "level_date": "2026-09-15",
-        "atr10": 13.4185,
-        "tolerance": 2.6837,
+        "atr10": 13.265,
+        "tolerance": 2.653,
         "retests_since_origin": 0,
         "testing_now": false,
         "touch_prob_1w": {
-          "sigma_pct": 5.73,
+          "sigma_pct": 5.44,
           "sigma_source": "em_pct_1w",
-          "z": 1.314
+          "z": 1.614
         },
         "volume_profile_proximity": {
           "status": "available",
@@ -131,7 +171,7 @@
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 2.6837,
+          "tolerance_abs": 2.653,
           "test_count": 1,
           "defense_count": 1,
           "defense_rate_pct": 100.0,
@@ -139,74 +179,155 @@
           "last_test_rebound_5d_pct": 8.29,
           "median_rebound_5d_pct": 8.29,
           "max_rebound_5d_pct": 8.29,
-          "defense_min_rebound_pct": 2.4
+          "defense_min_rebound_pct": 2.37
         }
       },
-      "prob_touch_1w_pct": 9.4,
+      "prob_touch_1w_pct": 5.3,
       "unit": "pct"
+    },
+    {
+      "type": "put_wall_gamma",
+      "level": 285.0,
+      "distance": 7.08,
+      "unit": "pct",
+      "strength_score": 9.2,
+      "notes": "Put wall (γ-$) exp 2026-10-16; dominante (22.1% del lado put) — pendiente",
+      "meta": {
+        "expiration": "2026-10-16",
+        "gamma_usd": 86.192,
+        "gamma_usd_units": "millions",
+        "gamma_usd_total_puts": 390.499,
+        "gamma_usd_share_pct": 22.1,
+        "oi": 1008,
+        "oi_share_pct": 16.4,
+        "atr10": 13.265,
+        "tolerance": 2.653,
+        "window": "puts agregadas en top 3 expiraciones; sin filtro de distancia",
+        "testing_now": false,
+        "cluster": {
+          "neighbors": [
+            272.5,
+            275.0,
+            277.5,
+            280.0,
+            285.0,
+            287.5,
+            290.0,
+            292.5,
+            295.0,
+            297.5
+          ],
+          "cluster_gamma_usd": 175.096,
+          "cluster_share_pct": 44.8
+        },
+        "method": "sum(|γ|·OI·spot²) por strike multi-exp (sin límites de distancia)",
+        "touch_prob_1w": {
+          "sigma_pct": 5.44,
+          "sigma_source": "em_pct_1w",
+          "z": 1.301
+        },
+        "volume_profile_proximity": {
+          "status": "available",
+          "nearest_type": "hvn",
+          "nearest_level": 316.973,
+          "nearest_distance_pct": 11.22,
+          "nearest_abs_distance_pct": 11.22,
+          "poc_distance_pct": 32.35,
+          "nearest_hvn_distance_pct": 11.22
+        },
+        "historical_reaction": {
+          "status": "available",
+          "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+          "lookback_sessions": 252,
+          "tolerance_abs": 2.653,
+          "test_count": 2,
+          "defense_count": 2,
+          "defense_rate_pct": 100.0,
+          "last_test_date": "2026-09-21",
+          "last_test_rebound_5d_pct": 7.86,
+          "median_rebound_5d_pct": 7.08,
+          "max_rebound_5d_pct": 7.86,
+          "defense_min_rebound_pct": 2.33
+        }
+      },
+      "prob_touch_1w_pct": 9.7
     }
   ],
   "relative_strength": {
     "vs_spy": {
-      "20d_diff_pct": -2.19,
-      "60d_diff_pct": -24.66
+      "20d_diff_pct": -0.08,
+      "60d_diff_pct": -19.06
     }
   },
   "call_walls_top": [
     {
-      "level": 305.0,
-      "expiration": "2026-09-25",
-      "gamma_usd_millions": 37.318,
-      "gamma_share_pct": 33.1,
-      "oi": 135,
-      "oi_share_pct": 9.2,
+      "level": 370.0,
+      "expiration": "2026-10-16",
+      "gamma_usd_millions": 50.571,
+      "gamma_share_pct": 15.2,
+      "oi": 1529,
+      "oi_share_pct": 14.2,
       "cluster_neighbors": [
-        292.5,
-        295.0,
-        297.5,
-        300.0,
-        302.5,
-        305.0,
-        307.5,
-        310.0,
-        312.5,
-        315.0,
-        317.5
+        357.5,
+        360.0,
+        365.0,
+        370.0,
+        375.0,
+        380.0
       ],
-      "cluster_gamma_usd": 75.533,
-      "cluster_share_pct": 66.9,
-      "distance": 0.81
+      "cluster_gamma_usd": 70.376,
+      "cluster_share_pct": 21.1,
+      "distance": 20.64
+    },
+    {
+      "level": 350.0,
+      "expiration": "2026-10-16",
+      "gamma_usd_millions": 34.612,
+      "gamma_share_pct": 10.4,
+      "oi": 612,
+      "oi_share_pct": 5.7,
+      "cluster_neighbors": [
+        340.0,
+        342.5,
+        345.0,
+        347.5,
+        350.0,
+        355.0,
+        357.5,
+        360.0
+      ],
+      "cluster_gamma_usd": 82.272,
+      "cluster_share_pct": 24.7,
+      "distance": 14.11
     },
     {
       "level": 325.0,
-      "expiration": "2026-09-25",
-      "gamma_usd_millions": 15.73,
-      "gamma_share_pct": 13.9,
-      "oi": 461,
-      "oi_share_pct": 31.5,
+      "expiration": "2026-10-16",
+      "gamma_usd_millions": 32.983,
+      "gamma_share_pct": 9.9,
+      "oi": 369,
+      "oi_share_pct": 3.4,
       "cluster_neighbors": [
         312.5,
         315.0,
-        317.5,
         320.0,
         322.5,
         325.0,
         327.5,
         330.0,
-        332.5,
         335.0
       ],
-      "cluster_gamma_usd": 33.917,
-      "cluster_share_pct": 30.1,
-      "distance": 7.42
+      "cluster_gamma_usd": 82.458,
+      "cluster_share_pct": 24.7,
+      "distance": 5.96
     },
     {
       "level": 310.0,
-      "expiration": "2026-09-25",
-      "gamma_usd_millions": 10.488,
-      "gamma_share_pct": 9.3,
-      "oi": 55,
-      "oi_share_pct": 3.8,
+      "expiration": "2026-10-16",
+      "gamma_usd_millions": 32.409,
+      "gamma_share_pct": 9.7,
+      "oi": 313,
+      "oi_share_pct": 2.9,
       "cluster_neighbors": [
         297.5,
         300.0,
@@ -216,242 +337,48 @@
         310.0,
         312.5,
         315.0,
-        317.5,
         320.0,
         322.5
       ],
-      "cluster_gamma_usd": 74.845,
-      "cluster_share_pct": 66.3,
-      "distance": 2.46
+      "cluster_gamma_usd": 84.423,
+      "cluster_share_pct": 25.3,
+      "distance": 1.07
     },
     {
-      "level": 300.0,
-      "expiration": "2026-09-25",
-      "gamma_usd_millions": 7.974,
-      "gamma_share_pct": 7.1,
-      "oi": 34,
-      "oi_share_pct": 2.3,
+      "level": 330.0,
+      "expiration": "2026-10-16",
+      "gamma_usd_millions": 31.913,
+      "gamma_share_pct": 9.6,
+      "oi": 381,
+      "oi_share_pct": 3.5,
       "cluster_neighbors": [
-        290.0,
-        292.5,
-        295.0,
-        297.5,
-        300.0,
-        302.5,
-        305.0,
-        307.5,
-        310.0,
-        312.5
+        320.0,
+        322.5,
+        325.0,
+        327.5,
+        330.0,
+        335.0,
+        340.0,
+        342.5
       ],
-      "cluster_gamma_usd": 72.737,
-      "cluster_share_pct": 64.4,
-      "distance": -0.85
-    },
-    {
-      "level": 295.0,
-      "expiration": "2026-09-25",
-      "gamma_usd_millions": 5.122,
-      "gamma_share_pct": 4.5,
-      "oi": 23,
-      "oi_share_pct": 1.6,
-      "cluster_neighbors": [
-        282.5,
-        285.0,
-        290.0,
-        292.5,
-        295.0,
-        297.5,
-        300.0,
-        302.5,
-        305.0,
-        307.5
-      ],
-      "cluster_gamma_usd": 60.18,
-      "cluster_share_pct": 53.3,
-      "distance": -2.5
+      "cluster_gamma_usd": 105.934,
+      "cluster_share_pct": 31.8,
+      "distance": 7.59
     }
   ],
   "put_walls_top": [
     {
-      "level": 287.5,
-      "expiration": "2026-09-25",
-      "gamma_usd_millions": 47.969,
-      "gamma_share_pct": 22.1,
-      "oi": 300,
-      "oi_share_pct": 12.0,
-      "cluster_neighbors": [
-        275.0,
-        277.5,
-        280.0,
-        282.5,
-        285.0,
-        287.5,
-        290.0,
-        292.5,
-        295.0,
-        297.5,
-        300.0
-      ],
-      "cluster_gamma_usd": 131.665,
-      "cluster_share_pct": 60.8,
-      "distance": -4.98,
-      "volume_profile_proximity": {
-        "status": "available",
-        "nearest_type": "hvn",
-        "nearest_level": 316.973,
-        "nearest_distance_pct": 10.25,
-        "nearest_abs_distance_pct": 10.25,
-        "poc_distance_pct": 31.2,
-        "nearest_hvn_distance_pct": 10.25
-      },
-      "historical_reaction": {
-        "status": "available",
-        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
-        "lookback_sessions": 252,
-        "tolerance_abs": 2.6837,
-        "test_count": 4,
-        "defense_count": 4,
-        "defense_rate_pct": 100.0,
-        "last_test_date": "2026-09-23",
-        "last_test_rebound_5d_pct": 5.51,
-        "median_rebound_5d_pct": 5.51,
-        "max_rebound_5d_pct": 15.0,
-        "defense_min_rebound_pct": 2.33
-      }
-    },
-    {
-      "level": 300.0,
-      "expiration": "2026-10-02",
-      "gamma_usd_millions": 41.148,
-      "gamma_share_pct": 19.0,
-      "oi": 237,
-      "oi_share_pct": 9.5,
-      "cluster_neighbors": [
-        287.5,
-        290.0,
-        292.5,
-        295.0,
-        297.5,
-        300.0,
-        302.5,
-        305.0,
-        307.5,
-        310.0
-      ],
-      "cluster_gamma_usd": 114.952,
-      "cluster_share_pct": 53.1,
-      "distance": -0.85,
-      "volume_profile_proximity": {
-        "status": "available",
-        "nearest_type": "hvn",
-        "nearest_level": 316.973,
-        "nearest_distance_pct": 5.66,
-        "nearest_abs_distance_pct": 5.66,
-        "poc_distance_pct": 25.74,
-        "nearest_hvn_distance_pct": 5.66
-      },
-      "historical_reaction": {
-        "status": "available",
-        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
-        "lookback_sessions": 252,
-        "tolerance_abs": 2.6837,
-        "test_count": 5,
-        "defense_count": 3,
-        "defense_rate_pct": 60.0,
-        "last_test_date": "2026-09-17",
-        "last_test_rebound_5d_pct": 1.11,
-        "median_rebound_5d_pct": 4.66,
-        "max_rebound_5d_pct": 15.56,
-        "defense_min_rebound_pct": 2.24
-      }
-    },
-    {
-      "level": 267.5,
-      "expiration": "2026-10-02",
-      "gamma_usd_millions": 37.2,
-      "gamma_share_pct": 17.2,
-      "oi": 664,
-      "oi_share_pct": 26.6,
-      "cluster_neighbors": [
-        255.0,
-        257.5,
-        260.0,
-        265.0,
-        267.5,
-        270.0,
-        272.5,
-        275.0,
-        277.5,
-        280.0
-      ],
-      "cluster_gamma_usd": 83.568,
-      "cluster_share_pct": 38.6,
-      "distance": -11.59,
-      "volume_profile_proximity": {
-        "status": "available",
-        "nearest_type": "hvn",
-        "nearest_level": 316.973,
-        "nearest_distance_pct": 18.49,
-        "nearest_abs_distance_pct": 18.49,
-        "poc_distance_pct": 41.01,
-        "nearest_hvn_distance_pct": 18.49
-      },
-      "historical_reaction": {
-        "status": "unavailable",
-        "reason": "no_completed_tests_in_lookback",
-        "lookback_sessions": 252
-      }
-    },
-    {
-      "level": 265.0,
-      "expiration": "2026-10-02",
-      "gamma_usd_millions": 20.306,
-      "gamma_share_pct": 9.4,
-      "oi": 423,
-      "oi_share_pct": 16.9,
-      "cluster_neighbors": [
-        252.5,
-        255.0,
-        257.5,
-        260.0,
-        265.0,
-        267.5,
-        270.0,
-        272.5,
-        275.0,
-        277.5
-      ],
-      "cluster_gamma_usd": 77.099,
-      "cluster_share_pct": 35.6,
-      "distance": -12.41,
-      "volume_profile_proximity": {
-        "status": "available",
-        "nearest_type": "hvn",
-        "nearest_level": 316.973,
-        "nearest_distance_pct": 19.61,
-        "nearest_abs_distance_pct": 19.61,
-        "poc_distance_pct": 42.34,
-        "nearest_hvn_distance_pct": 19.61
-      },
-      "historical_reaction": {
-        "status": "unavailable",
-        "reason": "no_completed_tests_in_lookback",
-        "lookback_sessions": 252
-      }
-    },
-    {
       "level": 285.0,
-      "expiration": "2026-09-25",
-      "gamma_usd_millions": 11.288,
-      "gamma_share_pct": 5.2,
-      "oi": 84,
-      "oi_share_pct": 3.4,
+      "expiration": "2026-10-16",
+      "gamma_usd_millions": 86.192,
+      "gamma_share_pct": 22.1,
+      "oi": 1008,
+      "oi_share_pct": 16.4,
       "cluster_neighbors": [
         272.5,
         275.0,
         277.5,
         280.0,
-        282.5,
         285.0,
         287.5,
         290.0,
@@ -459,9 +386,9 @@
         295.0,
         297.5
       ],
-      "cluster_gamma_usd": 95.368,
-      "cluster_share_pct": 44.0,
-      "distance": -5.8,
+      "cluster_gamma_usd": 175.096,
+      "cluster_share_pct": 44.8,
+      "distance": -7.08,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -475,36 +402,209 @@
         "status": "available",
         "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
         "lookback_sessions": 252,
-        "tolerance_abs": 2.6837,
+        "tolerance_abs": 2.653,
         "test_count": 2,
         "defense_count": 2,
         "defense_rate_pct": 100.0,
         "last_test_date": "2026-09-21",
-        "last_test_rebound_5d_pct": 6.44,
-        "median_rebound_5d_pct": 6.37,
-        "max_rebound_5d_pct": 6.44,
-        "defense_min_rebound_pct": 2.35
+        "last_test_rebound_5d_pct": 7.86,
+        "median_rebound_5d_pct": 7.08,
+        "max_rebound_5d_pct": 7.86,
+        "defense_min_rebound_pct": 2.33
+      }
+    },
+    {
+      "level": 300.0,
+      "expiration": "2026-10-02",
+      "gamma_usd_millions": 60.368,
+      "gamma_share_pct": 15.5,
+      "oi": 447,
+      "oi_share_pct": 7.3,
+      "cluster_neighbors": [
+        287.5,
+        290.0,
+        292.5,
+        295.0,
+        297.5,
+        300.0,
+        302.5,
+        305.0,
+        307.5,
+        310.0
+      ],
+      "cluster_gamma_usd": 129.512,
+      "cluster_share_pct": 33.2,
+      "distance": -2.19,
+      "volume_profile_proximity": {
+        "status": "available",
+        "nearest_type": "hvn",
+        "nearest_level": 316.973,
+        "nearest_distance_pct": 5.66,
+        "nearest_abs_distance_pct": 5.66,
+        "poc_distance_pct": 25.74,
+        "nearest_hvn_distance_pct": 5.66
+      },
+      "historical_reaction": {
+        "status": "available",
+        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+        "lookback_sessions": 252,
+        "tolerance_abs": 2.653,
+        "test_count": 5,
+        "defense_count": 3,
+        "defense_rate_pct": 60.0,
+        "last_test_date": "2026-09-17",
+        "last_test_rebound_5d_pct": 1.11,
+        "median_rebound_5d_pct": 4.66,
+        "max_rebound_5d_pct": 15.56,
+        "defense_min_rebound_pct": 2.21
+      }
+    },
+    {
+      "level": 310.0,
+      "expiration": "2026-10-16",
+      "gamma_usd_millions": 33.773,
+      "gamma_share_pct": 8.6,
+      "oi": 337,
+      "oi_share_pct": 5.5,
+      "cluster_neighbors": [
+        297.5,
+        300.0,
+        302.5,
+        305.0,
+        307.5,
+        310.0,
+        315.0,
+        317.5,
+        320.0
+      ],
+      "cluster_gamma_usd": 107.504,
+      "cluster_share_pct": 27.5,
+      "distance": 1.07,
+      "volume_profile_proximity": {
+        "status": "available",
+        "nearest_type": "hvn",
+        "nearest_level": 316.973,
+        "nearest_distance_pct": 2.25,
+        "nearest_abs_distance_pct": 2.25,
+        "poc_distance_pct": 21.68,
+        "nearest_hvn_distance_pct": 2.25
+      },
+      "historical_reaction": {
+        "status": "available",
+        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+        "lookback_sessions": 252,
+        "tolerance_abs": 2.653,
+        "test_count": 10,
+        "defense_count": 8,
+        "defense_rate_pct": 80.0,
+        "last_test_date": "2026-09-10",
+        "last_test_rebound_5d_pct": 2.42,
+        "median_rebound_5d_pct": 9.49,
+        "max_rebound_5d_pct": 27.3,
+        "defense_min_rebound_pct": 2.14
+      }
+    },
+    {
+      "level": 275.0,
+      "expiration": "2026-10-16",
+      "gamma_usd_millions": 28.482,
+      "gamma_share_pct": 7.3,
+      "oi": 421,
+      "oi_share_pct": 6.8,
+      "cluster_neighbors": [
+        265.0,
+        267.5,
+        270.0,
+        272.5,
+        275.0,
+        277.5,
+        280.0,
+        285.0,
+        287.5
+      ],
+      "cluster_gamma_usd": 199.819,
+      "cluster_share_pct": 51.2,
+      "distance": -10.34,
+      "volume_profile_proximity": {
+        "status": "available",
+        "nearest_type": "hvn",
+        "nearest_level": 316.973,
+        "nearest_distance_pct": 15.26,
+        "nearest_abs_distance_pct": 15.26,
+        "poc_distance_pct": 37.17,
+        "nearest_hvn_distance_pct": 15.26
+      },
+      "historical_reaction": {
+        "status": "unavailable",
+        "reason": "no_completed_tests_in_lookback",
+        "lookback_sessions": 252
+      }
+    },
+    {
+      "level": 280.0,
+      "expiration": "2026-10-16",
+      "gamma_usd_millions": 24.809,
+      "gamma_share_pct": 6.4,
+      "oi": 315,
+      "oi_share_pct": 5.1,
+      "cluster_neighbors": [
+        267.5,
+        270.0,
+        272.5,
+        275.0,
+        277.5,
+        280.0,
+        285.0,
+        287.5,
+        290.0,
+        292.5
+      ],
+      "cluster_gamma_usd": 205.002,
+      "cluster_share_pct": 52.5,
+      "distance": -8.71,
+      "volume_profile_proximity": {
+        "status": "available",
+        "nearest_type": "hvn",
+        "nearest_level": 316.973,
+        "nearest_distance_pct": 13.2,
+        "nearest_abs_distance_pct": 13.2,
+        "poc_distance_pct": 34.72,
+        "nearest_hvn_distance_pct": 13.2
+      },
+      "historical_reaction": {
+        "status": "available",
+        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+        "lookback_sessions": 252,
+        "tolerance_abs": 2.653,
+        "test_count": 1,
+        "defense_count": 1,
+        "defense_rate_pct": 100.0,
+        "last_test_date": "2026-09-15",
+        "last_test_rebound_5d_pct": 8.2,
+        "median_rebound_5d_pct": 8.2,
+        "max_rebound_5d_pct": 8.2,
+        "defense_min_rebound_pct": 2.37
       }
     }
   ],
   "technicals": {
-    "rsi14": 47.18,
+    "rsi14": 43.06,
     "sma": {
-      "20": 301.0593,
-      "50": 325.9268,
-      "200": 353.1728
+      "20": 301.0512,
+      "50": 324.6494,
+      "200": 352.928
     },
     "bollinger20_2": {
-      "upper": 323.5499,
-      "middle": 301.0593,
-      "lower": 278.5686,
+      "upper": 323.537,
+      "middle": 301.0512,
+      "lower": 278.5655,
       "width_pct": 14.94,
       "method": "SMA20 ± 2·σ(cierre)"
     },
     "keltner_ema20_atr10": {
-      "upper": 327.029,
-      "center": 300.1919,
-      "lower": 273.3549,
+      "upper": 326.2273,
+      "center": 299.6973,
+      "lower": 273.1673,
       "mult": 2.0,
       "method": "EMA20(typical) ± mult·ATR10"
     },
@@ -512,19 +612,18 @@
       "high": 330.635,
       "low": 279.77
     },
-    "atr10": 13.4185,
+    "atr10": 13.265,
     "volume": {
-      "avg_20d": 761900.15,
+      "avg_20d": 757132.2,
       "median_20d": 745102.5,
-      "avg_dollar_20d": 228471744.68,
+      "avg_dollar_20d": 227015116.79,
       "last_complete_day": {
-        "date": "2026-09-24",
-        "shares": 465245,
-        "rel_to_20d": 0.611
+        "date": "2026-09-25",
+        "shares": 550710,
+        "rel_to_20d": 0.727
       },
       "series": {
         "shares_20d": [
-          646069,
           684614,
           741799,
           950537,
@@ -543,10 +642,10 @@
           686634,
           581582,
           924775,
-          465245
+          465245,
+          550710
         ],
         "dollar_volume_20d": [
-          196779696.02,
           202717628.47,
           219394472.24,
           279201233.01,
@@ -565,11 +664,12 @@
           205969600.98,
           171299162.28,
           277746923.5,
-          139578152.45
+          139578152.45,
+          167647138.2
         ]
       },
       "current_session": {
-        "shares": 232.0,
+        "shares": 550710.0,
         "comparable_to_avg_20d": false
       },
       "note": "ratios calculados contra último día COMPLETO; intradía solo informativo"
@@ -577,13 +677,13 @@
     "trend": {
       "above_sma200": false,
       "price_vs_sma": {
-        "20": -0.35,
-        "50": -7.95,
-        "200": -15.05
+        "20": 1.12,
+        "50": -6.23,
+        "200": -13.74
       },
-      "price_20d_change_pct": -2.05,
-      "price_50d_change_pct": -25.02,
-      "bollinger_pos_pct": 47.7
+      "price_20d_change_pct": -0.05,
+      "price_50d_change_pct": -17.34,
+      "bollinger_pos_pct": 57.5
     }
   },
   "volume_profile": {
@@ -591,8 +691,8 @@
     "method": "daily_ohlcv_uniform_range_48_bins",
     "approximate": true,
     "lookback_sessions": 126,
-    "start_date": "2026-03-26",
-    "end_date": "2026-09-24",
+    "start_date": "2026-03-27",
+    "end_date": "2026-09-25",
     "price_low": 279.77,
     "price_high": 449.8409,
     "bin_width": 3.5431,
@@ -610,12 +710,12 @@
       {
         "type": "hvn",
         "level": 331.1456,
-        "volume_share_pct": 3.51
+        "volume_share_pct": 3.41
       },
       {
         "type": "hvn",
         "level": 316.973,
-        "volume_share_pct": 3.39
+        "volume_share_pct": 3.29
       },
       {
         "type": "hvn",
@@ -629,10 +729,10 @@
       "target": "1w",
       "expiration": "2026-10-02",
       "source_expiration": "2026-10-02",
-      "dte": 7,
+      "dte": 5,
       "weeklyized": false,
-      "dollars": 17.35,
-      "percent": 5.73,
+      "dollars": 16.7,
+      "percent": 5.44,
       "method": "ATM straddle mid (~1W)"
     },
     "max_pain": {
@@ -640,31 +740,18 @@
       "strike": 300.0
     },
     "dealer_gamma": {
-      "gex_total_usd_millions": -103.717,
+      "gex_total_usd_millions": -57.31,
       "gamma_regime": "negative",
       "method": "sum_calls_minus_puts"
     },
     "summary_by_expiration": [
       {
-        "date": "2026-09-25",
-        "dte": 0,
-        "atm_iv": 21.1735,
-        "expected_move": {
-          "dollars": 5.125,
-          "percent": 0.0169,
-          "method": "ATM straddle mid"
-        },
-        "total_call_oi": 1413,
-        "total_put_oi": 1184,
-        "put_call_oi_ratio": 0.838
-      },
-      {
         "date": "2026-10-02",
-        "dte": 7,
-        "atm_iv": 0.5176,
+        "dte": 5,
+        "atm_iv": 0.5815,
         "expected_move": {
-          "dollars": 17.35,
-          "percent": 0.0573,
+          "dollars": 16.7,
+          "percent": 0.0544,
           "method": "ATM straddle mid"
         },
         "total_call_oi": 453,
@@ -673,24 +760,32 @@
       },
       {
         "date": "2026-10-09",
-        "dte": 14,
-        "atm_iv": 0.4968,
+        "dte": 12,
+        "atm_iv": 0.5091,
         "expected_move": {
-          "dollars": 23.55,
-          "percent": 0.0778,
+          "dollars": 22.65,
+          "percent": 0.0738,
           "method": "ATM straddle mid"
         },
         "total_call_oi": 134,
         "total_put_oi": 208,
         "put_call_oi_ratio": 1.552
+      },
+      {
+        "date": "2026-10-16",
+        "dte": 19,
+        "atm_iv": 0.5314,
+        "expected_move": {
+          "dollars": 29.75,
+          "percent": 0.097,
+          "method": "ATM straddle mid"
+        },
+        "total_call_oi": 10742,
+        "total_put_oi": 4315,
+        "put_call_oi_ratio": 0.402
       }
     ],
     "max_pain_by_expiration": [
-      {
-        "date": "2026-09-25",
-        "strike": 295.0,
-        "confidence": 0.0
-      },
       {
         "date": "2026-10-02",
         "strike": 300.0,
@@ -700,6 +795,11 @@
         "date": "2026-10-09",
         "strike": 300.0,
         "confidence": 0.001
+      },
+      {
+        "date": "2026-10-16",
+        "strike": 325.0,
+        "confidence": 0.0
       }
     ]
   },
@@ -708,29 +808,29 @@
       "near_term": {
         "scope": "near_term",
         "expirations_considered": [
-          "2026-09-25",
           "2026-10-02",
-          "2026-10-09"
+          "2026-10-09",
+          "2026-10-16"
         ],
-        "total_put_oi": 3221,
-        "total_call_oi": 2000,
-        "ratio": 1.611,
+        "total_put_oi": 6352,
+        "total_call_oi": 11329,
+        "ratio": 0.561,
         "dte_buckets": {
           "0_7": {
-            "puts": 3013,
-            "calls": 1866,
-            "ratio": 1.615,
+            "puts": 1829,
+            "calls": 453,
+            "ratio": 4.038,
             "expirations": [
-              "2026-09-25",
               "2026-10-02"
             ]
           },
           "8_30": {
-            "puts": 208,
-            "calls": 134,
-            "ratio": 1.552,
+            "puts": 4523,
+            "calls": 10876,
+            "ratio": 0.416,
             "expirations": [
-              "2026-10-09"
+              "2026-10-09",
+              "2026-10-16"
             ]
           },
           "31_60": {
@@ -748,32 +848,31 @@
         },
         "per_expiration": [
           {
-            "expiration": "2026-09-25",
-            "dte": 0,
-            "puts": 1184,
-            "calls": 1413,
-            "ratio": 0.838
-          },
-          {
             "expiration": "2026-10-02",
-            "dte": 7,
+            "dte": 5,
             "puts": 1829,
             "calls": 453,
             "ratio": 4.038
           },
           {
             "expiration": "2026-10-09",
-            "dte": 14,
+            "dte": 12,
             "puts": 208,
             "calls": 134,
             "ratio": 1.552
+          },
+          {
+            "expiration": "2026-10-16",
+            "dte": 19,
+            "puts": 4315,
+            "calls": 10742,
+            "ratio": 0.402
           }
         ]
       },
       "thru_60d": {
         "scope": "thru_60d",
         "expirations_considered": [
-          "2026-09-25",
           "2026-10-02",
           "2026-10-09",
           "2026-10-16",
@@ -782,16 +881,15 @@
           "2026-11-06",
           "2026-11-20"
         ],
-        "total_put_oi": 9173,
-        "total_call_oi": 24850,
-        "ratio": 0.369,
+        "total_put_oi": 7989,
+        "total_call_oi": 23437,
+        "ratio": 0.341,
         "dte_buckets": {
           "0_7": {
-            "puts": 3013,
-            "calls": 1866,
-            "ratio": 1.615,
+            "puts": 1829,
+            "calls": 453,
+            "ratio": 4.038,
             "expirations": [
-              "2026-09-25",
               "2026-10-02"
             ]
           },
@@ -824,57 +922,50 @@
         },
         "per_expiration": [
           {
-            "expiration": "2026-09-25",
-            "dte": 0,
-            "puts": 1184,
-            "calls": 1413,
-            "ratio": 0.838
-          },
-          {
             "expiration": "2026-10-02",
-            "dte": 7,
+            "dte": 5,
             "puts": 1829,
             "calls": 453,
             "ratio": 4.038
           },
           {
             "expiration": "2026-10-09",
-            "dte": 14,
+            "dte": 12,
             "puts": 208,
             "calls": 134,
             "ratio": 1.552
           },
           {
             "expiration": "2026-10-16",
-            "dte": 21,
+            "dte": 19,
             "puts": 4315,
             "calls": 10742,
             "ratio": 0.402
           },
           {
             "expiration": "2026-10-23",
-            "dte": 28,
+            "dte": 26,
             "puts": 121,
             "calls": 173,
             "ratio": 0.699
           },
           {
             "expiration": "2026-10-30",
-            "dte": 35,
+            "dte": 33,
             "puts": 120,
             "calls": 23,
             "ratio": 5.217
           },
           {
             "expiration": "2026-11-06",
-            "dte": 42,
+            "dte": 40,
             "puts": 1,
             "calls": 0,
             "ratio": null
           },
           {
             "expiration": "2026-11-20",
-            "dte": 56,
+            "dte": 54,
             "puts": 1395,
             "calls": 11912,
             "ratio": 0.117
@@ -882,20 +973,20 @@
         ]
       },
       "default_scope": "near_term",
-      "ratio": 1.611,
-      "total_put_oi": 3221,
-      "total_call_oi": 2000
+      "ratio": 0.561,
+      "total_put_oi": 6352,
+      "total_call_oi": 11329
     }
   },
   "vols": {
-    "rv20_annual_pct": 43.414,
-    "rv60_annual_pct": 52.341,
-    "rv20_weekly_pct": 6.02,
-    "rv60_weekly_pct": 7.258,
-    "em_pct_1w": 5.73,
-    "em_abs_1w": 17.35,
-    "iv_to_rv_ratio": 0.952,
-    "em_to_atr_ratio": 1.293,
+    "rv20_annual_pct": 43.708,
+    "rv60_annual_pct": 51.033,
+    "rv20_weekly_pct": 6.061,
+    "rv60_weekly_pct": 7.077,
+    "em_pct_1w": 5.44,
+    "em_abs_1w": 16.7,
+    "iv_to_rv_ratio": 0.898,
+    "em_to_atr_ratio": 1.259,
     "windows": {
       "rv": [
         20,
@@ -911,7 +1002,7 @@
     "method": "std(log_returns_daily) * sqrt(252); weekly = annual/sqrt(52)",
     "em_basis": {
       "source_expiration": "2026-10-02",
-      "dte": 7,
+      "dte": 5,
       "weeklyized_from_dte": false
     }
   },
@@ -919,260 +1010,6 @@
     "lookback_days": 252,
     "series": {
       "anchor_dates": [
-        "2025-09-23",
-        "2025-09-24",
-        "2025-09-25",
-        "2025-09-26",
-        "2025-09-29",
-        "2025-09-30",
-        "2025-10-01",
-        "2025-10-02",
-        "2025-10-03",
-        "2025-10-06",
-        "2025-10-07",
-        "2025-10-08",
-        "2025-10-09",
-        "2025-10-10",
-        "2025-10-13",
-        "2025-10-14",
-        "2025-10-15",
-        "2025-10-16",
-        "2025-10-17",
-        "2025-10-20",
-        "2025-10-21",
-        "2025-10-22",
-        "2025-10-23",
-        "2025-10-24",
-        "2025-10-27",
-        "2025-10-28",
-        "2025-10-29",
-        "2025-10-30",
-        "2025-10-31",
-        "2025-11-03",
-        "2025-11-04",
-        "2025-11-05",
-        "2025-11-06",
-        "2025-11-07",
-        "2025-11-10",
-        "2025-11-11",
-        "2025-11-12",
-        "2025-11-13",
-        "2025-11-14",
-        "2025-11-17",
-        "2025-11-18",
-        "2025-11-19",
-        "2025-11-20",
-        "2025-11-21",
-        "2025-11-24",
-        "2025-11-25",
-        "2025-11-26",
-        "2025-11-28",
-        "2025-12-01",
-        "2025-12-02",
-        "2025-12-03",
-        "2025-12-04",
-        "2025-12-05",
-        "2025-12-08",
-        "2025-12-09",
-        "2025-12-10",
-        "2025-12-11",
-        "2025-12-12",
-        "2025-12-15",
-        "2025-12-16",
-        "2025-12-17",
-        "2025-12-18",
-        "2025-12-19",
-        "2025-12-22",
-        "2025-12-23",
-        "2025-12-24",
-        "2025-12-26",
-        "2025-12-29",
-        "2025-12-30",
-        "2025-12-31",
-        "2026-01-02",
-        "2026-01-05",
-        "2026-01-06",
-        "2026-01-07",
-        "2026-01-08",
-        "2026-01-09",
-        "2026-01-12",
-        "2026-01-13",
-        "2026-01-14",
-        "2026-01-15",
-        "2026-01-16",
-        "2026-01-20",
-        "2026-01-21",
-        "2026-01-22",
-        "2026-01-23",
-        "2026-01-26",
-        "2026-01-27",
-        "2026-01-28",
-        "2026-01-29",
-        "2026-01-30",
-        "2026-02-02",
-        "2026-02-03",
-        "2026-02-04",
-        "2026-02-05",
-        "2026-02-06",
-        "2026-02-09",
-        "2026-02-10",
-        "2026-02-11",
-        "2026-02-12",
-        "2026-02-13",
-        "2026-02-17",
-        "2026-02-18",
-        "2026-02-19",
-        "2026-02-20",
-        "2026-02-23",
-        "2026-02-24",
-        "2026-02-25",
-        "2026-02-26",
-        "2026-02-27",
-        "2026-03-02",
-        "2026-03-03",
-        "2026-03-04",
-        "2026-03-05",
-        "2026-03-06",
-        "2026-03-09",
-        "2026-03-10",
-        "2026-03-11",
-        "2026-03-12",
-        "2026-03-13",
-        "2026-03-16",
-        "2026-03-17",
-        "2026-03-18",
-        "2026-03-19",
-        "2026-03-20",
-        "2026-03-23",
-        "2026-03-24",
-        "2026-03-25",
-        "2026-03-26",
-        "2026-03-27",
-        "2026-03-30",
-        "2026-03-31",
-        "2026-04-01",
-        "2026-04-02",
-        "2026-04-06",
-        "2026-04-07",
-        "2026-04-08",
-        "2026-04-09",
-        "2026-04-10",
-        "2026-04-13",
-        "2026-04-14",
-        "2026-04-15",
-        "2026-04-16",
-        "2026-04-17",
-        "2026-04-20",
-        "2026-04-21",
-        "2026-04-22",
-        "2026-04-23",
-        "2026-04-24",
-        "2026-04-27",
-        "2026-04-28",
-        "2026-04-29",
-        "2026-04-30",
-        "2026-05-01",
-        "2026-05-04",
-        "2026-05-05",
-        "2026-05-06",
-        "2026-05-07",
-        "2026-05-08",
-        "2026-05-11",
-        "2026-05-12",
-        "2026-05-13",
-        "2026-05-14",
-        "2026-05-15",
-        "2026-05-18",
-        "2026-05-19",
-        "2026-05-20",
-        "2026-05-21",
-        "2026-05-22",
-        "2026-05-26",
-        "2026-05-27",
-        "2026-05-28",
-        "2026-05-29",
-        "2026-06-01",
-        "2026-06-02",
-        "2026-06-03",
-        "2026-06-04",
-        "2026-06-05",
-        "2026-06-08",
-        "2026-06-09",
-        "2026-06-10",
-        "2026-06-11",
-        "2026-06-12",
-        "2026-06-15",
-        "2026-06-16",
-        "2026-06-17",
-        "2026-06-18",
-        "2026-06-22",
-        "2026-06-23",
-        "2026-06-24",
-        "2026-06-25",
-        "2026-06-26",
-        "2026-06-29",
-        "2026-06-30",
-        "2026-07-01",
-        "2026-07-02",
-        "2026-07-06",
-        "2026-07-07",
-        "2026-07-08",
-        "2026-07-09",
-        "2026-07-10",
-        "2026-07-13",
-        "2026-07-14",
-        "2026-07-15",
-        "2026-07-16",
-        "2026-07-17",
-        "2026-07-20",
-        "2026-07-21",
-        "2026-07-22",
-        "2026-07-23",
-        "2026-07-24",
-        "2026-07-27",
-        "2026-07-28",
-        "2026-07-29",
-        "2026-07-30",
-        "2026-07-31",
-        "2026-08-03",
-        "2026-08-04",
-        "2026-08-05",
-        "2026-08-06",
-        "2026-08-07",
-        "2026-08-10",
-        "2026-08-11",
-        "2026-08-12",
-        "2026-08-13",
-        "2026-08-14",
-        "2026-08-17",
-        "2026-08-18",
-        "2026-08-19",
-        "2026-08-20",
-        "2026-08-21",
-        "2026-08-24",
-        "2026-08-25",
-        "2026-08-26",
-        "2026-08-27",
-        "2026-08-28",
-        "2026-08-31",
-        "2026-09-01",
-        "2026-09-02",
-        "2026-09-03",
-        "2026-09-04",
-        "2026-09-08",
-        "2026-09-09",
-        "2026-09-10",
-        "2026-09-11",
-        "2026-09-14",
-        "2026-09-15",
-        "2026-09-16",
-        "2026-09-17",
-        "2026-09-18",
-        "2026-09-21",
-        "2026-09-22",
-        "2026-09-23"
-      ],
-      "t1_dates": [
         "2025-09-24",
         "2025-09-25",
         "2025-09-26",
@@ -1426,8 +1263,261 @@
         "2026-09-23",
         "2026-09-24"
       ],
+      "t1_dates": [
+        "2025-09-25",
+        "2025-09-26",
+        "2025-09-29",
+        "2025-09-30",
+        "2025-10-01",
+        "2025-10-02",
+        "2025-10-03",
+        "2025-10-06",
+        "2025-10-07",
+        "2025-10-08",
+        "2025-10-09",
+        "2025-10-10",
+        "2025-10-13",
+        "2025-10-14",
+        "2025-10-15",
+        "2025-10-16",
+        "2025-10-17",
+        "2025-10-20",
+        "2025-10-21",
+        "2025-10-22",
+        "2025-10-23",
+        "2025-10-24",
+        "2025-10-27",
+        "2025-10-28",
+        "2025-10-29",
+        "2025-10-30",
+        "2025-10-31",
+        "2025-11-03",
+        "2025-11-04",
+        "2025-11-05",
+        "2025-11-06",
+        "2025-11-07",
+        "2025-11-10",
+        "2025-11-11",
+        "2025-11-12",
+        "2025-11-13",
+        "2025-11-14",
+        "2025-11-17",
+        "2025-11-18",
+        "2025-11-19",
+        "2025-11-20",
+        "2025-11-21",
+        "2025-11-24",
+        "2025-11-25",
+        "2025-11-26",
+        "2025-11-28",
+        "2025-12-01",
+        "2025-12-02",
+        "2025-12-03",
+        "2025-12-04",
+        "2025-12-05",
+        "2025-12-08",
+        "2025-12-09",
+        "2025-12-10",
+        "2025-12-11",
+        "2025-12-12",
+        "2025-12-15",
+        "2025-12-16",
+        "2025-12-17",
+        "2025-12-18",
+        "2025-12-19",
+        "2025-12-22",
+        "2025-12-23",
+        "2025-12-24",
+        "2025-12-26",
+        "2025-12-29",
+        "2025-12-30",
+        "2025-12-31",
+        "2026-01-02",
+        "2026-01-05",
+        "2026-01-06",
+        "2026-01-07",
+        "2026-01-08",
+        "2026-01-09",
+        "2026-01-12",
+        "2026-01-13",
+        "2026-01-14",
+        "2026-01-15",
+        "2026-01-16",
+        "2026-01-20",
+        "2026-01-21",
+        "2026-01-22",
+        "2026-01-23",
+        "2026-01-26",
+        "2026-01-27",
+        "2026-01-28",
+        "2026-01-29",
+        "2026-01-30",
+        "2026-02-02",
+        "2026-02-03",
+        "2026-02-04",
+        "2026-02-05",
+        "2026-02-06",
+        "2026-02-09",
+        "2026-02-10",
+        "2026-02-11",
+        "2026-02-12",
+        "2026-02-13",
+        "2026-02-17",
+        "2026-02-18",
+        "2026-02-19",
+        "2026-02-20",
+        "2026-02-23",
+        "2026-02-24",
+        "2026-02-25",
+        "2026-02-26",
+        "2026-02-27",
+        "2026-03-02",
+        "2026-03-03",
+        "2026-03-04",
+        "2026-03-05",
+        "2026-03-06",
+        "2026-03-09",
+        "2026-03-10",
+        "2026-03-11",
+        "2026-03-12",
+        "2026-03-13",
+        "2026-03-16",
+        "2026-03-17",
+        "2026-03-18",
+        "2026-03-19",
+        "2026-03-20",
+        "2026-03-23",
+        "2026-03-24",
+        "2026-03-25",
+        "2026-03-26",
+        "2026-03-27",
+        "2026-03-30",
+        "2026-03-31",
+        "2026-04-01",
+        "2026-04-02",
+        "2026-04-06",
+        "2026-04-07",
+        "2026-04-08",
+        "2026-04-09",
+        "2026-04-10",
+        "2026-04-13",
+        "2026-04-14",
+        "2026-04-15",
+        "2026-04-16",
+        "2026-04-17",
+        "2026-04-20",
+        "2026-04-21",
+        "2026-04-22",
+        "2026-04-23",
+        "2026-04-24",
+        "2026-04-27",
+        "2026-04-28",
+        "2026-04-29",
+        "2026-04-30",
+        "2026-05-01",
+        "2026-05-04",
+        "2026-05-05",
+        "2026-05-06",
+        "2026-05-07",
+        "2026-05-08",
+        "2026-05-11",
+        "2026-05-12",
+        "2026-05-13",
+        "2026-05-14",
+        "2026-05-15",
+        "2026-05-18",
+        "2026-05-19",
+        "2026-05-20",
+        "2026-05-21",
+        "2026-05-22",
+        "2026-05-26",
+        "2026-05-27",
+        "2026-05-28",
+        "2026-05-29",
+        "2026-06-01",
+        "2026-06-02",
+        "2026-06-03",
+        "2026-06-04",
+        "2026-06-05",
+        "2026-06-08",
+        "2026-06-09",
+        "2026-06-10",
+        "2026-06-11",
+        "2026-06-12",
+        "2026-06-15",
+        "2026-06-16",
+        "2026-06-17",
+        "2026-06-18",
+        "2026-06-22",
+        "2026-06-23",
+        "2026-06-24",
+        "2026-06-25",
+        "2026-06-26",
+        "2026-06-29",
+        "2026-06-30",
+        "2026-07-01",
+        "2026-07-02",
+        "2026-07-06",
+        "2026-07-07",
+        "2026-07-08",
+        "2026-07-09",
+        "2026-07-10",
+        "2026-07-13",
+        "2026-07-14",
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24",
+        "2026-07-27",
+        "2026-07-28",
+        "2026-07-29",
+        "2026-07-30",
+        "2026-07-31",
+        "2026-08-03",
+        "2026-08-04",
+        "2026-08-05",
+        "2026-08-06",
+        "2026-08-07",
+        "2026-08-10",
+        "2026-08-11",
+        "2026-08-12",
+        "2026-08-13",
+        "2026-08-14",
+        "2026-08-17",
+        "2026-08-18",
+        "2026-08-19",
+        "2026-08-20",
+        "2026-08-21",
+        "2026-08-24",
+        "2026-08-25",
+        "2026-08-26",
+        "2026-08-27",
+        "2026-08-28",
+        "2026-08-31",
+        "2026-09-01",
+        "2026-09-02",
+        "2026-09-03",
+        "2026-09-04",
+        "2026-09-08",
+        "2026-09-09",
+        "2026-09-10",
+        "2026-09-11",
+        "2026-09-14",
+        "2026-09-15",
+        "2026-09-16",
+        "2026-09-17",
+        "2026-09-18",
+        "2026-09-21",
+        "2026-09-22",
+        "2026-09-23",
+        "2026-09-24",
+        "2026-09-25"
+      ],
       "t1_close_from_close_pct": [
-        -1.463,
         -1.492,
         0.124,
         2.303,
@@ -1678,10 +1768,10 @@
         2.624,
         -1.81,
         1.969,
-        -0.11
+        -0.11,
+        1.47
       ],
       "t1_high_from_close_pct": [
-        0.324,
         -0.801,
         1.283,
         3.344,
@@ -1932,10 +2022,10 @@
         3.25,
         0.93,
         2.723,
-        0.999
+        0.999,
+        2.467
       ],
       "t1_close_from_open_pct": [
-        -1.433,
         0.202,
         -0.758,
         1.618,
@@ -2186,41 +2276,42 @@
         1.3,
         -1.728,
         2.754,
-        1.372
+        1.372,
+        0.122
       ]
     },
     "stats": {
       "close_from_close": {
         "count": 252,
-        "mean": -0.076,
-        "median": 0.142,
-        "up_rate_pct": 51.98,
+        "mean": -0.064,
+        "median": 0.147,
+        "up_rate_pct": 52.38,
         "p05": -6.014,
         "p95": 5.379
       },
       "high_from_close": {
         "count": 252,
-        "mean": 2.393,
-        "median": 1.999,
+        "mean": 2.402,
+        "median": 2.021,
         "up_rate_pct": 87.7,
         "p05": -0.851,
         "p95": 6.673
       },
       "close_from_open": {
         "count": 252,
-        "mean": -0.28,
-        "median": -0.191,
-        "up_rate_pct": 49.21,
+        "mean": -0.273,
+        "median": -0.117,
+        "up_rate_pct": 49.6,
         "p05": -4.83,
         "p95": 3.795
       }
     },
     "latest": {
-      "anchor_date": "2026-09-23",
-      "t1_date": "2026-09-24",
-      "close_from_close_pct": -0.11,
-      "high_from_close_pct": 0.999,
-      "close_from_open_pct": 1.372
+      "anchor_date": "2026-09-24",
+      "t1_date": "2026-09-25",
+      "close_from_close_pct": 1.47,
+      "high_from_close_pct": 2.467,
+      "close_from_open_pct": 0.122
     }
   },
   "conventions": {
@@ -2241,41 +2332,46 @@
       "A_technicals": {
         "score": -20,
         "signals": {
-          "rsi14": 47.18,
-          "price_vs_sma20_pct": -0.35,
-          "price_vs_sma50_pct": -7.95,
-          "donchian20_pos_pct": 44.8,
+          "rsi14": 43.06,
+          "price_vs_sma20_pct": 1.12,
+          "price_vs_sma50_pct": -6.23,
+          "donchian20_pos_pct": 53.0,
           "bb_width_pct": 14.94
         }
       },
       "B_options_7_21DTE": {
         "score": 0,
         "signals": {
-          "nearest_call_wall_dist_pct": 0.81,
-          "nearest_put_wall_dist_pct": 0.85,
+          "nearest_call_wall_dist_pct": 1.07,
+          "nearest_put_wall_dist_pct": 0.0,
           "gamma_regime": "negative"
         }
       },
       "C_vol_risk": {
         "score": 0,
         "signals": {
-          "iv_to_rv": 0.952,
-          "em_2w_to_atr": 1.293,
-          "em_pct_1w": 5.73
+          "iv_to_rv": 0.898,
+          "em_2w_to_atr": 1.259,
+          "em_pct_1w": 5.44
         }
       },
       "D_volume_tape": {
         "score": -5,
         "signals": {
-          "volume_rel_20d_last_close": 0.611
+          "volume_rel_20d_last_close": 0.727
         }
       }
     },
     "rules_triggered": [
       {
-        "code": "PX_LT_SMA20",
-        "weight": 10,
+        "code": "RSI_LT_45",
+        "weight": 20,
         "side": -1
+      },
+      {
+        "code": "PX_GT_SMA20",
+        "weight": 10,
+        "side": 1
       },
       {
         "code": "PX_LT_SMA50",
@@ -2309,31 +2405,31 @@
       }
     ],
     "features_flat": {
-      "rsi14": 47.18,
-      "price_vs_sma20_pct": -0.35,
-      "price_vs_sma50_pct": -7.95,
-      "donchian20_pos_pct": 44.8049,
+      "rsi14": 43.06,
+      "price_vs_sma20_pct": 1.12,
+      "price_vs_sma50_pct": -6.23,
+      "donchian20_pos_pct": 52.9637,
       "bb_width_pct": 14.94,
-      "nearest_call_wall_dist_pct": 0.81,
-      "nearest_put_wall_dist_pct": 0.85,
+      "nearest_call_wall_dist_pct": 1.07,
+      "nearest_put_wall_dist_pct": 0.0,
       "gamma_regime": "negative",
-      "iv_to_rv": 0.952,
-      "em_2w_to_atr": 1.293,
-      "em_pct_1w": 5.73,
-      "volume_rel_20d_last_close": 0.611
+      "iv_to_rv": 0.898,
+      "em_2w_to_atr": 1.259,
+      "em_pct_1w": 5.44,
+      "volume_rel_20d_last_close": 0.727
     },
     "config": {
       "entry_threshold_bias": 55
     }
   },
   "liquidity": {
-    "adv20_usd": 228471744.68,
+    "adv20_usd": 227015116.79,
     "bid_ask": {
-      "bid": 300.07,
-      "ask": 305.05,
-      "mid": 302.56,
-      "spread_abs": 4.98,
-      "spread_pct": 1.66
+      "bid": 304.42,
+      "ask": 309.0,
+      "mid": 306.71,
+      "spread_abs": 4.58,
+      "spread_pct": 1.505
     }
   }
 }
