@@ -1,12 +1,12 @@
 {
   "symbol": "SNDK",
-  "latest_price": 1484.125,
-  "as_of": "2026-10-12T20:44:55.871143+00:00",
+  "latest_price": 1441.695,
+  "as_of": "2026-10-13T08:12:13.308546+00:00",
   "resistances": [
     {
       "type": "52_week_high",
       "level": 2354.3899,
-      "distance": 58.64,
+      "distance": 63.31,
       "strength_score": 8.0,
       "notes": "Re-test #2 (pendiente) — señal débil (γ-$ bajo)",
       "meta": {
@@ -17,9 +17,9 @@
         "testing_now": false,
         "low_signal": true,
         "touch_prob_1w": {
-          "sigma_pct": 5.34,
+          "sigma_pct": 7.88,
           "sigma_source": "em_pct_1w",
-          "z": 10.981
+          "z": 8.034
         }
       },
       "prob_touch_1w_pct": 0.0,
@@ -28,7 +28,7 @@
     {
       "type": "range_top_3_6m",
       "level": 1604.8025,
-      "distance": 8.13,
+      "distance": 11.31,
       "strength_score": 8.0,
       "notes": "Techo de rango 3–6m con 2 toques; último 2026-09-01 (pendiente)",
       "meta": {
@@ -39,26 +39,26 @@
         "tolerance": 15.8494,
         "testing_now": false,
         "touch_prob_1w": {
-          "sigma_pct": 5.34,
+          "sigma_pct": 7.88,
           "sigma_source": "em_pct_1w",
-          "z": 1.522
+          "z": 1.435
         }
       },
-      "prob_touch_1w_pct": 6.4,
+      "prob_touch_1w_pct": 7.6,
       "unit": "pct"
     },
     {
       "type": "gap_down_upper",
       "level": 2251.2849,
-      "distance": 51.69,
+      "distance": 56.16,
       "strength_score": 8.5,
-      "notes": "Gap bajista del 2026-06-23 (tam. 12.89%); relleno (pendiente)",
+      "notes": "Gap bajista del 2026-06-23 (tam. 13.27%); relleno (pendiente)",
       "meta": {
         "gap_date": "2026-06-23",
         "gap_upper": 2251.2849,
         "gap_lower": 2059.9999,
         "gap_size": 191.285,
-        "gap_size_pct_vs_price": 12.89,
+        "gap_size_pct_vs_price": 13.27,
         "vol_factor_vs_median": 0.96,
         "touches_since_gap": 1,
         "last_touch_date": "2026-06-26",
@@ -66,9 +66,9 @@
         "testing_now": false,
         "filled": true,
         "touch_prob_1w": {
-          "sigma_pct": 5.34,
+          "sigma_pct": 7.88,
           "sigma_source": "em_pct_1w",
-          "z": 9.68
+          "z": 7.127
         }
       },
       "prob_touch_1w_pct": 0.0,
@@ -76,8 +76,8 @@
     },
     {
       "type": "avwap_event",
-      "level": 1589.7049,
-      "distance": 7.11,
+      "level": 1589.6897,
+      "distance": 10.27,
       "strength_score": 8.5,
       "notes": "AVWAP anclado a 52w high 2026-06-22 (pendiente)",
       "meta": {
@@ -91,12 +91,77 @@
         "min_distance_pct": 0.05,
         "method": "daily_typical_price_vwap",
         "touch_prob_1w": {
-          "sigma_pct": 5.34,
+          "sigma_pct": 7.88,
           "sigma_source": "em_pct_1w",
-          "z": 1.331
+          "z": 1.303
         }
       },
-      "prob_touch_1w_pct": 9.2,
+      "prob_touch_1w_pct": 9.6,
+      "unit": "pct"
+    },
+    {
+      "type": "call_wall_gamma",
+      "level": 1520.0,
+      "distance": 5.43,
+      "strength_score": 8.9,
+      "notes": "Call wall (γ-$) exp 2026-10-16; dominante (10.4% del lado call) — pendiente",
+      "meta": {
+        "expiration": "2026-10-16",
+        "gamma_usd": 1028.559,
+        "gamma_usd_units": "millions",
+        "gamma_usd_total_calls": 9913.937,
+        "gamma_usd_share_pct": 10.4,
+        "oi": 1319,
+        "oi_share_pct": 2.5,
+        "atr10": 79.2469,
+        "tolerance": 15.8494,
+        "window": "calls agregadas en top 3 expiraciones; sin filtro de distancia",
+        "testing_now": false,
+        "cluster": {
+          "neighbors": [
+            1445.0,
+            1450.0,
+            1455.0,
+            1460.0,
+            1465.0,
+            1470.0,
+            1475.0,
+            1480.0,
+            1485.0,
+            1490.0,
+            1495.0,
+            1500.0,
+            1505.0,
+            1510.0,
+            1515.0,
+            1520.0,
+            1525.0,
+            1530.0,
+            1535.0,
+            1540.0,
+            1545.0,
+            1550.0,
+            1555.0,
+            1560.0,
+            1565.0,
+            1570.0,
+            1575.0,
+            1580.0,
+            1585.0,
+            1590.0,
+            1595.0
+          ],
+          "cluster_gamma_usd": 3194.398,
+          "cluster_share_pct": 32.2
+        },
+        "method": "sum(|γ|·OI·spot²) por strike multi-exp (sin límites de distancia)",
+        "touch_prob_1w": {
+          "sigma_pct": 7.88,
+          "sigma_source": "em_pct_1w",
+          "z": 0.689
+        }
+      },
+      "prob_touch_1w_pct": 24.5,
       "unit": "pct"
     }
   ],
@@ -104,7 +169,7 @@
     {
       "type": "52_week_low",
       "level": 116.17,
-      "distance": 92.17,
+      "distance": 91.94,
       "strength_score": 8.5,
       "notes": "Re-test #4 (pendiente)",
       "meta": {
@@ -114,32 +179,32 @@
         "retests_since_origin": 3,
         "testing_now": false,
         "touch_prob_1w": {
-          "sigma_pct": 5.34,
+          "sigma_pct": 7.88,
           "sigma_source": "em_pct_1w",
-          "z": 17.26
+          "z": 11.668
         },
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "hvn",
-          "nearest_level": 944.4208,
-          "nearest_distance_pct": 712.96,
-          "nearest_abs_distance_pct": 712.96,
-          "poc_distance_pct": 1246.46,
-          "nearest_hvn_distance_pct": 712.96
+          "nearest_level": 920.1944,
+          "nearest_distance_pct": 692.11,
+          "nearest_abs_distance_pct": 692.11,
+          "poc_distance_pct": 1249.66,
+          "nearest_hvn_distance_pct": 692.11
         },
         "historical_reaction": {
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 15.8772,
+          "tolerance_abs": 15.8494,
           "test_count": 1,
           "defense_count": 0,
           "defense_rate_pct": 0.0,
-          "last_test_date": "2025-10-09",
-          "last_test_rebound_5d_pct": 28.34,
-          "median_rebound_5d_pct": 28.34,
-          "max_rebound_5d_pct": 28.34,
-          "defense_min_rebound_pct": 34.17,
+          "last_test_date": "2025-10-10",
+          "last_test_rebound_5d_pct": 29.83,
+          "median_rebound_5d_pct": 29.83,
+          "max_rebound_5d_pct": 29.83,
+          "defense_min_rebound_pct": 34.11,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
           "pending_test_count": 0,
@@ -148,10 +213,10 @@
           "excluded_incomplete_data_test_count": 0,
           "measurement_basis": {
             "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "a885fdcffc2a1170bcfe501ce007086616661050024a242b73e19a2135ebc897",
-            "history_end": "2026-10-09",
-            "atr10": 79.38588999999999,
-            "parameters_sha256": "ba84befe4a1208ded7e7deda1f4251772e3b213d8c89f82fb0428819032131cd"
+            "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+            "history_end": "2026-10-12",
+            "atr10": 79.24688999999998,
+            "parameters_sha256": "0277e53cb9740101263773e45e46c306a019a7eb09b211b7a6a085d01fc497e1"
           }
         }
       },
@@ -161,15 +226,15 @@
     {
       "type": "gap_up_lower",
       "level": 1316.45,
-      "distance": 11.3,
+      "distance": 8.69,
       "strength_score": 7.0,
-      "notes": "Gap alcista del 2026-08-04 (tam. 1.59%); relleno (pendiente)",
+      "notes": "Gap alcista del 2026-08-04 (tam. 1.63%); relleno (pendiente)",
       "meta": {
         "gap_date": "2026-08-04",
         "gap_upper": 1340.0,
         "gap_lower": 1316.45,
         "gap_size": 23.55,
-        "gap_size_pct_vs_price": 1.59,
+        "gap_size_pct_vs_price": 1.63,
         "vol_factor_vs_median": 1.1,
         "touches_since_gap": 2,
         "last_touch_date": "2026-08-13",
@@ -177,24 +242,24 @@
         "testing_now": false,
         "filled": true,
         "touch_prob_1w": {
-          "sigma_pct": 5.34,
+          "sigma_pct": 7.88,
           "sigma_source": "em_pct_1w",
-          "z": 2.116
+          "z": 1.103
         },
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "hvn",
-          "nearest_level": 1409.2458,
-          "nearest_distance_pct": 7.05,
-          "nearest_abs_distance_pct": 7.05,
-          "poc_distance_pct": 18.82,
-          "nearest_hvn_distance_pct": 7.05
+          "nearest_level": 1413.681,
+          "nearest_distance_pct": 7.39,
+          "nearest_abs_distance_pct": 7.39,
+          "poc_distance_pct": 19.1,
+          "nearest_hvn_distance_pct": 7.39
         },
         "historical_reaction": {
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 15.8772,
+          "tolerance_abs": 15.8494,
           "test_count": 8,
           "defense_count": 5,
           "defense_rate_pct": 62.5,
@@ -202,7 +267,7 @@
           "last_test_rebound_5d_pct": 38.86,
           "median_rebound_5d_pct": 20.81,
           "max_rebound_5d_pct": 38.86,
-          "defense_min_rebound_pct": 3.02,
+          "defense_min_rebound_pct": 3.01,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
           "pending_test_count": 0,
@@ -211,20 +276,20 @@
           "excluded_incomplete_data_test_count": 0,
           "measurement_basis": {
             "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "a885fdcffc2a1170bcfe501ce007086616661050024a242b73e19a2135ebc897",
-            "history_end": "2026-10-09",
-            "atr10": 79.38588999999999,
-            "parameters_sha256": "5a2cd050614ec5ac0ebf2d8172e5f447cda23b4b3a5f50b58cee5fd0cfe8c3a2"
+            "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+            "history_end": "2026-10-12",
+            "atr10": 79.24688999999998,
+            "parameters_sha256": "68bbbd0664fae556d604a503cf222a9578fc53ad84c026ca2338bc678e77df9c"
           }
         }
       },
-      "prob_touch_1w_pct": 1.7,
+      "prob_touch_1w_pct": 13.5,
       "unit": "pct"
     },
     {
       "type": "avwap_event_support",
-      "level": 945.7581,
-      "distance": 36.28,
+      "level": 945.7833,
+      "distance": 34.4,
       "strength_score": 8.5,
       "notes": "AVWAP anclado a 52w low 2025-10-10 (pendiente)",
       "meta": {
@@ -238,32 +303,32 @@
         "min_distance_pct": 0.05,
         "method": "daily_typical_price_vwap",
         "touch_prob_1w": {
-          "sigma_pct": 5.34,
+          "sigma_pct": 7.88,
           "sigma_source": "em_pct_1w",
-          "z": 6.794
+          "z": 4.365
         },
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "hvn",
-          "nearest_level": 944.4208,
-          "nearest_distance_pct": -0.14,
-          "nearest_abs_distance_pct": 0.14,
-          "poc_distance_pct": 65.39,
-          "nearest_hvn_distance_pct": -0.14
+          "nearest_level": 920.1944,
+          "nearest_distance_pct": -2.71,
+          "nearest_abs_distance_pct": 2.71,
+          "poc_distance_pct": 65.78,
+          "nearest_hvn_distance_pct": -2.71
         },
         "historical_reaction": {
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 15.8772,
+          "tolerance_abs": 15.8494,
           "test_count": 2,
           "defense_count": 0,
           "defense_rate_pct": 0.0,
           "last_test_date": "2026-04-17",
-          "last_test_rebound_5d_pct": 5.96,
-          "median_rebound_5d_pct": 4.0,
-          "max_rebound_5d_pct": 5.96,
-          "defense_min_rebound_pct": 4.2,
+          "last_test_rebound_5d_pct": 5.95,
+          "median_rebound_5d_pct": 3.99,
+          "max_rebound_5d_pct": 5.95,
+          "defense_min_rebound_pct": 4.19,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
           "pending_test_count": 0,
@@ -272,10 +337,10 @@
           "excluded_incomplete_data_test_count": 0,
           "measurement_basis": {
             "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "a885fdcffc2a1170bcfe501ce007086616661050024a242b73e19a2135ebc897",
-            "history_end": "2026-10-09",
-            "atr10": 79.38588999999999,
-            "parameters_sha256": "2fa0b3bd3416c332363cc404071958f206a98e68bcf658ff93ad8ad1602202f9"
+            "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+            "history_end": "2026-10-12",
+            "atr10": 79.24688999999998,
+            "parameters_sha256": "1edc5bc9d9b9f87520482b24ed2c105541d163b45ef119988a0a6fa5ee490fa3"
           }
         }
       },
@@ -286,7 +351,7 @@
   "observed_origins": [
     {
       "type": "avwap_observation",
-      "level": 941.8168,
+      "level": 941.842,
       "status": "available",
       "reason": null,
       "meta": {
@@ -296,17 +361,17 @@
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "hvn",
-          "nearest_level": 944.4208,
-          "nearest_distance_pct": 0.28,
-          "nearest_abs_distance_pct": 0.28,
-          "poc_distance_pct": 66.08,
-          "nearest_hvn_distance_pct": 0.28
+          "nearest_level": 920.1944,
+          "nearest_distance_pct": -2.3,
+          "nearest_abs_distance_pct": 2.3,
+          "poc_distance_pct": 66.47,
+          "nearest_hvn_distance_pct": -2.3
         },
         "historical_reaction": {
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 15.8772,
+          "tolerance_abs": 15.8494,
           "test_count": 1,
           "defense_count": 0,
           "defense_rate_pct": 0.0,
@@ -323,17 +388,111 @@
           "excluded_incomplete_data_test_count": 0,
           "measurement_basis": {
             "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "a885fdcffc2a1170bcfe501ce007086616661050024a242b73e19a2135ebc897",
-            "history_end": "2026-10-09",
-            "atr10": 79.38588999999999,
-            "parameters_sha256": "3c818d08a0d2e4d9e24ad2c2304fe4c88342c77c3c25d9e6d74499c778ba92f3"
+            "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+            "history_end": "2026-10-12",
+            "atr10": 79.24688999999998,
+            "parameters_sha256": "d40f2462d382090e743abf54c5178bb06dd62d9666138c8c601e39493ab0fb5a"
           }
         }
       }
     },
     {
       "type": "avwap_observation",
-      "level": 1661.8132,
+      "level": 945.7833,
+      "status": "available",
+      "reason": null,
+      "meta": {
+        "anchor_date": "2025-10-10",
+        "anchor_type": "requested_dated_origin",
+        "selection": "continuity_observation_not_support_verdict",
+        "volume_profile_proximity": {
+          "status": "available",
+          "nearest_type": "hvn",
+          "nearest_level": 920.1944,
+          "nearest_distance_pct": -2.71,
+          "nearest_abs_distance_pct": 2.71,
+          "poc_distance_pct": 65.78,
+          "nearest_hvn_distance_pct": -2.71
+        },
+        "historical_reaction": {
+          "status": "available",
+          "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+          "lookback_sessions": 252,
+          "tolerance_abs": 15.8494,
+          "test_count": 2,
+          "defense_count": 0,
+          "defense_rate_pct": 0.0,
+          "last_test_date": "2026-04-17",
+          "last_test_rebound_5d_pct": 5.95,
+          "median_rebound_5d_pct": 3.99,
+          "max_rebound_5d_pct": 5.95,
+          "defense_min_rebound_pct": 4.19,
+          "observation_policy": "complete_forward_window_only",
+          "forward_sessions": 5,
+          "pending_test_count": 0,
+          "last_pending_test_date": null,
+          "last_pending_observed_sessions": null,
+          "excluded_incomplete_data_test_count": 0,
+          "measurement_basis": {
+            "calibration": "completed_daily_atr10_v1",
+            "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+            "history_end": "2026-10-12",
+            "atr10": 79.24688999999998,
+            "parameters_sha256": "1edc5bc9d9b9f87520482b24ed2c105541d163b45ef119988a0a6fa5ee490fa3"
+          }
+        }
+      }
+    },
+    {
+      "type": "avwap_observation",
+      "level": 1589.6897,
+      "status": "available",
+      "reason": null,
+      "meta": {
+        "anchor_date": "2026-06-22",
+        "anchor_type": "requested_dated_origin",
+        "selection": "continuity_observation_not_support_verdict",
+        "volume_profile_proximity": {
+          "status": "available",
+          "nearest_type": "poc",
+          "nearest_level": 1567.8956,
+          "nearest_distance_pct": -1.37,
+          "nearest_abs_distance_pct": 1.37,
+          "poc_distance_pct": -1.37,
+          "nearest_hvn_distance_pct": -5.25
+        },
+        "historical_reaction": {
+          "status": "available",
+          "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+          "lookback_sessions": 252,
+          "tolerance_abs": 15.8494,
+          "test_count": 11,
+          "defense_count": 5,
+          "defense_rate_pct": 45.5,
+          "last_test_date": "2026-09-17",
+          "last_test_rebound_5d_pct": 20.12,
+          "median_rebound_5d_pct": 13.69,
+          "max_rebound_5d_pct": 27.17,
+          "defense_min_rebound_pct": 2.49,
+          "observation_policy": "complete_forward_window_only",
+          "forward_sessions": 5,
+          "pending_test_count": 1,
+          "last_pending_test_date": "2026-10-08",
+          "last_pending_observed_sessions": 2,
+          "excluded_incomplete_data_test_count": 0,
+          "measurement_basis": {
+            "calibration": "completed_daily_atr10_v1",
+            "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+            "history_end": "2026-10-12",
+            "atr10": 79.24688999999998,
+            "parameters_sha256": "968de87c8108f2bad6d7a1caa66eeea9b20fd5acd82ba5aab47f5d519f5d313a"
+          }
+        }
+      }
+    },
+    {
+      "type": "avwap_observation",
+      "level": 1661.3868,
       "status": "available",
       "reason": null,
       "meta": {
@@ -343,37 +502,37 @@
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "hvn",
-          "nearest_level": 1719.1291,
-          "nearest_distance_pct": 3.45,
-          "nearest_abs_distance_pct": 3.45,
-          "poc_distance_pct": -5.87,
-          "nearest_hvn_distance_pct": 3.45
+          "nearest_level": 1722.1102,
+          "nearest_distance_pct": 3.65,
+          "nearest_abs_distance_pct": 3.65,
+          "poc_distance_pct": -5.63,
+          "nearest_hvn_distance_pct": 3.65
         },
         "historical_reaction": {
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 15.8772,
+          "tolerance_abs": 15.8494,
           "test_count": 12,
           "defense_count": 6,
           "defense_rate_pct": 50.0,
           "last_test_date": "2026-09-28",
-          "last_test_rebound_5d_pct": 8.44,
-          "median_rebound_5d_pct": 8.91,
-          "max_rebound_5d_pct": 21.65,
-          "defense_min_rebound_pct": 2.39,
+          "last_test_rebound_5d_pct": 8.46,
+          "median_rebound_5d_pct": 8.94,
+          "max_rebound_5d_pct": 21.68,
+          "defense_min_rebound_pct": 2.38,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
           "pending_test_count": 1,
           "last_pending_test_date": "2026-10-06",
-          "last_pending_observed_sessions": 3,
+          "last_pending_observed_sessions": 4,
           "excluded_incomplete_data_test_count": 0,
           "measurement_basis": {
             "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "a885fdcffc2a1170bcfe501ce007086616661050024a242b73e19a2135ebc897",
-            "history_end": "2026-10-09",
-            "atr10": 79.38588999999999,
-            "parameters_sha256": "755240dcd24da48aea28bf475d42301b4813f47de6e0c9ec6b447f9501d8b451"
+            "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+            "history_end": "2026-10-12",
+            "atr10": 79.24688999999998,
+            "parameters_sha256": "68fd7628512f22512b7af0cc6c063bca1707374972edbb708056cd358869b5a8"
           }
         }
       }
@@ -389,7 +548,7 @@
     {
       "level": 1520.0,
       "expiration": "2026-10-16",
-      "gamma_usd_millions": 1089.992,
+      "gamma_usd_millions": 1028.559,
       "gamma_share_pct": 10.4,
       "oi": 1319,
       "oi_share_pct": 2.5,
@@ -426,14 +585,14 @@
         1590.0,
         1595.0
       ],
-      "cluster_gamma_usd": 3385.191,
+      "cluster_gamma_usd": 3194.398,
       "cluster_share_pct": 32.2,
-      "distance": 2.42
+      "distance": 5.43
     },
     {
       "level": 1600.0,
       "expiration": "2026-10-16",
-      "gamma_usd_millions": 1006.367,
+      "gamma_usd_millions": 949.647,
       "gamma_share_pct": 9.6,
       "oi": 2106,
       "oi_share_pct": 3.9,
@@ -470,14 +629,14 @@
         1670.0,
         1675.0
       ],
-      "cluster_gamma_usd": 4131.586,
+      "cluster_gamma_usd": 3898.726,
       "cluster_share_pct": 39.3,
-      "distance": 7.81
+      "distance": 10.98
     },
     {
       "level": 1700.0,
       "expiration": "2026-10-16",
-      "gamma_usd_millions": 655.26,
+      "gamma_usd_millions": 618.328,
       "gamma_share_pct": 6.2,
       "oi": 2873,
       "oi_share_pct": 5.3,
@@ -519,14 +678,14 @@
         1770.0,
         1775.0
       ],
-      "cluster_gamma_usd": 3701.327,
+      "cluster_gamma_usd": 3492.716,
       "cluster_share_pct": 35.2,
-      "distance": 14.55
+      "distance": 17.92
     },
     {
       "level": 1500.0,
       "expiration": "2026-10-16",
-      "gamma_usd_millions": 647.475,
+      "gamma_usd_millions": 610.983,
       "gamma_share_pct": 6.2,
       "oi": 825,
       "oi_share_pct": 1.5,
@@ -563,14 +722,14 @@
         1570.0,
         1575.0
       ],
-      "cluster_gamma_usd": 3075.317,
+      "cluster_gamma_usd": 2901.988,
       "cluster_share_pct": 29.3,
-      "distance": 1.07
+      "distance": 4.04
     },
     {
       "level": 1650.0,
       "expiration": "2026-10-16",
-      "gamma_usd_millions": 388.317,
+      "gamma_usd_millions": 366.431,
       "gamma_share_pct": 3.7,
       "oi": 1162,
       "oi_share_pct": 2.2,
@@ -610,16 +769,16 @@
         1725.0,
         1727.5
       ],
-      "cluster_gamma_usd": 4692.714,
+      "cluster_gamma_usd": 4428.228,
       "cluster_share_pct": 44.7,
-      "distance": 11.18
+      "distance": 14.45
     }
   ],
   "put_walls_top": [
     {
       "level": 1500.0,
       "expiration": "2026-10-16",
-      "gamma_usd_millions": 2851.785,
+      "gamma_usd_millions": 2691.055,
       "gamma_share_pct": 11.4,
       "oi": 3811,
       "oi_share_pct": 5.7,
@@ -656,23 +815,23 @@
         1570.0,
         1575.0
       ],
-      "cluster_gamma_usd": 12813.741,
+      "cluster_gamma_usd": 12091.544,
       "cluster_share_pct": 51.3,
-      "distance": 1.07,
+      "distance": 4.04,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
-        "nearest_level": 1502.2108,
-        "nearest_distance_pct": 0.15,
-        "nearest_abs_distance_pct": 0.15,
-        "poc_distance_pct": 4.28,
-        "nearest_hvn_distance_pct": 0.15
+        "nearest_level": 1506.2097,
+        "nearest_distance_pct": 0.41,
+        "nearest_abs_distance_pct": 0.41,
+        "poc_distance_pct": 4.53,
+        "nearest_hvn_distance_pct": 0.41
       },
       "historical_reaction": {
         "status": "available",
         "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
         "lookback_sessions": 252,
-        "tolerance_abs": 15.8772,
+        "tolerance_abs": 15.8494,
         "test_count": 10,
         "defense_count": 9,
         "defense_rate_pct": 90.0,
@@ -680,26 +839,26 @@
         "last_test_rebound_5d_pct": 22.3,
         "median_rebound_5d_pct": 13.51,
         "max_rebound_5d_pct": 34.78,
-        "defense_min_rebound_pct": 2.65,
+        "defense_min_rebound_pct": 2.64,
         "observation_policy": "complete_forward_window_only",
         "forward_sessions": 5,
-        "pending_test_count": 0,
-        "last_pending_test_date": null,
-        "last_pending_observed_sessions": null,
+        "pending_test_count": 1,
+        "last_pending_test_date": "2026-10-12",
+        "last_pending_observed_sessions": 0,
         "excluded_incomplete_data_test_count": 0,
         "measurement_basis": {
           "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "a885fdcffc2a1170bcfe501ce007086616661050024a242b73e19a2135ebc897",
-          "history_end": "2026-10-09",
-          "atr10": 79.38588999999999,
-          "parameters_sha256": "2609207fcb9b625f5c889cb7354b7b46480c1e9cff6d84317eb9da26f3803312"
+          "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+          "history_end": "2026-10-12",
+          "atr10": 79.24688999999998,
+          "parameters_sha256": "8ac00fdcc7e8489b7f84ca119938bff7c8691b2939e6579ee8fe4031b9477dd3"
         }
       }
     },
     {
       "level": 1400.0,
       "expiration": "2026-10-16",
-      "gamma_usd_millions": 1629.556,
+      "gamma_usd_millions": 1537.713,
       "gamma_share_pct": 6.5,
       "oi": 3160,
       "oi_share_pct": 4.7,
@@ -736,23 +895,23 @@
         1470.0,
         1475.0
       ],
-      "cluster_gamma_usd": 7823.487,
+      "cluster_gamma_usd": 7382.546,
       "cluster_share_pct": 31.3,
-      "distance": -5.67,
+      "distance": -2.89,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
-        "nearest_level": 1409.2458,
-        "nearest_distance_pct": 0.66,
-        "nearest_abs_distance_pct": 0.66,
-        "poc_distance_pct": 11.73,
-        "nearest_hvn_distance_pct": 0.66
+        "nearest_level": 1413.681,
+        "nearest_distance_pct": 0.98,
+        "nearest_abs_distance_pct": 0.98,
+        "poc_distance_pct": 11.99,
+        "nearest_hvn_distance_pct": 0.98
       },
       "historical_reaction": {
         "status": "available",
         "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
         "lookback_sessions": 252,
-        "tolerance_abs": 15.8772,
+        "tolerance_abs": 15.8494,
         "test_count": 7,
         "defense_count": 5,
         "defense_rate_pct": 71.4,
@@ -760,7 +919,7 @@
         "last_test_rebound_5d_pct": 30.57,
         "median_rebound_5d_pct": 8.11,
         "max_rebound_5d_pct": 30.57,
-        "defense_min_rebound_pct": 2.84,
+        "defense_min_rebound_pct": 2.83,
         "observation_policy": "complete_forward_window_only",
         "forward_sessions": 5,
         "pending_test_count": 0,
@@ -769,17 +928,17 @@
         "excluded_incomplete_data_test_count": 0,
         "measurement_basis": {
           "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "a885fdcffc2a1170bcfe501ce007086616661050024a242b73e19a2135ebc897",
-          "history_end": "2026-10-09",
-          "atr10": 79.38588999999999,
-          "parameters_sha256": "43d33f2c8c7fded31a76759d882fb8ff8662325d59bb43852d8f70ff2510ac2c"
+          "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+          "history_end": "2026-10-12",
+          "atr10": 79.24688999999998,
+          "parameters_sha256": "ba602137cfaf45bd3aaabb2befc9fdd1b9e0a832e1edc5eaa3ea1ce38822e4d7"
         }
       }
     },
     {
       "level": 1600.0,
       "expiration": "2026-10-16",
-      "gamma_usd_millions": 1289.999,
+      "gamma_usd_millions": 1217.294,
       "gamma_share_pct": 5.2,
       "oi": 2681,
       "oi_share_pct": 4.0,
@@ -816,23 +975,23 @@
         1670.0,
         1675.0
       ],
-      "cluster_gamma_usd": 8190.784,
+      "cluster_gamma_usd": 7729.142,
       "cluster_share_pct": 32.8,
-      "distance": 7.81,
+      "distance": 10.98,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "poc",
-        "nearest_level": 1564.1875,
-        "nearest_distance_pct": -2.24,
-        "nearest_abs_distance_pct": 2.24,
-        "poc_distance_pct": -2.24,
-        "nearest_hvn_distance_pct": -6.11
+        "nearest_level": 1567.8956,
+        "nearest_distance_pct": -2.01,
+        "nearest_abs_distance_pct": 2.01,
+        "poc_distance_pct": -2.01,
+        "nearest_hvn_distance_pct": -5.86
       },
       "historical_reaction": {
         "status": "available",
         "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
         "lookback_sessions": 252,
-        "tolerance_abs": 15.8772,
+        "tolerance_abs": 15.8494,
         "test_count": 11,
         "defense_count": 7,
         "defense_rate_pct": 63.6,
@@ -845,21 +1004,21 @@
         "forward_sessions": 5,
         "pending_test_count": 1,
         "last_pending_test_date": "2026-10-08",
-        "last_pending_observed_sessions": 1,
+        "last_pending_observed_sessions": 2,
         "excluded_incomplete_data_test_count": 0,
         "measurement_basis": {
           "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "a885fdcffc2a1170bcfe501ce007086616661050024a242b73e19a2135ebc897",
-          "history_end": "2026-10-09",
-          "atr10": 79.38588999999999,
-          "parameters_sha256": "e13e4514666185e24be10365e5682af3127a40ca967bbe7a70d7857e4d3b18a5"
+          "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+          "history_end": "2026-10-12",
+          "atr10": 79.24688999999998,
+          "parameters_sha256": "72bd75dd6083fc32979ffa38759eb1eaa30edd6d9a62c324e2b6c450381d08c3"
         }
       }
     },
     {
       "level": 1550.0,
       "expiration": "2026-10-16",
-      "gamma_usd_millions": 1157.604,
+      "gamma_usd_millions": 1092.36,
       "gamma_share_pct": 4.6,
       "oi": 1724,
       "oi_share_pct": 2.6,
@@ -896,23 +1055,23 @@
         1620.0,
         1625.0
       ],
-      "cluster_gamma_usd": 12469.4,
+      "cluster_gamma_usd": 11766.61,
       "cluster_share_pct": 49.9,
-      "distance": 4.44,
+      "distance": 7.51,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "poc",
-        "nearest_level": 1564.1875,
-        "nearest_distance_pct": 0.92,
-        "nearest_abs_distance_pct": 0.92,
-        "poc_distance_pct": 0.92,
-        "nearest_hvn_distance_pct": -3.08
+        "nearest_level": 1567.8956,
+        "nearest_distance_pct": 1.15,
+        "nearest_abs_distance_pct": 1.15,
+        "poc_distance_pct": 1.15,
+        "nearest_hvn_distance_pct": -2.83
       },
       "historical_reaction": {
         "status": "available",
         "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
         "lookback_sessions": 252,
-        "tolerance_abs": 15.8772,
+        "tolerance_abs": 15.8494,
         "test_count": 14,
         "defense_count": 11,
         "defense_rate_pct": 78.6,
@@ -923,23 +1082,23 @@
         "defense_min_rebound_pct": 2.56,
         "observation_policy": "complete_forward_window_only",
         "forward_sessions": 5,
-        "pending_test_count": 0,
-        "last_pending_test_date": null,
-        "last_pending_observed_sessions": null,
+        "pending_test_count": 1,
+        "last_pending_test_date": "2026-10-12",
+        "last_pending_observed_sessions": 0,
         "excluded_incomplete_data_test_count": 0,
         "measurement_basis": {
           "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "a885fdcffc2a1170bcfe501ce007086616661050024a242b73e19a2135ebc897",
-          "history_end": "2026-10-09",
-          "atr10": 79.38588999999999,
-          "parameters_sha256": "6a96b3d04974e412d964b0304f3aebb6c3d443b369d090a6df2aa4ca85958a10"
+          "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+          "history_end": "2026-10-12",
+          "atr10": 79.24688999999998,
+          "parameters_sha256": "9dcffc532b5661e700b3efc12c703acb7125e9e63d647efaf8d9d92a9e6e362d"
         }
       }
     },
     {
       "level": 1460.0,
       "expiration": "2026-10-16",
-      "gamma_usd_millions": 982.297,
+      "gamma_usd_millions": 926.933,
       "gamma_share_pct": 3.9,
       "oi": 1259,
       "oi_share_pct": 1.9,
@@ -976,23 +1135,23 @@
         1530.0,
         1535.0
       ],
-      "cluster_gamma_usd": 12917.09,
+      "cluster_gamma_usd": 12189.069,
       "cluster_share_pct": 51.7,
-      "distance": -1.63,
+      "distance": 1.27,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
-        "nearest_level": 1502.2108,
-        "nearest_distance_pct": 2.89,
-        "nearest_abs_distance_pct": 2.89,
-        "poc_distance_pct": 7.14,
-        "nearest_hvn_distance_pct": 2.89
+        "nearest_level": 1506.2097,
+        "nearest_distance_pct": 3.17,
+        "nearest_abs_distance_pct": 3.17,
+        "poc_distance_pct": 7.39,
+        "nearest_hvn_distance_pct": 3.17
       },
       "historical_reaction": {
         "status": "available",
         "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
         "lookback_sessions": 252,
-        "tolerance_abs": 15.8772,
+        "tolerance_abs": 15.8494,
         "test_count": 8,
         "defense_count": 5,
         "defense_rate_pct": 62.5,
@@ -1000,19 +1159,19 @@
         "last_test_rebound_5d_pct": 7.72,
         "median_rebound_5d_pct": 8.65,
         "max_rebound_5d_pct": 25.2,
-        "defense_min_rebound_pct": 2.72,
+        "defense_min_rebound_pct": 2.71,
         "observation_policy": "complete_forward_window_only",
         "forward_sessions": 5,
-        "pending_test_count": 0,
-        "last_pending_test_date": null,
-        "last_pending_observed_sessions": null,
+        "pending_test_count": 1,
+        "last_pending_test_date": "2026-10-12",
+        "last_pending_observed_sessions": 0,
         "excluded_incomplete_data_test_count": 0,
         "measurement_basis": {
           "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "a885fdcffc2a1170bcfe501ce007086616661050024a242b73e19a2135ebc897",
-          "history_end": "2026-10-09",
-          "atr10": 79.38588999999999,
-          "parameters_sha256": "6b8a0148cd2b58a0df6c3aa6fc084e79a95e11301a69a92330539292fd00fcc1"
+          "history_sha256": "fbdb627819d991478fdac28f4f56358f8bd3adb9948ef49358af7917a46304da",
+          "history_end": "2026-10-12",
+          "atr10": 79.24688999999998,
+          "parameters_sha256": "f257f6099a4877e7293a39e8dad913a9d404084ba0bc2531f2a8eebe027bd264"
         }
       }
     }
@@ -1044,13 +1203,13 @@
     },
     "atr10": 79.2469,
     "volume": {
-      "avg_20d": 8456352.25,
+      "avg_20d": 8464547.85,
       "median_20d": 7961766.0,
-      "avg_dollar_20d": 14439092303.02,
+      "avg_dollar_20d": 14451281864.77,
       "last_complete_day": {
         "date": "2026-10-12",
-        "shares": 8639954,
-        "rel_to_20d": 1.022
+        "shares": 8803866,
+        "rel_to_20d": 1.04
       },
       "series": {
         "shares_20d": [
@@ -1073,7 +1232,7 @@
           9166860,
           9357012,
           5606795,
-          8639954
+          8803866
         ],
         "dollar_volume_20d": [
           10523243634.82,
@@ -1095,11 +1254,11 @@
           15514177201.2,
           15059736533.52,
           8868940466.9,
-          12850462782.82
+          13094254017.78
         ]
       },
       "current_session": {
-        "shares": 8639952.0,
+        "shares": 135864.0,
         "comparable_to_avg_20d": false
       },
       "note": "ratios calculados contra último día COMPLETO; intradía solo informativo"
@@ -1121,36 +1280,36 @@
     "method": "daily_ohlcv_uniform_range_48_bins",
     "approximate": true,
     "lookback_sessions": 126,
-    "start_date": "2026-04-13",
-    "end_date": "2026-10-09",
-    "price_low": 866.95,
+    "start_date": "2026-04-14",
+    "end_date": "2026-10-12",
+    "price_low": 873.93,
     "price_high": 2354.3899,
-    "bin_width": 30.9883,
+    "bin_width": 30.8429,
     "poc": {
       "type": "poc",
-      "level": 1564.1875,
-      "volume_share_pct": 4.85
+      "level": 1567.8956,
+      "volume_share_pct": 4.98
     },
     "hvn": [
       {
         "type": "hvn",
-        "level": 1502.2108,
-        "volume_share_pct": 4.45
+        "level": 1506.2097,
+        "volume_share_pct": 4.87
       },
       {
         "type": "hvn",
-        "level": 1719.1291,
-        "volume_share_pct": 4.39
+        "level": 1722.1102,
+        "volume_share_pct": 4.52
       },
       {
         "type": "hvn",
-        "level": 1409.2458,
-        "volume_share_pct": 3.98
+        "level": 1413.681,
+        "volume_share_pct": 4.01
       },
       {
         "type": "hvn",
-        "level": 944.4208,
-        "volume_share_pct": 3.31
+        "level": 920.1944,
+        "volume_share_pct": 2.87
       }
     ]
   },
@@ -1160,29 +1319,29 @@
       "target": "1w",
       "expiration": "2026-10-16",
       "source_expiration": "2026-10-16",
-      "dte": 4,
-      "weeklyized": false,
-      "dollars": 79.3,
-      "percent": 5.34,
-      "method": "ATM straddle mid (~1W)"
+      "dte": 3,
+      "weeklyized": true,
+      "dollars": 113.543,
+      "percent": 7.88,
+      "method": "ATM straddle mid (weeklyized from DTE)"
     },
     "max_pain": {
       "expiration": "2026-10-16",
       "strike": 1650.0
     },
     "dealer_gamma": {
-      "gex_total_usd_millions": -14490.588,
+      "gex_total_usd_millions": -13673.882,
       "gamma_regime": "negative",
       "method": "sum_calls_minus_puts"
     },
     "summary_by_expiration": [
       {
         "date": "2026-10-16",
-        "dte": 4,
-        "atm_iv": 0.638,
+        "dte": 3,
+        "atm_iv": 0.8411,
         "expected_move": {
-          "dollars": 79.3,
-          "percent": 0.0534,
+          "dollars": 87.95,
+          "percent": 0.061,
           "method": "ATM straddle mid"
         },
         "total_call_oi": 56426,
@@ -1191,11 +1350,11 @@
       },
       {
         "date": "2026-10-23",
-        "dte": 11,
-        "atm_iv": 0.5749,
+        "dte": 10,
+        "atm_iv": 0.6503,
         "expected_move": {
-          "dollars": 118.5,
-          "percent": 0.0798,
+          "dollars": 124.15,
+          "percent": 0.0861,
           "method": "ATM straddle mid"
         },
         "total_call_oi": 14279,
@@ -1204,11 +1363,11 @@
       },
       {
         "date": "2026-10-30",
-        "dte": 18,
-        "atm_iv": 0.6766,
+        "dte": 17,
+        "atm_iv": 0.731,
         "expected_move": {
-          "dollars": 178.4,
-          "percent": 0.1202,
+          "dollars": 181.95,
+          "percent": 0.1262,
           "method": "ATM straddle mid"
         },
         "total_call_oi": 9061,
@@ -1280,21 +1439,21 @@
         "per_expiration": [
           {
             "expiration": "2026-10-16",
-            "dte": 4,
+            "dte": 3,
             "puts": 65826,
             "calls": 56426,
             "ratio": 1.167
           },
           {
             "expiration": "2026-10-23",
-            "dte": 11,
+            "dte": 10,
             "puts": 14390,
             "calls": 14279,
             "ratio": 1.008
           },
           {
             "expiration": "2026-10-30",
-            "dte": 18,
+            "dte": 17,
             "puts": 11879,
             "calls": 9061,
             "ratio": 1.311
@@ -1354,49 +1513,49 @@
         "per_expiration": [
           {
             "expiration": "2026-10-16",
-            "dte": 4,
+            "dte": 3,
             "puts": 65826,
             "calls": 56426,
             "ratio": 1.167
           },
           {
             "expiration": "2026-10-23",
-            "dte": 11,
+            "dte": 10,
             "puts": 14390,
             "calls": 14279,
             "ratio": 1.008
           },
           {
             "expiration": "2026-10-30",
-            "dte": 18,
+            "dte": 17,
             "puts": 11879,
             "calls": 9061,
             "ratio": 1.311
           },
           {
             "expiration": "2026-11-06",
-            "dte": 25,
+            "dte": 24,
             "puts": 4405,
             "calls": 3575,
             "ratio": 1.232
           },
           {
             "expiration": "2026-11-13",
-            "dte": 32,
+            "dte": 31,
             "puts": 1960,
             "calls": 1624,
             "ratio": 1.207
           },
           {
             "expiration": "2026-11-20",
-            "dte": 39,
+            "dte": 38,
             "puts": 39609,
             "calls": 31583,
             "ratio": 1.254
           },
           {
             "expiration": "2026-11-27",
-            "dte": 46,
+            "dte": 45,
             "puts": 268,
             "calls": 242,
             "ratio": 1.107
@@ -1414,10 +1573,10 @@
     "rv60_annual_pct": 104.087,
     "rv20_weekly_pct": 9.018,
     "rv60_weekly_pct": 14.434,
-    "em_pct_1w": 5.34,
-    "em_abs_1w": 79.3,
-    "iv_to_rv_ratio": 0.592,
-    "em_to_atr_ratio": 1.001,
+    "em_pct_1w": 7.88,
+    "em_abs_1w": 113.543,
+    "iv_to_rv_ratio": 0.874,
+    "em_to_atr_ratio": 1.433,
     "windows": {
       "rv": [
         20,
@@ -1433,8 +1592,8 @@
     "method": "std(log_returns_daily) * sqrt(252); weekly = annual/sqrt(52)",
     "em_basis": {
       "source_expiration": "2026-10-16",
-      "dte": 4,
-      "weeklyized_from_dte": false
+      "dte": 3,
+      "weeklyized_from_dte": true
     }
   },
   "forward_returns": {
@@ -2766,14 +2925,14 @@
           "rsi14": 19.79,
           "price_vs_sma20_pct": -12.21,
           "price_vs_sma50_pct": -6.34,
-          "donchian20_pos_pct": 4.4,
+          "donchian20_pos_pct": 0.0,
           "bb_width_pct": 24.64
         }
       },
       "B_options_7_21DTE": {
         "score": 0,
         "signals": {
-          "nearest_call_wall_dist_pct": 1.07,
+          "nearest_call_wall_dist_pct": 4.04,
           "nearest_put_wall_dist_pct": 0.0,
           "gamma_regime": "negative"
         }
@@ -2781,15 +2940,15 @@
       "C_vol_risk": {
         "score": 0,
         "signals": {
-          "iv_to_rv": 0.592,
-          "em_2w_to_atr": 1.001,
-          "em_pct_1w": 5.34
+          "iv_to_rv": 0.874,
+          "em_2w_to_atr": 1.433,
+          "em_pct_1w": 7.88
         }
       },
       "D_volume_tape": {
         "score": 0,
         "signals": {
-          "volume_rel_20d_last_close": 1.022
+          "volume_rel_20d_last_close": 1.04
         }
       }
     },
@@ -2839,28 +2998,28 @@
       "rsi14": 19.79,
       "price_vs_sma20_pct": -12.21,
       "price_vs_sma50_pct": -6.34,
-      "donchian20_pos_pct": 4.4253,
+      "donchian20_pos_pct": 0.0,
       "bb_width_pct": 24.64,
-      "nearest_call_wall_dist_pct": 1.07,
+      "nearest_call_wall_dist_pct": 4.04,
       "nearest_put_wall_dist_pct": 0.0,
       "gamma_regime": "negative",
-      "iv_to_rv": 0.592,
-      "em_2w_to_atr": 1.001,
-      "em_pct_1w": 5.34,
-      "volume_rel_20d_last_close": 1.022
+      "iv_to_rv": 0.874,
+      "em_2w_to_atr": 1.433,
+      "em_pct_1w": 7.88,
+      "volume_rel_20d_last_close": 1.04
     },
     "config": {
       "entry_threshold_bias": 55
     }
   },
   "liquidity": {
-    "adv20_usd": 14439092303.02,
+    "adv20_usd": 14451281864.77,
     "bid_ask": {
-      "bid": 1483.5,
-      "ask": 1484.75,
-      "mid": 1484.125,
-      "spread_abs": 1.25,
-      "spread_pct": 0.084
+      "bid": 1440.42,
+      "ask": 1442.97,
+      "mid": 1441.695,
+      "spread_abs": 2.55,
+      "spread_pct": 0.177
     }
   }
 }
