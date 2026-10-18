@@ -1,129 +1,131 @@
 {
   "symbol": "PLTR",
-  "latest_price": 187.255,
-  "as_of": "2026-10-16T16:09:50.721925+00:00",
+  "data_contract_revision": 40,
+  "latest_price": 184.105,
+  "as_of": "2026-10-18T09:42:02.918800+00:00",
+  "quote_observation": {
+    "status": "available",
+    "price": 184.105,
+    "source": "bid_ask_mid",
+    "provider_timestamp": "2026-10-16T23:59:31+00:00",
+    "fetched_at": "2026-10-18T09:42:02.918800+00:00",
+    "age_seconds": 121351.9188,
+    "freshness_basis": "current_open_session_or_latest_completed_session",
+    "expected_market_date": "2026-10-16"
+  },
   "resistances": [
     {
       "type": "52_week_high",
       "level": 212.9399,
-      "distance": 13.72,
-      "strength_score": 9.0,
+      "distance": 15.66,
       "notes": "Primer test (pendiente) — señal débil (γ-$ bajo)",
       "meta": {
         "level_date": "2026-10-12",
-        "atr10": 8.2798,
-        "tolerance": 1.656,
+        "atr10": 8.5228,
+        "tolerance": 1.7046,
         "retests_since_origin": 0,
         "testing_now": false,
-        "low_signal": true,
-        "touch_prob_1w": {
-          "sigma_pct": 5.55,
-          "sigma_source": "em_pct_1w",
-          "z": 2.472
-        }
+        "low_signal": true
       },
-      "prob_touch_1w_pct": 0.7,
+      "unit": "pct"
+    },
+    {
+      "type": "range_top_3_6m",
+      "level": 194.73,
+      "distance": 5.77,
+      "notes": "Techo de rango 3–6m con 2 toques; último 2026-10-02 (pendiente)",
+      "meta": {
+        "first_touch_date": "2026-09-24",
+        "last_touch_date": "2026-10-02",
+        "touches": 2,
+        "vol_factor_vs_median": 0.61,
+        "tolerance": 1.7046,
+        "testing_now": false
+      },
       "unit": "pct"
     },
     {
       "type": "gap_down_upper",
       "level": 201.82,
-      "distance": 7.78,
-      "strength_score": 7.7,
-      "notes": "Gap bajista del 2025-11-04 (tam. 3.27%); relleno (pendiente)",
+      "distance": 9.62,
+      "notes": "Gap bajista del 2025-11-04 (tam. 3.32%); relleno (pendiente)",
       "meta": {
         "gap_date": "2025-11-04",
         "gap_upper": 201.82,
         "gap_lower": 195.7,
         "gap_size": 6.12,
-        "gap_size_pct_vs_price": 3.27,
+        "gap_size_pct_vs_price": 3.32,
         "vol_factor_vs_median": 3.14,
         "touches_since_gap": 1,
         "last_touch_date": "2026-10-15",
-        "tolerance": 1.656,
+        "tolerance": 1.7046,
         "testing_now": false,
-        "filled": true,
-        "touch_prob_1w": {
-          "sigma_pct": 5.55,
-          "sigma_source": "em_pct_1w",
-          "z": 1.402
-        }
+        "filled": true
       },
-      "prob_touch_1w_pct": 8.0,
       "unit": "pct"
     },
     {
       "type": "avwap_event",
-      "level": 202.7738,
-      "distance": 8.29,
-      "strength_score": 8.7,
-      "notes": "AVWAP anclado a 52w high 2026-10-12 (en curso)",
+      "level": 201.0151,
+      "distance": 9.19,
+      "notes": "AVWAP anclado a 52w high 2026-10-12 (pendiente)",
       "meta": {
         "anchor_type": "52w_high",
         "anchor_date": "2026-10-12",
         "vol_factor_vs_median": 0.73,
         "gap_size_atr": null,
         "touches": null,
-        "tolerance": 1.656,
-        "testing_now": true,
+        "tolerance": 1.7046,
+        "testing_now": false,
         "min_distance_pct": 0.05,
-        "method": "daily_typical_price_vwap",
-        "touch_prob_1w": {
-          "sigma_pct": 5.55,
-          "sigma_source": "em_pct_1w",
-          "z": 1.494
-        }
+        "method": "daily_typical_price_vwap"
       },
-      "prob_touch_1w_pct": 6.8,
       "unit": "pct"
     },
     {
       "type": "call_wall_gamma",
       "level": 200.0,
-      "distance": 6.81,
-      "strength_score": 9.4,
-      "notes": "Call wall (γ-$) exp 2026-10-16; dominante (23.5% del lado call) — pendiente",
+      "distance": 8.63,
+      "notes": "Call wall (γ-$) exp 2026-10-23; dominante (13.1% del lado call) — pendiente",
       "meta": {
-        "expiration": "2026-10-16",
+        "expiration": "2026-10-23",
         "option_details": {
           "scope": "parsed_contracts_in_sampled_expirations",
           "option_type": "call",
           "strike": 200.0,
+          "aggregate_oi_basis": "gamma_eligible_contracts",
+          "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
           "sampled_expirations": [
-            "2026-10-16",
             "2026-10-23",
-            "2026-10-30"
+            "2026-10-30",
+            "2026-11-06"
           ],
           "by_expiration": [
-            {
-              "expiration": "2026-10-16",
-              "status": "observed",
-              "aggregate_oi": 12026.0,
-              "gamma_usd_millions": 1946.9191630343714,
-              "observed_contracts": [
-                {
-                  "oi": 12026.0,
-                  "included_in_wall_aggregate": true,
-                  "bid": 0.01,
-                  "ask": 0.02,
-                  "bid_date": "1792166984000",
-                  "ask_date": "1792166983000"
-                }
-              ]
-            },
             {
               "expiration": "2026-10-23",
               "status": "observed",
               "aggregate_oi": 4063.0,
-              "gamma_usd_millions": 436.66074048765245,
+              "gamma_usd_millions": 255.32169503042206,
               "observed_contracts": [
                 {
-                  "oi": 4063.0,
-                  "included_in_wall_aggregate": true,
-                  "bid": 1.15,
-                  "ask": 1.17,
-                  "bid_date": "1792166986000",
-                  "ask_date": "1792166986000"
+                  "strike": 200.0,
+                  "option_type": "call",
+                  "oi": 4063,
+                  "gamma": 0.01854,
+                  "bid": 0.8,
+                  "ask": 0.83,
+                  "last": 0.81,
+                  "bid_date": "1792180799000",
+                  "ask_date": "1792180799000",
+                  "trade_date": "1792180799205",
+                  "symbol": "PLTR261023C00200000",
+                  "root_symbol": "PLTR",
+                  "expiration_date": "2026-10-23",
+                  "contract_size": 100.0,
+                  "multiplier_basis": "provider_contract_size",
+                  "greeks_updated_at": "2026-10-16 20:00:06",
+                  "greeks_smv_vol": 0.462,
+                  "included_in_wall_aggregate": true
                 }
               ]
             },
@@ -131,28 +133,68 @@
               "expiration": "2026-10-30",
               "status": "observed",
               "aggregate_oi": 3024.0,
-              "gamma_usd_millions": 254.1655390828932,
+              "gamma_usd_millions": 180.6004623206952,
               "observed_contracts": [
                 {
-                  "oi": 3024.0,
-                  "included_in_wall_aggregate": true,
-                  "bid": 2.68,
-                  "ask": 2.73,
-                  "bid_date": "1792166987000",
-                  "ask_date": "1792166987000"
+                  "strike": 200.0,
+                  "option_type": "call",
+                  "oi": 3024,
+                  "gamma": 0.01762,
+                  "bid": 2.27,
+                  "ask": 2.35,
+                  "last": 2.28,
+                  "bid_date": "1792180798000",
+                  "ask_date": "1792180799000",
+                  "trade_date": "1792180786480",
+                  "symbol": "PLTR261030C00200000",
+                  "root_symbol": "PLTR",
+                  "expiration_date": "2026-10-30",
+                  "contract_size": 100.0,
+                  "multiplier_basis": "provider_contract_size",
+                  "greeks_updated_at": "2026-10-16 20:00:06",
+                  "greeks_smv_vol": 0.474,
+                  "included_in_wall_aggregate": true
+                }
+              ]
+            },
+            {
+              "expiration": "2026-11-06",
+              "status": "observed",
+              "aggregate_oi": 1096.0,
+              "gamma_usd_millions": 45.878443841399,
+              "observed_contracts": [
+                {
+                  "strike": 200.0,
+                  "option_type": "call",
+                  "oi": 1096,
+                  "gamma": 0.01235,
+                  "bid": 6.85,
+                  "ask": 7.2,
+                  "last": 7.0,
+                  "bid_date": "1792180799000",
+                  "ask_date": "1792180799000",
+                  "trade_date": "1792180761053",
+                  "symbol": "PLTR261106C00200000",
+                  "root_symbol": "PLTR",
+                  "expiration_date": "2026-11-06",
+                  "contract_size": 100.0,
+                  "multiplier_basis": "provider_contract_size",
+                  "greeks_updated_at": "2026-10-16 20:00:06",
+                  "greeks_smv_vol": 0.685,
+                  "included_in_wall_aggregate": true
                 }
               ]
             }
           ]
         },
-        "gamma_usd": 2637.745,
+        "gamma_usd": 481.801,
         "gamma_usd_units": "millions",
-        "gamma_usd_total_calls": 11203.416,
-        "gamma_usd_share_pct": 23.5,
-        "oi": 19113,
-        "oi_share_pct": 11.4,
-        "atr10": 8.2798,
-        "tolerance": 1.656,
+        "gamma_usd_total_calls": 3681.955,
+        "gamma_usd_share_pct": 13.1,
+        "oi": 8183,
+        "oi_share_pct": 7.6,
+        "atr10": 8.5228,
+        "tolerance": 1.7046,
         "window": "calls agregadas en top 3 expiraciones; sin filtro de distancia",
         "testing_now": false,
         "cluster": {
@@ -165,17 +207,11 @@
             205.0,
             207.5
           ],
-          "cluster_gamma_usd": 8254.613,
-          "cluster_share_pct": 73.7
+          "cluster_gamma_usd": 1627.212,
+          "cluster_share_pct": 44.2
         },
-        "method": "sum(|γ|·OI·spot²) por strike multi-exp (sin límites de distancia)",
-        "touch_prob_1w": {
-          "sigma_pct": 5.55,
-          "sigma_source": "em_pct_1w",
-          "z": 1.227
-        }
+        "method": "sum(|γ|·OI·spot²) por strike multi-exp (sin límites de distancia)"
       },
-      "prob_touch_1w_pct": 11.0,
       "unit": "pct"
     }
   ],
@@ -183,20 +219,14 @@
     {
       "type": "52_week_low",
       "level": 106.37,
-      "distance": 43.2,
-      "strength_score": 9.5,
+      "distance": 42.22,
       "notes": "Primer test (pendiente)",
       "meta": {
         "level_date": "2026-06-25",
-        "atr10": 8.2798,
-        "tolerance": 1.656,
+        "atr10": 8.5228,
+        "tolerance": 1.7046,
         "retests_since_origin": 0,
         "testing_now": false,
-        "touch_prob_1w": {
-          "sigma_pct": 5.55,
-          "sigma_source": "em_pct_1w",
-          "z": 7.784
-        },
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "hvn",
@@ -210,7 +240,7 @@
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 1.453,
+          "tolerance_abs": 1.7046,
           "test_count": 1,
           "defense_count": 1,
           "defense_rate_pct": 100.0,
@@ -218,7 +248,7 @@
           "last_test_rebound_5d_pct": 24.92,
           "median_rebound_5d_pct": 24.92,
           "max_rebound_5d_pct": 24.92,
-          "defense_min_rebound_pct": 3.41,
+          "defense_min_rebound_pct": 4.01,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
           "pending_test_count": 0,
@@ -227,34 +257,73 @@
           "excluded_incomplete_data_test_count": 0,
           "measurement_basis": {
             "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "6c470067ae8d27c1b371229f67bc3d0b2628d269d98acea88019290cd2cd8db1",
-            "history_end": "2026-10-15",
-            "atr10": 7.264769999999996,
-            "parameters_sha256": "d7291c7af1ee81450e27de806e69a20dd1e0f6aa203a5c3ae04341e30af93770"
+            "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+            "history_end": "2026-10-16",
+            "atr10": 8.522769999999998,
+            "parameters_sha256": "e18db23f7cb808e0fb6c6e6f6bda22c351788f92a248ef02afcbe5398c919b6e"
+          },
+          "path_evidence": {
+            "status": "available",
+            "method": "horizontal_coordinate_post_contact_close_path_v40",
+            "measurement_origin": "contact_session_close",
+            "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+            "intraday_order": "unknown_with_daily_bars",
+            "forward_sessions": 5,
+            "coordinate": 106.37,
+            "tolerance_abs": 1.7045539999999997,
+            "history_first_session": "2025-09-15",
+            "history_last_session": "2026-10-16",
+            "contact_count": 1,
+            "completed_count": 1,
+            "pending_count": 0,
+            "incomplete_data_count": 0,
+            "overlapping_window_count": 0,
+            "independent_trials_assumed": false,
+            "summary_scope": "all_completed_contacts",
+            "event_detail_selection": "latest_completed_contacts",
+            "negative_terminal_count": 0,
+            "positive_excursion_negative_terminal_count": 0,
+            "adverse_extreme_first_count": 1,
+            "same_session_extremes_count": 0,
+            "events": [
+              {
+                "contact_date": "2026-06-25",
+                "window_end": "2026-07-02",
+                "contact_close": 107.27,
+                "approach": "from_above",
+                "favorable_excursion_pct": 23.874336,
+                "adverse_excursion_pct": 0.0,
+                "terminal_close_return_pct": 20.536963,
+                "favorable_extreme_session": 5,
+                "adverse_extreme_session": 1,
+                "extreme_order": "adverse_extreme_first",
+                "first_close_at_or_above_contact_close_session": 1,
+                "overlaps_previous_window": false
+              }
+            ],
+            "events_omitted": 0,
+            "max_adverse_excursion_pct": 0.0,
+            "min_terminal_close_return_pct": 20.536963,
+            "median_favorable_excursion_pct": 23.874336,
+            "median_adverse_excursion_pct": 0.0,
+            "median_terminal_close_return_pct": 20.536963
           }
         }
       },
-      "prob_touch_1w_pct": 0.0,
       "unit": "pct"
     },
     {
       "type": "range_bottom_3_6m",
       "level": 168.9,
-      "distance": 9.8,
-      "strength_score": 8.5,
+      "distance": 8.26,
       "notes": "Suelo de rango 3–6m con 3 toques; último 2026-08-26 (pendiente)",
       "meta": {
         "first_touch_date": "2026-08-12",
         "last_touch_date": "2026-08-26",
         "touches": 3,
         "vol_factor_vs_median": 0.99,
-        "tolerance": 1.656,
+        "tolerance": 1.7046,
         "testing_now": false,
-        "touch_prob_1w": {
-          "sigma_pct": 5.55,
-          "sigma_source": "em_pct_1w",
-          "z": 1.766
-        },
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "hvn",
@@ -268,7 +337,7 @@
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 1.453,
+          "tolerance_abs": 1.7046,
           "test_count": 12,
           "defense_count": 10,
           "defense_rate_pct": 83.3,
@@ -276,7 +345,7 @@
           "last_test_rebound_5d_pct": 4.55,
           "median_rebound_5d_pct": 7.35,
           "max_rebound_5d_pct": 18.32,
-          "defense_min_rebound_pct": 2.15,
+          "defense_min_rebound_pct": 2.52,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
           "pending_test_count": 0,
@@ -285,39 +354,106 @@
           "excluded_incomplete_data_test_count": 0,
           "measurement_basis": {
             "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "6c470067ae8d27c1b371229f67bc3d0b2628d269d98acea88019290cd2cd8db1",
-            "history_end": "2026-10-15",
-            "atr10": 7.264769999999996,
-            "parameters_sha256": "fc1b59ae5a8d63d7465c6eebdf0709330903214b84fc94da77c3556a1fee740d"
+            "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+            "history_end": "2026-10-16",
+            "atr10": 8.522769999999998,
+            "parameters_sha256": "953820524231e16343600689f4fa3b1bc650c882695876135db255cedb795bce"
+          },
+          "path_evidence": {
+            "status": "available",
+            "method": "horizontal_coordinate_post_contact_close_path_v40",
+            "measurement_origin": "contact_session_close",
+            "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+            "intraday_order": "unknown_with_daily_bars",
+            "forward_sessions": 5,
+            "coordinate": 168.9,
+            "tolerance_abs": 1.7045539999999997,
+            "history_first_session": "2025-09-15",
+            "history_last_session": "2026-10-16",
+            "contact_count": 13,
+            "completed_count": 13,
+            "pending_count": 0,
+            "incomplete_data_count": 0,
+            "overlapping_window_count": 6,
+            "independent_trials_assumed": false,
+            "summary_scope": "all_completed_contacts",
+            "event_detail_selection": "latest_completed_contacts",
+            "negative_terminal_count": 5,
+            "positive_excursion_negative_terminal_count": 5,
+            "adverse_extreme_first_count": 7,
+            "same_session_extremes_count": 0,
+            "events": [
+              {
+                "contact_date": "2026-08-26",
+                "window_end": "2026-09-02",
+                "contact_close": 177.5,
+                "approach": "from_above",
+                "favorable_excursion_pct": 6.123944,
+                "adverse_excursion_pct": 6.642254,
+                "terminal_close_return_pct": -4.529577,
+                "favorable_extreme_session": 2,
+                "adverse_extreme_session": 5,
+                "extreme_order": "favorable_extreme_first",
+                "first_close_at_or_above_contact_close_session": 1,
+                "overlaps_previous_window": true
+              },
+              {
+                "contact_date": "2026-09-02",
+                "window_end": "2026-09-10",
+                "contact_close": 169.46,
+                "approach": "from_above",
+                "favorable_excursion_pct": 9.660097,
+                "adverse_excursion_pct": 2.897439,
+                "terminal_close_return_pct": -2.124395,
+                "favorable_extreme_session": 1,
+                "adverse_extreme_session": 5,
+                "extreme_order": "favorable_extreme_first",
+                "first_close_at_or_above_contact_close_session": 1,
+                "overlaps_previous_window": true
+              },
+              {
+                "contact_date": "2026-09-08",
+                "window_end": "2026-09-15",
+                "contact_close": 170.3,
+                "approach": "from_above",
+                "favorable_excursion_pct": 3.693482,
+                "adverse_excursion_pct": 3.376395,
+                "terminal_close_return_pct": 1.32707,
+                "favorable_extreme_session": 5,
+                "adverse_extreme_session": 2,
+                "extreme_order": "adverse_extreme_first",
+                "first_close_at_or_above_contact_close_session": 4,
+                "overlaps_previous_window": true
+              }
+            ],
+            "events_omitted": 10,
+            "max_adverse_excursion_pct": 15.200276,
+            "min_terminal_close_return_pct": -11.010861,
+            "median_favorable_excursion_pct": 6.123944,
+            "median_adverse_excursion_pct": 3.376395,
+            "median_terminal_close_return_pct": 1.318568
           }
         }
       },
-      "prob_touch_1w_pct": 3.9,
       "unit": "pct"
     },
     {
       "type": "gap_up_lower",
       "level": 126.965,
-      "distance": 32.2,
-      "strength_score": 8.7,
-      "notes": "Gap alcista del 2026-08-04 (tam. 8.71%); abierto (pendiente)",
+      "distance": 31.04,
+      "notes": "Gap alcista del 2026-08-04 (tam. 8.86%); abierto (pendiente)",
       "meta": {
         "gap_date": "2026-08-04",
         "gap_upper": 143.28,
         "gap_lower": 126.965,
         "gap_size": 16.315,
-        "gap_size_pct_vs_price": 8.71,
+        "gap_size_pct_vs_price": 8.86,
         "vol_factor_vs_median": 4.53,
         "touches_since_gap": 0,
         "last_touch_date": null,
-        "tolerance": 1.656,
+        "tolerance": 1.7046,
         "testing_now": false,
         "filled": false,
-        "touch_prob_1w": {
-          "sigma_pct": 5.55,
-          "sigma_source": "em_pct_1w",
-          "z": 5.802
-        },
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "poc",
@@ -331,15 +467,15 @@
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 1.453,
-          "test_count": 12,
+          "tolerance_abs": 1.7046,
+          "test_count": 11,
           "defense_count": 9,
-          "defense_rate_pct": 75.0,
+          "defense_rate_pct": 81.8,
           "last_test_date": "2026-08-03",
           "last_test_rebound_5d_pct": 41.46,
-          "median_rebound_5d_pct": 8.6,
+          "median_rebound_5d_pct": 9.4,
           "max_rebound_5d_pct": 41.46,
-          "defense_min_rebound_pct": 2.86,
+          "defense_min_rebound_pct": 3.36,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
           "pending_test_count": 0,
@@ -348,59 +484,126 @@
           "excluded_incomplete_data_test_count": 0,
           "measurement_basis": {
             "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "6c470067ae8d27c1b371229f67bc3d0b2628d269d98acea88019290cd2cd8db1",
-            "history_end": "2026-10-15",
-            "atr10": 7.264769999999996,
-            "parameters_sha256": "066d81422ace5b83cad6d16ca557766727f368ec35eae0ae0df0ef11dd878fb7"
+            "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+            "history_end": "2026-10-16",
+            "atr10": 8.522769999999998,
+            "parameters_sha256": "b088ce71e6302b44670a132a3e20c120d06c35ab4124dfc5734d688a0ab34e2e"
+          },
+          "path_evidence": {
+            "status": "available",
+            "method": "horizontal_coordinate_post_contact_close_path_v40",
+            "measurement_origin": "contact_session_close",
+            "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+            "intraday_order": "unknown_with_daily_bars",
+            "forward_sessions": 5,
+            "coordinate": 126.965,
+            "tolerance_abs": 1.7045539999999997,
+            "history_first_session": "2025-09-15",
+            "history_last_session": "2026-10-16",
+            "contact_count": 11,
+            "completed_count": 11,
+            "pending_count": 0,
+            "incomplete_data_count": 0,
+            "overlapping_window_count": 4,
+            "independent_trials_assumed": false,
+            "summary_scope": "all_completed_contacts",
+            "event_detail_selection": "latest_completed_contacts",
+            "negative_terminal_count": 4,
+            "positive_excursion_negative_terminal_count": 4,
+            "adverse_extreme_first_count": 6,
+            "same_session_extremes_count": 0,
+            "events": [
+              {
+                "contact_date": "2026-07-08",
+                "window_end": "2026-07-15",
+                "contact_close": 132.22,
+                "approach": "from_above",
+                "favorable_excursion_pct": 3.524429,
+                "adverse_excursion_pct": 7.2455,
+                "terminal_close_return_pct": 1.164725,
+                "favorable_extreme_session": 5,
+                "adverse_extreme_session": 4,
+                "extreme_order": "adverse_extreme_first",
+                "first_close_at_or_above_contact_close_session": 4,
+                "overlaps_previous_window": true
+              },
+              {
+                "contact_date": "2026-07-22",
+                "window_end": "2026-07-29",
+                "contact_close": 124.57,
+                "approach": "from_above",
+                "favorable_excursion_pct": 6.29365,
+                "adverse_excursion_pct": 5.362447,
+                "terminal_close_return_pct": -1.260336,
+                "favorable_extreme_session": 3,
+                "adverse_extreme_session": 4,
+                "extreme_order": "favorable_extreme_first",
+                "first_close_at_or_above_contact_close_session": 3,
+                "overlaps_previous_window": false
+              },
+              {
+                "contact_date": "2026-08-03",
+                "window_end": "2026-08-10",
+                "contact_close": 125.65,
+                "approach": "from_below",
+                "favorable_excursion_pct": 42.936729,
+                "adverse_excursion_pct": 0.0,
+                "terminal_close_return_pct": 39.458814,
+                "favorable_extreme_session": 5,
+                "adverse_extreme_session": 1,
+                "extreme_order": "adverse_extreme_first",
+                "first_close_at_or_above_contact_close_session": 1,
+                "overlaps_previous_window": false
+              }
+            ],
+            "events_omitted": 8,
+            "max_adverse_excursion_pct": 17.20246,
+            "min_terminal_close_return_pct": -12.096209,
+            "median_favorable_excursion_pct": 9.163246,
+            "median_adverse_excursion_pct": 4.103884,
+            "median_terminal_close_return_pct": 1.164725
           }
         }
       },
-      "prob_touch_1w_pct": 0.0,
       "unit": "pct"
     },
     {
       "type": "avwap_event_support",
-      "level": 177.2462,
-      "distance": 5.34,
-      "strength_score": 9.4,
-      "notes": "AVWAP anclado a gap-up del 2026-08-04 (pendiente)",
+      "level": 157.2151,
+      "distance": 14.61,
+      "notes": "AVWAP anclado a 52w low 2026-06-25 (pendiente)",
       "meta": {
-        "anchor_type": "gap_up",
-        "anchor_date": "2026-08-04",
-        "vol_factor_vs_median": 4.53,
-        "gap_size_atr": 1.97,
+        "anchor_type": "52w_low",
+        "anchor_date": "2026-06-25",
+        "vol_factor_vs_median": 1.85,
+        "gap_size_atr": null,
         "touches": null,
-        "tolerance": 1.656,
+        "tolerance": 1.7046,
         "testing_now": false,
         "min_distance_pct": 0.05,
         "method": "daily_typical_price_vwap",
-        "touch_prob_1w": {
-          "sigma_pct": 5.55,
-          "sigma_source": "em_pct_1w",
-          "z": 0.962
-        },
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "hvn",
-          "nearest_level": 171.8661,
-          "nearest_distance_pct": -3.04,
-          "nearest_abs_distance_pct": 3.04,
-          "poc_distance_pct": -24.33,
-          "nearest_hvn_distance_pct": -3.04
+          "nearest_level": 143.0034,
+          "nearest_distance_pct": -9.04,
+          "nearest_abs_distance_pct": 9.04,
+          "poc_distance_pct": -14.69,
+          "nearest_hvn_distance_pct": -9.04
         },
         "historical_reaction": {
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 1.453,
-          "test_count": 13,
-          "defense_count": 6,
-          "defense_rate_pct": 46.2,
-          "last_test_date": "2026-09-17",
-          "last_test_rebound_5d_pct": 9.84,
-          "median_rebound_5d_pct": 4.84,
-          "max_rebound_5d_pct": 12.21,
-          "defense_min_rebound_pct": 2.05,
+          "tolerance_abs": 1.7046,
+          "test_count": 9,
+          "defense_count": 4,
+          "defense_rate_pct": 44.4,
+          "last_test_date": "2026-08-04",
+          "last_test_rebound_5d_pct": 14.24,
+          "median_rebound_5d_pct": 3.3,
+          "max_rebound_5d_pct": 14.24,
+          "defense_min_rebound_pct": 2.71,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
           "pending_test_count": 0,
@@ -409,21 +612,94 @@
           "excluded_incomplete_data_test_count": 0,
           "measurement_basis": {
             "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "6c470067ae8d27c1b371229f67bc3d0b2628d269d98acea88019290cd2cd8db1",
-            "history_end": "2026-10-15",
-            "atr10": 7.264769999999996,
-            "parameters_sha256": "485da400a9ef3e2f3402d9b1d20d29f740fa31e00b5496b16b4a4c974ab8d8e3"
+            "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+            "history_end": "2026-10-16",
+            "atr10": 8.522769999999998,
+            "parameters_sha256": "3d71cf67fbeb1ec5f8d8946ace14be34be60c3d17045fde20b02aebffde3c765"
+          },
+          "path_evidence": {
+            "status": "available",
+            "method": "horizontal_coordinate_post_contact_close_path_v40",
+            "measurement_origin": "contact_session_close",
+            "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+            "intraday_order": "unknown_with_daily_bars",
+            "forward_sessions": 5,
+            "coordinate": 157.2151,
+            "tolerance_abs": 1.7045539999999997,
+            "history_first_session": "2025-09-15",
+            "history_last_session": "2026-10-16",
+            "contact_count": 9,
+            "completed_count": 9,
+            "pending_count": 0,
+            "incomplete_data_count": 0,
+            "overlapping_window_count": 3,
+            "independent_trials_assumed": false,
+            "summary_scope": "all_completed_contacts",
+            "event_detail_selection": "latest_completed_contacts",
+            "negative_terminal_count": 4,
+            "positive_excursion_negative_terminal_count": 3,
+            "adverse_extreme_first_count": 5,
+            "same_session_extremes_count": 0,
+            "events": [
+              {
+                "contact_date": "2026-04-08",
+                "window_end": "2026-04-15",
+                "contact_close": 140.76,
+                "approach": "from_below",
+                "favorable_excursion_pct": 1.292981,
+                "adverse_excursion_pct": 12.844558,
+                "terminal_close_return_pct": 0.987496,
+                "favorable_extreme_session": 5,
+                "adverse_extreme_session": 2,
+                "extreme_order": "adverse_extreme_first",
+                "first_close_at_or_above_contact_close_session": 5,
+                "overlaps_previous_window": false
+              },
+              {
+                "contact_date": "2026-05-29",
+                "window_end": "2026-06-05",
+                "contact_close": 156.54,
+                "approach": "from_below",
+                "favorable_excursion_pct": 4.573911,
+                "adverse_excursion_pct": 14.382905,
+                "terminal_close_return_pct": -13.42149,
+                "favorable_extreme_session": 1,
+                "adverse_extreme_session": 5,
+                "extreme_order": "favorable_extreme_first",
+                "first_close_at_or_above_contact_close_session": 1,
+                "overlaps_previous_window": false
+              },
+              {
+                "contact_date": "2026-08-04",
+                "window_end": "2026-08-11",
+                "contact_close": 162.66,
+                "approach": "from_below",
+                "favorable_excursion_pct": 10.414361,
+                "adverse_excursion_pct": 6.123202,
+                "terminal_close_return_pct": 7.54949,
+                "favorable_extreme_session": 4,
+                "adverse_extreme_session": 2,
+                "extreme_order": "adverse_extreme_first",
+                "first_close_at_or_above_contact_close_session": 3,
+                "overlaps_previous_window": false
+              }
+            ],
+            "events_omitted": 6,
+            "max_adverse_excursion_pct": 18.723081,
+            "min_terminal_close_return_pct": -13.42149,
+            "median_favorable_excursion_pct": 4.720144,
+            "median_adverse_excursion_pct": 6.123202,
+            "median_terminal_close_return_pct": 0.543656
           }
         }
       },
-      "prob_touch_1w_pct": 16.8,
       "unit": "pct"
     }
   ],
   "observed_origins": [
     {
       "type": "avwap_observation",
-      "level": 177.2462,
+      "level": 177.38,
       "status": "available",
       "reason": null,
       "meta": {
@@ -434,24 +710,24 @@
           "status": "available",
           "nearest_type": "hvn",
           "nearest_level": 171.8661,
-          "nearest_distance_pct": -3.04,
-          "nearest_abs_distance_pct": 3.04,
-          "poc_distance_pct": -24.33,
-          "nearest_hvn_distance_pct": -3.04
+          "nearest_distance_pct": -3.11,
+          "nearest_abs_distance_pct": 3.11,
+          "poc_distance_pct": -24.39,
+          "nearest_hvn_distance_pct": -3.11
         },
         "historical_reaction": {
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
-          "tolerance_abs": 1.453,
+          "tolerance_abs": 1.7046,
           "test_count": 13,
-          "defense_count": 6,
-          "defense_rate_pct": 46.2,
+          "defense_count": 5,
+          "defense_rate_pct": 38.5,
           "last_test_date": "2026-09-17",
-          "last_test_rebound_5d_pct": 9.84,
-          "median_rebound_5d_pct": 4.84,
-          "max_rebound_5d_pct": 12.21,
-          "defense_min_rebound_pct": 2.05,
+          "last_test_rebound_5d_pct": 9.75,
+          "median_rebound_5d_pct": 4.6,
+          "max_rebound_5d_pct": 12.12,
+          "defense_min_rebound_pct": 2.4,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
           "pending_test_count": 0,
@@ -460,10 +736,191 @@
           "excluded_incomplete_data_test_count": 0,
           "measurement_basis": {
             "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "6c470067ae8d27c1b371229f67bc3d0b2628d269d98acea88019290cd2cd8db1",
-            "history_end": "2026-10-15",
-            "atr10": 7.264769999999996,
-            "parameters_sha256": "485da400a9ef3e2f3402d9b1d20d29f740fa31e00b5496b16b4a4c974ab8d8e3"
+            "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+            "history_end": "2026-10-16",
+            "atr10": 8.522769999999998,
+            "parameters_sha256": "4e8b7892107901ebd49899402df0bd52dff338f150ab6ea8349016242b4927eb"
+          },
+          "path_evidence": {
+            "status": "available",
+            "method": "horizontal_coordinate_post_contact_close_path_v40",
+            "measurement_origin": "contact_session_close",
+            "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+            "intraday_order": "unknown_with_daily_bars",
+            "forward_sessions": 5,
+            "coordinate": 177.38,
+            "tolerance_abs": 1.7045539999999997,
+            "history_first_session": "2025-09-15",
+            "history_last_session": "2026-10-16",
+            "contact_count": 15,
+            "completed_count": 15,
+            "pending_count": 0,
+            "incomplete_data_count": 0,
+            "overlapping_window_count": 6,
+            "independent_trials_assumed": false,
+            "summary_scope": "all_completed_contacts",
+            "event_detail_selection": "latest_completed_contacts",
+            "negative_terminal_count": 6,
+            "positive_excursion_negative_terminal_count": 6,
+            "adverse_extreme_first_count": 9,
+            "same_session_extremes_count": 0,
+            "events": [
+              {
+                "contact_date": "2026-09-02",
+                "window_end": "2026-09-10",
+                "contact_close": 169.46,
+                "approach": "from_above",
+                "favorable_excursion_pct": 9.660097,
+                "adverse_excursion_pct": 2.897439,
+                "terminal_close_return_pct": -2.124395,
+                "favorable_extreme_session": 1,
+                "adverse_extreme_session": 5,
+                "extreme_order": "favorable_extreme_first",
+                "first_close_at_or_above_contact_close_session": 1,
+                "overlaps_previous_window": false
+              },
+              {
+                "contact_date": "2026-09-15",
+                "window_end": "2026-09-22",
+                "contact_close": 172.56,
+                "approach": "from_below",
+                "favorable_excursion_pct": 7.522021,
+                "adverse_excursion_pct": 2.086231,
+                "terminal_close_return_pct": 7.203292,
+                "favorable_extreme_session": 5,
+                "adverse_extreme_session": 1,
+                "extreme_order": "adverse_extreme_first",
+                "first_close_at_or_above_contact_close_session": 1,
+                "overlaps_previous_window": false
+              },
+              {
+                "contact_date": "2026-09-17",
+                "window_end": "2026-09-24",
+                "contact_close": 176.24,
+                "approach": "from_below",
+                "favorable_excursion_pct": 10.463005,
+                "adverse_excursion_pct": 2.40581,
+                "terminal_close_return_pct": 9.277122,
+                "favorable_extreme_session": 5,
+                "adverse_extreme_session": 1,
+                "extreme_order": "adverse_extreme_first",
+                "first_close_at_or_above_contact_close_session": 1,
+                "overlaps_previous_window": true
+              }
+            ],
+            "events_omitted": 12,
+            "max_adverse_excursion_pct": 10.30847,
+            "min_terminal_close_return_pct": -9.524224,
+            "median_favorable_excursion_pct": 6.226508,
+            "median_adverse_excursion_pct": 2.897439,
+            "median_terminal_close_return_pct": 1.318568
+          }
+        }
+      }
+    },
+    {
+      "type": "avwap_observation",
+      "level": 201.0151,
+      "status": "available",
+      "reason": null,
+      "meta": {
+        "anchor_date": "2026-10-12",
+        "anchor_type": "requested_dated_origin",
+        "selection": "continuity_observation_not_support_verdict",
+        "volume_profile_proximity": {
+          "status": "available",
+          "nearest_type": "hvn",
+          "nearest_level": 187.4075,
+          "nearest_distance_pct": -6.77,
+          "nearest_abs_distance_pct": 6.77,
+          "poc_distance_pct": -33.28,
+          "nearest_hvn_distance_pct": -6.77
+        },
+        "historical_reaction": {
+          "status": "available",
+          "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+          "lookback_sessions": 252,
+          "tolerance_abs": 1.7046,
+          "test_count": 2,
+          "defense_count": 0,
+          "defense_rate_pct": 0.0,
+          "last_test_date": "2026-10-08",
+          "last_test_rebound_5d_pct": 5.93,
+          "median_rebound_5d_pct": 4.58,
+          "max_rebound_5d_pct": 5.93,
+          "defense_min_rebound_pct": 2.12,
+          "observation_policy": "complete_forward_window_only",
+          "forward_sessions": 5,
+          "pending_test_count": 1,
+          "last_pending_test_date": "2026-10-14",
+          "last_pending_observed_sessions": 2,
+          "excluded_incomplete_data_test_count": 0,
+          "measurement_basis": {
+            "calibration": "completed_daily_atr10_v1",
+            "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+            "history_end": "2026-10-16",
+            "atr10": 8.522769999999998,
+            "parameters_sha256": "40a455e021d32be12a4ab2d15ae99c6e9e9618b4ec3340e2e828eb87be461147"
+          },
+          "path_evidence": {
+            "status": "available",
+            "method": "horizontal_coordinate_post_contact_close_path_v40",
+            "measurement_origin": "contact_session_close",
+            "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+            "intraday_order": "unknown_with_daily_bars",
+            "forward_sessions": 5,
+            "coordinate": 201.0151,
+            "tolerance_abs": 1.7045539999999997,
+            "history_first_session": "2025-09-15",
+            "history_last_session": "2026-10-16",
+            "contact_count": 3,
+            "completed_count": 2,
+            "pending_count": 1,
+            "incomplete_data_count": 0,
+            "overlapping_window_count": 0,
+            "independent_trials_assumed": false,
+            "summary_scope": "all_completed_contacts",
+            "event_detail_selection": "latest_completed_contacts",
+            "negative_terminal_count": 1,
+            "positive_excursion_negative_terminal_count": 1,
+            "adverse_extreme_first_count": 0,
+            "same_session_extremes_count": 0,
+            "events": [
+              {
+                "contact_date": "2025-10-29",
+                "window_end": "2025-11-05",
+                "contact_close": 198.81,
+                "approach": "from_below",
+                "favorable_excursion_pct": 4.381067,
+                "adverse_excursion_pct": 8.852673,
+                "terminal_close_return_pct": -5.487652,
+                "favorable_extreme_session": 3,
+                "adverse_extreme_session": 5,
+                "extreme_order": "favorable_extreme_first",
+                "first_close_at_or_above_contact_close_session": 2,
+                "overlaps_previous_window": false
+              },
+              {
+                "contact_date": "2026-10-08",
+                "window_end": "2026-10-15",
+                "contact_close": 198.78,
+                "approach": "from_below",
+                "favorable_excursion_pct": 7.123403,
+                "adverse_excursion_pct": 3.108965,
+                "terminal_close_return_pct": 0.865278,
+                "favorable_extreme_session": 2,
+                "adverse_extreme_session": 5,
+                "extreme_order": "favorable_extreme_first",
+                "first_close_at_or_above_contact_close_session": 1,
+                "overlaps_previous_window": false
+              }
+            ],
+            "events_omitted": 0,
+            "max_adverse_excursion_pct": 8.852673,
+            "min_terminal_close_return_pct": -5.487652,
+            "median_favorable_excursion_pct": 5.752235,
+            "median_adverse_excursion_pct": 5.980819,
+            "median_terminal_close_return_pct": -2.311187
           }
         }
       }
@@ -471,53 +928,51 @@
   ],
   "relative_strength": {
     "vs_spy": {
-      "20d_diff_pct": 4.71,
-      "60d_diff_pct": 47.87
+      "20d_diff_pct": 4.52,
+      "60d_diff_pct": 47.39
     }
   },
   "call_walls_top": [
     {
       "level": 200.0,
-      "expiration": "2026-10-16",
+      "expiration": "2026-10-23",
       "option_details": {
         "scope": "parsed_contracts_in_sampled_expirations",
         "option_type": "call",
         "strike": 200.0,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
         "sampled_expirations": [
-          "2026-10-16",
           "2026-10-23",
-          "2026-10-30"
+          "2026-10-30",
+          "2026-11-06"
         ],
         "by_expiration": [
-          {
-            "expiration": "2026-10-16",
-            "status": "observed",
-            "aggregate_oi": 12026.0,
-            "gamma_usd_millions": 1946.9191630343714,
-            "observed_contracts": [
-              {
-                "oi": 12026.0,
-                "included_in_wall_aggregate": true,
-                "bid": 0.01,
-                "ask": 0.02,
-                "bid_date": "1792166984000",
-                "ask_date": "1792166983000"
-              }
-            ]
-          },
           {
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 4063.0,
-            "gamma_usd_millions": 436.66074048765245,
+            "gamma_usd_millions": 255.32169503042206,
             "observed_contracts": [
               {
-                "oi": 4063.0,
-                "included_in_wall_aggregate": true,
-                "bid": 1.15,
-                "ask": 1.17,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166986000"
+                "strike": 200.0,
+                "option_type": "call",
+                "oi": 4063,
+                "gamma": 0.01854,
+                "bid": 0.8,
+                "ask": 0.83,
+                "last": 0.81,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180799205",
+                "symbol": "PLTR261023C00200000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.462,
+                "included_in_wall_aggregate": true
               }
             ]
           },
@@ -525,24 +980,64 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 3024.0,
-            "gamma_usd_millions": 254.1655390828932,
+            "gamma_usd_millions": 180.6004623206952,
             "observed_contracts": [
               {
-                "oi": 3024.0,
-                "included_in_wall_aggregate": true,
-                "bid": 2.68,
-                "ask": 2.73,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166987000"
+                "strike": 200.0,
+                "option_type": "call",
+                "oi": 3024,
+                "gamma": 0.01762,
+                "bid": 2.27,
+                "ask": 2.35,
+                "last": 2.28,
+                "bid_date": "1792180798000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180786480",
+                "symbol": "PLTR261030C00200000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.474,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 1096.0,
+            "gamma_usd_millions": 45.878443841399,
+            "observed_contracts": [
+              {
+                "strike": 200.0,
+                "option_type": "call",
+                "oi": 1096,
+                "gamma": 0.01235,
+                "bid": 6.85,
+                "ask": 7.2,
+                "last": 7.0,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180761053",
+                "symbol": "PLTR261106C00200000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.685,
+                "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 2637.745,
-      "gamma_share_pct": 23.5,
-      "oi": 19113,
-      "oi_share_pct": 11.4,
+      "gamma_usd_millions": 481.801,
+      "gamma_share_pct": 13.1,
+      "oi": 8183,
+      "oi_share_pct": 7.6,
       "cluster_neighbors": [
         192.5,
         195.0,
@@ -552,292 +1047,286 @@
         205.0,
         207.5
       ],
-      "cluster_gamma_usd": 8254.613,
-      "cluster_share_pct": 73.7,
-      "distance": 6.81
+      "cluster_gamma_usd": 1627.212,
+      "cluster_share_pct": 44.2,
+      "distance": 8.63
     },
     {
-      "level": 195.0,
-      "expiration": "2026-10-16",
+      "level": 180.0,
+      "expiration": "2026-10-23",
       "option_details": {
         "scope": "parsed_contracts_in_sampled_expirations",
         "option_type": "call",
-        "strike": 195.0,
+        "strike": 180.0,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
         "sampled_expirations": [
-          "2026-10-16",
           "2026-10-23",
-          "2026-10-30"
+          "2026-10-30",
+          "2026-11-06"
         ],
         "by_expiration": [
           {
-            "expiration": "2026-10-16",
-            "status": "observed",
-            "aggregate_oi": 3743.0,
-            "gamma_usd_millions": 1755.548907673739,
-            "observed_contracts": [
-              {
-                "oi": 3743.0,
-                "included_in_wall_aggregate": true,
-                "bid": 0.02,
-                "ask": 0.03,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166986000"
-              }
-            ]
-          },
-          {
             "expiration": "2026-10-23",
             "status": "observed",
-            "aggregate_oi": 1432.0,
-            "gamma_usd_millions": 160.1269320780462,
+            "aggregate_oi": 4686.0,
+            "gamma_usd_millions": 415.6589859181435,
             "observed_contracts": [
               {
-                "oi": 1432.0,
-                "included_in_wall_aggregate": true,
-                "bid": 2.22,
-                "ask": 2.26,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166986000"
+                "strike": 180.0,
+                "option_type": "call",
+                "oi": 4686,
+                "gamma": 0.02617,
+                "bid": 8.65,
+                "ask": 9.1,
+                "last": 9.22,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180519073",
+                "symbol": "PLTR261023C00180000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.508,
+                "included_in_wall_aggregate": true
               }
             ]
           },
           {
             "expiration": "2026-10-30",
             "status": "observed",
-            "aggregate_oi": 1086.0,
-            "gamma_usd_millions": 92.95322248308314,
+            "aggregate_oi": 483.0,
+            "gamma_usd_millions": 32.627635075034476,
             "observed_contracts": [
               {
-                "oi": 1086.0,
-                "included_in_wall_aggregate": true,
-                "bid": 4.1,
-                "ask": 4.2,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166987000"
+                "strike": 180.0,
+                "option_type": "call",
+                "oi": 483,
+                "gamma": 0.01993,
+                "bid": 10.5,
+                "ask": 11.35,
+                "last": 10.7,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180064937",
+                "symbol": "PLTR261030C00180000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.51,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 298.0,
+            "gamma_usd_millions": 12.524751446757998,
+            "observed_contracts": [
+              {
+                "strike": 180.0,
+                "option_type": "call",
+                "oi": 298,
+                "gamma": 0.0124,
+                "bid": 15.7,
+                "ask": 16.15,
+                "last": 16.0,
+                "bid_date": "1792180800000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180666957",
+                "symbol": "PLTR261106C00180000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.71,
+                "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 2008.629,
-      "gamma_share_pct": 17.9,
-      "oi": 6261,
-      "oi_share_pct": 3.7,
+      "gamma_usd_millions": 460.811,
+      "gamma_share_pct": 12.5,
+      "oi": 5467,
+      "oi_share_pct": 5.1,
       "cluster_neighbors": [
-        187.5,
-        190.0,
-        192.5,
-        195.0,
-        197.5,
-        200.0,
-        202.5
+        172.5,
+        175.0,
+        177.5,
+        180.0,
+        182.5,
+        185.0,
+        187.5
       ],
-      "cluster_gamma_usd": 8393.352,
-      "cluster_share_pct": 74.9,
-      "distance": 4.14
+      "cluster_gamma_usd": 940.047,
+      "cluster_share_pct": 25.5,
+      "distance": -2.23
     },
     {
-      "level": 197.5,
-      "expiration": "2026-10-16",
+      "level": 205.0,
+      "expiration": "2026-10-30",
       "option_details": {
         "scope": "parsed_contracts_in_sampled_expirations",
         "option_type": "call",
-        "strike": 197.5,
+        "strike": 205.0,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
         "sampled_expirations": [
-          "2026-10-16",
           "2026-10-23",
-          "2026-10-30"
+          "2026-10-30",
+          "2026-11-06"
         ],
         "by_expiration": [
           {
-            "expiration": "2026-10-16",
-            "status": "observed",
-            "aggregate_oi": 2789.0,
-            "gamma_usd_millions": 990.36702092641,
-            "observed_contracts": [
-              {
-                "oi": 2789.0,
-                "included_in_wall_aggregate": true,
-                "bid": 0.01,
-                "ask": 0.02,
-                "bid_date": "1792166984000",
-                "ask_date": "1792166984000"
-              }
-            ]
-          },
-          {
             "expiration": "2026-10-23",
             "status": "observed",
-            "aggregate_oi": 549.0,
-            "gamma_usd_millions": 61.5241979526051,
+            "aggregate_oi": 2931.0,
+            "gamma_usd_millions": 118.71754047435861,
             "observed_contracts": [
               {
-                "oi": 549.0,
-                "included_in_wall_aggregate": true,
-                "bid": 1.61,
-                "ask": 1.64,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166987000"
+                "strike": 205.0,
+                "option_type": "call",
+                "oi": 2931,
+                "gamma": 0.01195,
+                "bid": 0.37,
+                "ask": 0.4,
+                "last": 0.38,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180796550",
+                "symbol": "PLTR261023C00205000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.47,
+                "included_in_wall_aggregate": true
               }
             ]
           },
           {
             "expiration": "2026-10-30",
             "status": "observed",
-            "aggregate_oi": 602.0,
-            "gamma_usd_millions": 51.969840696993096,
+            "aggregate_oi": 3531.0,
+            "gamma_usd_millions": 169.11068404298555,
             "observed_contracts": [
               {
-                "oi": 602.0,
-                "included_in_wall_aggregate": true,
-                "bid": 3.3,
-                "ask": 3.4,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166986000"
+                "strike": 205.0,
+                "option_type": "call",
+                "oi": 3531,
+                "gamma": 0.01413,
+                "bid": 1.36,
+                "ask": 1.47,
+                "last": 1.41,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180783649",
+                "symbol": "PLTR261030C00205000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.471,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 1394.0,
+            "gamma_usd_millions": 54.6200099193506,
+            "observed_contracts": [
+              {
+                "strike": 205.0,
+                "option_type": "call",
+                "oi": 1394,
+                "gamma": 0.01156,
+                "bid": 5.4,
+                "ask": 5.9,
+                "last": 5.47,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180526779",
+                "symbol": "PLTR261106C00205000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.682,
+                "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 1103.861,
-      "gamma_share_pct": 9.9,
-      "oi": 3940,
-      "oi_share_pct": 2.3,
+      "gamma_usd_millions": 342.448,
+      "gamma_share_pct": 9.3,
+      "oi": 7856,
+      "oi_share_pct": 7.3,
       "cluster_neighbors": [
-        190.0,
-        192.5,
-        195.0,
         197.5,
         200.0,
         202.5,
-        205.0
+        205.0,
+        207.5,
+        210.0,
+        212.5
       ],
-      "cluster_gamma_usd": 9053.688,
-      "cluster_share_pct": 80.8,
-      "distance": 5.47
-    },
-    {
-      "level": 190.0,
-      "expiration": "2026-10-16",
-      "option_details": {
-        "scope": "parsed_contracts_in_sampled_expirations",
-        "option_type": "call",
-        "strike": 190.0,
-        "sampled_expirations": [
-          "2026-10-16",
-          "2026-10-23",
-          "2026-10-30"
-        ],
-        "by_expiration": [
-          {
-            "expiration": "2026-10-16",
-            "status": "observed",
-            "aggregate_oi": 5520.0,
-            "gamma_usd_millions": 810.03052639953,
-            "observed_contracts": [
-              {
-                "oi": 5520.0,
-                "included_in_wall_aggregate": true,
-                "bid": 0.28,
-                "ask": 0.3,
-                "bid_date": "1792166985000",
-                "ask_date": "1792166985000"
-              }
-            ]
-          },
-          {
-            "expiration": "2026-10-23",
-            "status": "observed",
-            "aggregate_oi": 1106.0,
-            "gamma_usd_millions": 108.54876112028235,
-            "observed_contracts": [
-              {
-                "oi": 1106.0,
-                "included_in_wall_aggregate": true,
-                "bid": 3.95,
-                "ask": 4.0,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166987000"
-              }
-            ]
-          },
-          {
-            "expiration": "2026-10-30",
-            "status": "observed",
-            "aggregate_oi": 1437.0,
-            "gamma_usd_millions": 109.0387515353217,
-            "observed_contracts": [
-              {
-                "oi": 1437.0,
-                "included_in_wall_aggregate": true,
-                "bid": 6.05,
-                "ask": 6.15,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166986000"
-              }
-            ]
-          }
-        ]
-      },
-      "gamma_usd_millions": 1027.618,
-      "gamma_share_pct": 9.2,
-      "oi": 8063,
-      "oi_share_pct": 4.8,
-      "cluster_neighbors": [
-        182.5,
-        185.0,
-        187.5,
-        190.0,
-        192.5,
-        195.0,
-        197.5
-      ],
-      "cluster_gamma_usd": 5401.799,
-      "cluster_share_pct": 48.2,
-      "distance": 1.47
+      "cluster_gamma_usd": 1480.306,
+      "cluster_share_pct": 40.2,
+      "distance": 11.35
     },
     {
       "level": 192.5,
-      "expiration": "2026-10-16",
+      "expiration": "2026-10-30",
       "option_details": {
         "scope": "parsed_contracts_in_sampled_expirations",
         "option_type": "call",
         "strike": 192.5,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
         "sampled_expirations": [
-          "2026-10-16",
           "2026-10-23",
-          "2026-10-30"
+          "2026-10-30",
+          "2026-11-06"
         ],
         "by_expiration": [
-          {
-            "expiration": "2026-10-16",
-            "status": "observed",
-            "aggregate_oi": 2324.0,
-            "gamma_usd_millions": 716.376365860297,
-            "observed_contracts": [
-              {
-                "oi": 2324.0,
-                "included_in_wall_aggregate": true,
-                "bid": 0.06,
-                "ask": 0.07,
-                "bid_date": "1792166985000",
-                "ask_date": "1792166985000"
-              }
-            ]
-          },
           {
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 514.0,
-            "gamma_usd_millions": 54.9344685494868,
+            "gamma_usd_millions": 49.512899481507695,
             "observed_contracts": [
               {
-                "oi": 514.0,
-                "included_in_wall_aggregate": true,
-                "bid": 3.0,
-                "ask": 3.05,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166987000"
+                "strike": 192.5,
+                "option_type": "call",
+                "oi": 514,
+                "gamma": 0.02842,
+                "bid": 2.34,
+                "ask": 2.58,
+                "last": 2.38,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180798736",
+                "symbol": "PLTR261023C00192500",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.468,
+                "included_in_wall_aggregate": true
               }
             ]
           },
@@ -845,24 +1334,64 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 2608.0,
-            "gamma_usd_millions": 213.4397406364968,
+            "gamma_usd_millions": 190.05408722737997,
             "observed_contracts": [
               {
-                "oi": 2608.0,
-                "included_in_wall_aggregate": true,
-                "bid": 5.0,
-                "ask": 5.1,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166986000"
+                "strike": 192.5,
+                "option_type": "call",
+                "oi": 2608,
+                "gamma": 0.0215,
+                "bid": 4.35,
+                "ask": 4.6,
+                "last": 4.45,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180693485",
+                "symbol": "PLTR261030C00192500",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.483,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 232.0,
+            "gamma_usd_millions": 10.277671662404599,
+            "observed_contracts": [
+              {
+                "strike": 192.5,
+                "option_type": "call",
+                "oi": 232,
+                "gamma": 0.01307,
+                "bid": 9.5,
+                "ask": 10.15,
+                "last": 9.61,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792179877517",
+                "symbol": "PLTR261106C00192500",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.693,
+                "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 984.751,
-      "gamma_share_pct": 8.8,
-      "oi": 5446,
-      "oi_share_pct": 3.2,
+      "gamma_usd_millions": 249.845,
+      "gamma_share_pct": 6.8,
+      "oi": 3354,
+      "oi_share_pct": 3.1,
       "cluster_neighbors": [
         185.0,
         187.5,
@@ -872,311 +1401,115 @@
         197.5,
         200.0
       ],
-      "cluster_gamma_usd": 8001.796,
-      "cluster_share_pct": 71.4,
-      "distance": 2.8
-    }
-  ],
-  "put_walls_top": [
-    {
-      "level": 195.0,
-      "expiration": "2026-10-16",
-      "option_details": {
-        "scope": "parsed_contracts_in_sampled_expirations",
-        "option_type": "put",
-        "strike": 195.0,
-        "sampled_expirations": [
-          "2026-10-16",
-          "2026-10-23",
-          "2026-10-30"
-        ],
-        "by_expiration": [
-          {
-            "expiration": "2026-10-16",
-            "status": "observed",
-            "aggregate_oi": 6955.0,
-            "gamma_usd_millions": 3262.047195530552,
-            "observed_contracts": [
-              {
-                "oi": 6955.0,
-                "included_in_wall_aggregate": true,
-                "bid": 7.65,
-                "ask": 7.85,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166985000"
-              }
-            ]
-          },
-          {
-            "expiration": "2026-10-23",
-            "status": "observed",
-            "aggregate_oi": 2277.0,
-            "gamma_usd_millions": 254.61524046208882,
-            "observed_contracts": [
-              {
-                "oi": 2277.0,
-                "included_in_wall_aggregate": true,
-                "bid": 9.8,
-                "ask": 9.9,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166987000"
-              }
-            ]
-          },
-          {
-            "expiration": "2026-10-30",
-            "status": "observed",
-            "aggregate_oi": 1347.0,
-            "gamma_usd_millions": 115.29280910194568,
-            "observed_contracts": [
-              {
-                "oi": 1347.0,
-                "included_in_wall_aggregate": true,
-                "bid": 11.5,
-                "ask": 11.65,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166986000"
-              }
-            ]
-          }
-        ]
-      },
-      "gamma_usd_millions": 3631.955,
-      "gamma_share_pct": 26.3,
-      "oi": 10579,
-      "oi_share_pct": 8.3,
-      "cluster_neighbors": [
-        187.5,
-        190.0,
-        192.5,
-        195.0,
-        197.5,
-        200.0,
-        202.5
-      ],
-      "cluster_gamma_usd": 12151.788,
-      "cluster_share_pct": 87.9,
-      "distance": 4.14,
-      "volume_profile_proximity": {
-        "status": "available",
-        "nearest_type": "hvn",
-        "nearest_level": 187.4075,
-        "nearest_distance_pct": -3.89,
-        "nearest_abs_distance_pct": 3.89,
-        "poc_distance_pct": -31.22,
-        "nearest_hvn_distance_pct": -3.89
-      },
-      "historical_reaction": {
-        "status": "available",
-        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
-        "lookback_sessions": 252,
-        "tolerance_abs": 1.453,
-        "test_count": 7,
-        "defense_count": 1,
-        "defense_rate_pct": 14.3,
-        "last_test_date": "2026-10-06",
-        "last_test_rebound_5d_pct": 9.2,
-        "median_rebound_5d_pct": 1.99,
-        "max_rebound_5d_pct": 9.2,
-        "defense_min_rebound_pct": 1.86,
-        "observation_policy": "complete_forward_window_only",
-        "forward_sessions": 5,
-        "pending_test_count": 1,
-        "last_pending_test_date": "2026-10-15",
-        "last_pending_observed_sessions": 0,
-        "excluded_incomplete_data_test_count": 0,
-        "measurement_basis": {
-          "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "6c470067ae8d27c1b371229f67bc3d0b2628d269d98acea88019290cd2cd8db1",
-          "history_end": "2026-10-15",
-          "atr10": 7.264769999999996,
-          "parameters_sha256": "75818d19161da4370a6a8e2ca0beed3efc2ef8f77e9d93ca1771ed8dfae2ec82"
-        }
-      }
-    },
-    {
-      "level": 197.5,
-      "expiration": "2026-10-16",
-      "option_details": {
-        "scope": "parsed_contracts_in_sampled_expirations",
-        "option_type": "put",
-        "strike": 197.5,
-        "sampled_expirations": [
-          "2026-10-16",
-          "2026-10-23",
-          "2026-10-30"
-        ],
-        "by_expiration": [
-          {
-            "expiration": "2026-10-16",
-            "status": "observed",
-            "aggregate_oi": 5728.0,
-            "gamma_usd_millions": 2033.9986718775465,
-            "observed_contracts": [
-              {
-                "oi": 5728.0,
-                "included_in_wall_aggregate": true,
-                "bid": 10.15,
-                "ask": 10.35,
-                "bid_date": "1792166984000",
-                "ask_date": "1792166985000"
-              }
-            ]
-          },
-          {
-            "expiration": "2026-10-23",
-            "status": "observed",
-            "aggregate_oi": 1705.0,
-            "gamma_usd_millions": 191.0724180495295,
-            "observed_contracts": [
-              {
-                "oi": 1705.0,
-                "included_in_wall_aggregate": true,
-                "bid": 11.65,
-                "ask": 11.8,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166987000"
-              }
-            ]
-          },
-          {
-            "expiration": "2026-10-30",
-            "status": "observed",
-            "aggregate_oi": 483.0,
-            "gamma_usd_millions": 41.696732652238644,
-            "observed_contracts": [
-              {
-                "oi": 483.0,
-                "included_in_wall_aggregate": true,
-                "bid": 13.2,
-                "ask": 13.4,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166987000"
-              }
-            ]
-          }
-        ]
-      },
-      "gamma_usd_millions": 2266.768,
-      "gamma_share_pct": 16.4,
-      "oi": 7916,
-      "oi_share_pct": 6.2,
-      "cluster_neighbors": [
-        190.0,
-        192.5,
-        195.0,
-        197.5,
-        200.0,
-        202.5,
-        205.0
-      ],
-      "cluster_gamma_usd": 12252.14,
-      "cluster_share_pct": 88.6,
-      "distance": 5.47,
-      "volume_profile_proximity": {
-        "status": "available",
-        "nearest_type": "hvn",
-        "nearest_level": 187.4075,
-        "nearest_distance_pct": -5.11,
-        "nearest_abs_distance_pct": 5.11,
-        "poc_distance_pct": -32.09,
-        "nearest_hvn_distance_pct": -5.11
-      },
-      "historical_reaction": {
-        "status": "available",
-        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
-        "lookback_sessions": 252,
-        "tolerance_abs": 1.453,
-        "test_count": 4,
-        "defense_count": 2,
-        "defense_rate_pct": 50.0,
-        "last_test_date": "2026-10-08",
-        "last_test_rebound_5d_pct": 7.82,
-        "median_rebound_5d_pct": 2.25,
-        "max_rebound_5d_pct": 7.82,
-        "defense_min_rebound_pct": 1.84,
-        "observation_policy": "complete_forward_window_only",
-        "forward_sessions": 5,
-        "pending_test_count": 1,
-        "last_pending_test_date": "2026-10-15",
-        "last_pending_observed_sessions": 0,
-        "excluded_incomplete_data_test_count": 0,
-        "measurement_basis": {
-          "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "6c470067ae8d27c1b371229f67bc3d0b2628d269d98acea88019290cd2cd8db1",
-          "history_end": "2026-10-15",
-          "atr10": 7.264769999999996,
-          "parameters_sha256": "6a7ce670549312240d90563cc115c56be962988bd16fabcc9904349630eb71ca"
-        }
-      }
+      "cluster_gamma_usd": 1609.112,
+      "cluster_share_pct": 43.7,
+      "distance": 4.56
     },
     {
       "level": 190.0,
-      "expiration": "2026-10-16",
+      "expiration": "2026-10-23",
       "option_details": {
         "scope": "parsed_contracts_in_sampled_expirations",
-        "option_type": "put",
+        "option_type": "call",
         "strike": 190.0,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
         "sampled_expirations": [
-          "2026-10-16",
           "2026-10-23",
-          "2026-10-30"
+          "2026-10-30",
+          "2026-11-06"
         ],
         "by_expiration": [
           {
-            "expiration": "2026-10-16",
-            "status": "observed",
-            "aggregate_oi": 8828.0,
-            "gamma_usd_millions": 1295.4618635969296,
-            "observed_contracts": [
-              {
-                "oi": 8828.0,
-                "included_in_wall_aggregate": true,
-                "bid": 2.97,
-                "ask": 3.1,
-                "bid_date": "1792166985000",
-                "ask_date": "1792166986000"
-              }
-            ]
-          },
-          {
             "expiration": "2026-10-23",
             "status": "observed",
-            "aggregate_oi": 2980.0,
-            "gamma_usd_millions": 292.4731538322255,
+            "aggregate_oi": 1106.0,
+            "gamma_usd_millions": 113.8120015261614,
             "observed_contracts": [
               {
-                "oi": 2980.0,
-                "included_in_wall_aggregate": true,
-                "bid": 6.5,
-                "ask": 6.6,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166987000"
+                "strike": 190.0,
+                "option_type": "call",
+                "oi": 1106,
+                "gamma": 0.03036,
+                "bid": 3.2,
+                "ask": 3.3,
+                "last": 3.31,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180788444",
+                "symbol": "PLTR261023C00190000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.473,
+                "included_in_wall_aggregate": true
               }
             ]
           },
           {
             "expiration": "2026-10-30",
             "status": "observed",
-            "aggregate_oi": 4251.0,
-            "gamma_usd_millions": 322.5634883623191,
+            "aggregate_oi": 1437.0,
+            "gamma_usd_millions": 107.49549604509548,
             "observed_contracts": [
               {
-                "oi": 4251.0,
-                "included_in_wall_aggregate": true,
-                "bid": 8.5,
-                "ask": 8.6,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166986000"
+                "strike": 190.0,
+                "option_type": "call",
+                "oi": 1437,
+                "gamma": 0.02207,
+                "bid": 5.35,
+                "ask": 5.6,
+                "last": 5.45,
+                "bid_date": "1792180800000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180787801",
+                "symbol": "PLTR261030C00190000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.487,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 586.0,
+            "gamma_usd_millions": 26.079154602353448,
+            "observed_contracts": [
+              {
+                "strike": 190.0,
+                "option_type": "call",
+                "oi": 586,
+                "gamma": 0.01313,
+                "bid": 10.55,
+                "ask": 11.0,
+                "last": 10.85,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180679121",
+                "symbol": "PLTR261106C00190000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.698,
+                "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 1910.499,
-      "gamma_share_pct": 13.8,
-      "oi": 16059,
-      "oi_share_pct": 12.6,
+      "gamma_usd_millions": 247.387,
+      "gamma_share_pct": 6.7,
+      "oi": 3129,
+      "oi_share_pct": 2.9,
       "cluster_neighbors": [
         182.5,
         185.0,
@@ -1186,9 +1519,129 @@
         195.0,
         197.5
       ],
-      "cluster_gamma_usd": 10206.286,
-      "cluster_share_pct": 73.8,
-      "distance": 1.47,
+      "cluster_gamma_usd": 1185.846,
+      "cluster_share_pct": 32.2,
+      "distance": 3.2
+    }
+  ],
+  "put_walls_top": [
+    {
+      "level": 190.0,
+      "expiration": "2026-10-30",
+      "option_details": {
+        "scope": "parsed_contracts_in_sampled_expirations",
+        "option_type": "put",
+        "strike": 190.0,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
+        "sampled_expirations": [
+          "2026-10-23",
+          "2026-10-30",
+          "2026-11-06"
+        ],
+        "by_expiration": [
+          {
+            "expiration": "2026-10-23",
+            "status": "observed",
+            "aggregate_oi": 2980.0,
+            "gamma_usd_millions": 306.65439832546207,
+            "observed_contracts": [
+              {
+                "strike": 190.0,
+                "option_type": "put",
+                "oi": 2980,
+                "gamma": 0.03036,
+                "bid": 7.0,
+                "ask": 7.15,
+                "last": 7.0,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180778327",
+                "symbol": "PLTR261023P00190000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.473,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-10-30",
+            "status": "observed",
+            "aggregate_oi": 4251.0,
+            "gamma_usd_millions": 317.9981584465559,
+            "observed_contracts": [
+              {
+                "strike": 190.0,
+                "option_type": "put",
+                "oi": 4251,
+                "gamma": 0.02207,
+                "bid": 8.9,
+                "ask": 9.3,
+                "last": 9.0,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180754461",
+                "symbol": "PLTR261030P00190000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.487,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 3044.0,
+            "gamma_usd_millions": 135.4691921664913,
+            "observed_contracts": [
+              {
+                "strike": 190.0,
+                "option_type": "put",
+                "oi": 3044,
+                "gamma": 0.01313,
+                "bid": 14.15,
+                "ask": 14.7,
+                "last": 14.35,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180478787",
+                "symbol": "PLTR261106P00190000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.698,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          }
+        ]
+      },
+      "gamma_usd_millions": 760.122,
+      "gamma_share_pct": 15.9,
+      "oi": 10275,
+      "oi_share_pct": 10.2,
+      "cluster_neighbors": [
+        182.5,
+        185.0,
+        187.5,
+        190.0,
+        192.5,
+        195.0,
+        197.5
+      ],
+      "cluster_gamma_usd": 2368.825,
+      "cluster_share_pct": 49.6,
+      "distance": 3.2,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -1202,15 +1655,243 @@
         "status": "available",
         "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
         "lookback_sessions": 252,
-        "tolerance_abs": 1.453,
-        "test_count": 7,
+        "tolerance_abs": 1.7046,
+        "test_count": 9,
         "defense_count": 4,
-        "defense_rate_pct": 57.1,
+        "defense_rate_pct": 44.4,
         "last_test_date": "2026-09-23",
         "last_test_rebound_5d_pct": 2.46,
         "median_rebound_5d_pct": 2.46,
         "max_rebound_5d_pct": 9.22,
-        "defense_min_rebound_pct": 1.91,
+        "defense_min_rebound_pct": 2.24,
+        "observation_policy": "complete_forward_window_only",
+        "forward_sessions": 5,
+        "pending_test_count": 1,
+        "last_pending_test_date": "2026-10-16",
+        "last_pending_observed_sessions": 0,
+        "excluded_incomplete_data_test_count": 0,
+        "measurement_basis": {
+          "calibration": "completed_daily_atr10_v1",
+          "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+          "history_end": "2026-10-16",
+          "atr10": 8.522769999999998,
+          "parameters_sha256": "9eeec247cc3770b392fd15a92f726a76e3a443d398cf2559881127cb45fc9a1c"
+        },
+        "path_evidence": {
+          "status": "available",
+          "method": "horizontal_coordinate_post_contact_close_path_v40",
+          "measurement_origin": "contact_session_close",
+          "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+          "intraday_order": "unknown_with_daily_bars",
+          "forward_sessions": 5,
+          "coordinate": 190.0,
+          "tolerance_abs": 1.7045539999999997,
+          "history_first_session": "2025-09-15",
+          "history_last_session": "2026-10-16",
+          "contact_count": 10,
+          "completed_count": 9,
+          "pending_count": 1,
+          "incomplete_data_count": 0,
+          "overlapping_window_count": 4,
+          "independent_trials_assumed": false,
+          "summary_scope": "all_completed_contacts",
+          "event_detail_selection": "latest_completed_contacts",
+          "negative_terminal_count": 6,
+          "positive_excursion_negative_terminal_count": 4,
+          "adverse_extreme_first_count": 3,
+          "same_session_extremes_count": 0,
+          "events": [
+            {
+              "contact_date": "2025-12-26",
+              "window_end": "2026-01-05",
+              "contact_close": 188.71,
+              "approach": "from_above",
+              "favorable_excursion_pct": 0.0,
+              "adverse_excursion_pct": 11.848869,
+              "terminal_close_return_pct": -7.773833,
+              "favorable_extreme_session": 1,
+              "adverse_extreme_session": 4,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": null,
+              "overlaps_previous_window": true
+            },
+            {
+              "contact_date": "2026-08-28",
+              "window_end": "2026-09-04",
+              "contact_close": 186.29,
+              "approach": "from_below",
+              "favorable_excursion_pct": 0.885716,
+              "adverse_excursion_pct": 11.047292,
+              "terminal_close_return_pct": -6.420098,
+              "favorable_extreme_session": 1,
+              "adverse_extreme_session": 3,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": false
+            },
+            {
+              "contact_date": "2026-09-23",
+              "window_end": "2026-09-30",
+              "contact_close": 191.79,
+              "approach": "from_below",
+              "favorable_excursion_pct": 1.506856,
+              "adverse_excursion_pct": 3.639397,
+              "terminal_close_return_pct": -2.471453,
+              "favorable_extreme_session": 1,
+              "adverse_extreme_session": 4,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": false
+            }
+          ],
+          "events_omitted": 6,
+          "max_adverse_excursion_pct": 15.03538,
+          "min_terminal_close_return_pct": -11.54899,
+          "median_favorable_excursion_pct": 1.506856,
+          "median_adverse_excursion_pct": 6.072056,
+          "median_terminal_close_return_pct": -4.757472
+        }
+      }
+    },
+    {
+      "level": 180.0,
+      "expiration": "2026-10-23",
+      "option_details": {
+        "scope": "parsed_contracts_in_sampled_expirations",
+        "option_type": "put",
+        "strike": 180.0,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
+        "sampled_expirations": [
+          "2026-10-23",
+          "2026-10-30",
+          "2026-11-06"
+        ],
+        "by_expiration": [
+          {
+            "expiration": "2026-10-23",
+            "status": "observed",
+            "aggregate_oi": 2218.0,
+            "gamma_usd_millions": 196.74170524251866,
+            "observed_contracts": [
+              {
+                "strike": 180.0,
+                "option_type": "put",
+                "oi": 2218,
+                "gamma": 0.02617,
+                "bid": 2.6,
+                "ask": 2.85,
+                "last": 2.6,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180793160",
+                "symbol": "PLTR261023P00180000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.508,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-10-30",
+            "status": "observed",
+            "aggregate_oi": 2155.0,
+            "gamma_usd_millions": 145.57464510703787,
+            "observed_contracts": [
+              {
+                "strike": 180.0,
+                "option_type": "put",
+                "oi": 2155,
+                "gamma": 0.01993,
+                "bid": 4.4,
+                "ask": 4.65,
+                "last": 4.5,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180771711",
+                "symbol": "PLTR261030P00180000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.51,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 788.0,
+            "gamma_usd_millions": 33.119141409548,
+            "observed_contracts": [
+              {
+                "strike": 180.0,
+                "option_type": "put",
+                "oi": 788,
+                "gamma": 0.0124,
+                "bid": 9.3,
+                "ask": 9.5,
+                "last": 9.48,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180798000",
+                "trade_date": "1792180593284",
+                "symbol": "PLTR261106P00180000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.71,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          }
+        ]
+      },
+      "gamma_usd_millions": 375.435,
+      "gamma_share_pct": 7.9,
+      "oi": 5161,
+      "oi_share_pct": 5.1,
+      "cluster_neighbors": [
+        172.5,
+        175.0,
+        177.5,
+        180.0,
+        182.5,
+        185.0,
+        187.5
+      ],
+      "cluster_gamma_usd": 1835.137,
+      "cluster_share_pct": 38.4,
+      "distance": -2.23,
+      "volume_profile_proximity": {
+        "status": "available",
+        "nearest_type": "hvn",
+        "nearest_level": 187.4075,
+        "nearest_distance_pct": 4.12,
+        "nearest_abs_distance_pct": 4.12,
+        "poc_distance_pct": -25.49,
+        "nearest_hvn_distance_pct": 4.12
+      },
+      "historical_reaction": {
+        "status": "available",
+        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+        "lookback_sessions": 252,
+        "tolerance_abs": 1.7046,
+        "test_count": 13,
+        "defense_count": 7,
+        "defense_rate_pct": 53.8,
+        "last_test_date": "2026-09-21",
+        "last_test_rebound_5d_pct": 8.16,
+        "median_rebound_5d_pct": 4.04,
+        "max_rebound_5d_pct": 8.29,
+        "defense_min_rebound_pct": 2.37,
         "observation_policy": "complete_forward_window_only",
         "forward_sessions": 5,
         "pending_test_count": 0,
@@ -1219,55 +1900,583 @@
         "excluded_incomplete_data_test_count": 0,
         "measurement_basis": {
           "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "6c470067ae8d27c1b371229f67bc3d0b2628d269d98acea88019290cd2cd8db1",
-          "history_end": "2026-10-15",
-          "atr10": 7.264769999999996,
-          "parameters_sha256": "f925d4021f897976a1951d825d60d7731e4368ccdfce9dec0e99c2c77b117cd7"
+          "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+          "history_end": "2026-10-16",
+          "atr10": 8.522769999999998,
+          "parameters_sha256": "6ffdc0a11a4096ab43074fadf9f1514d39999abbd60f17b4cb0f3d04b332809a"
+        },
+        "path_evidence": {
+          "status": "available",
+          "method": "horizontal_coordinate_post_contact_close_path_v40",
+          "measurement_origin": "contact_session_close",
+          "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+          "intraday_order": "unknown_with_daily_bars",
+          "forward_sessions": 5,
+          "coordinate": 180.0,
+          "tolerance_abs": 1.7045539999999997,
+          "history_first_session": "2025-09-15",
+          "history_last_session": "2026-10-16",
+          "contact_count": 14,
+          "completed_count": 14,
+          "pending_count": 0,
+          "incomplete_data_count": 0,
+          "overlapping_window_count": 5,
+          "independent_trials_assumed": false,
+          "summary_scope": "all_completed_contacts",
+          "event_detail_selection": "latest_completed_contacts",
+          "negative_terminal_count": 8,
+          "positive_excursion_negative_terminal_count": 6,
+          "adverse_extreme_first_count": 7,
+          "same_session_extremes_count": 0,
+          "events": [
+            {
+              "contact_date": "2026-09-01",
+              "window_end": "2026-09-09",
+              "contact_close": 179.92,
+              "approach": "from_above",
+              "favorable_excursion_pct": 3.284793,
+              "adverse_excursion_pct": 7.897955,
+              "terminal_close_return_pct": -5.774789,
+              "favorable_extreme_session": 2,
+              "adverse_extreme_session": 1,
+              "extreme_order": "adverse_extreme_first",
+              "first_close_at_or_above_contact_close_session": 2,
+              "overlaps_previous_window": false
+            },
+            {
+              "contact_date": "2026-09-03",
+              "window_end": "2026-09-11",
+              "contact_close": 182.53,
+              "approach": "from_below",
+              "favorable_excursion_pct": 0.0,
+              "adverse_excursion_pct": 9.850436,
+              "terminal_close_return_pct": -8.382184,
+              "favorable_extreme_session": 1,
+              "adverse_extreme_session": 4,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": null,
+              "overlaps_previous_window": true
+            },
+            {
+              "contact_date": "2026-09-21",
+              "window_end": "2026-09-28",
+              "contact_close": 183.09,
+              "approach": "from_below",
+              "favorable_excursion_pct": 6.33022,
+              "adverse_excursion_pct": 0.57895,
+              "terminal_close_return_pct": 2.397728,
+              "favorable_extreme_session": 3,
+              "adverse_extreme_session": 1,
+              "extreme_order": "adverse_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": false
+            }
+          ],
+          "events_omitted": 11,
+          "max_adverse_excursion_pct": 11.809741,
+          "min_terminal_close_return_pct": -10.180811,
+          "median_favorable_excursion_pct": 3.651229,
+          "median_adverse_excursion_pct": 5.524094,
+          "median_terminal_close_return_pct": -0.701898
+        }
+      }
+    },
+    {
+      "level": 187.5,
+      "expiration": "2026-10-23",
+      "option_details": {
+        "scope": "parsed_contracts_in_sampled_expirations",
+        "option_type": "put",
+        "strike": 187.5,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
+        "sampled_expirations": [
+          "2026-10-23",
+          "2026-10-30",
+          "2026-11-06"
+        ],
+        "by_expiration": [
+          {
+            "expiration": "2026-10-23",
+            "status": "observed",
+            "aggregate_oi": 1756.0,
+            "gamma_usd_millions": 184.98507437728918,
+            "observed_contracts": [
+              {
+                "strike": 187.5,
+                "option_type": "put",
+                "oi": 1756,
+                "gamma": 0.03108,
+                "bid": 5.55,
+                "ask": 5.7,
+                "last": 5.61,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180760723",
+                "symbol": "PLTR261023P00187500",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.48,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-10-30",
+            "status": "observed",
+            "aggregate_oi": 2062.0,
+            "gamma_usd_millions": 155.15751031808102,
+            "observed_contracts": [
+              {
+                "strike": 187.5,
+                "option_type": "put",
+                "oi": 2062,
+                "gamma": 0.0222,
+                "bid": 7.55,
+                "ask": 8.25,
+                "last": 7.94,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180512158",
+                "symbol": "PLTR261030P00187500",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.493,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 672.0,
+            "gamma_usd_millions": 29.838139190328,
+            "observed_contracts": [
+              {
+                "strike": 187.5,
+                "option_type": "put",
+                "oi": 672,
+                "gamma": 0.0131,
+                "bid": 12.9,
+                "ask": 13.35,
+                "last": 13.5,
+                "bid_date": "1792180800000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180305006",
+                "symbol": "PLTR261106P00187500",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.701,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          }
+        ]
+      },
+      "gamma_usd_millions": 369.981,
+      "gamma_share_pct": 7.7,
+      "oi": 4490,
+      "oi_share_pct": 4.5,
+      "cluster_neighbors": [
+        180.0,
+        182.5,
+        185.0,
+        187.5,
+        190.0,
+        192.5,
+        195.0
+      ],
+      "cluster_gamma_usd": 2571.441,
+      "cluster_share_pct": 53.8,
+      "distance": 1.84,
+      "volume_profile_proximity": {
+        "status": "available",
+        "nearest_type": "hvn",
+        "nearest_level": 187.4075,
+        "nearest_distance_pct": -0.05,
+        "nearest_abs_distance_pct": 0.05,
+        "poc_distance_pct": -28.47,
+        "nearest_hvn_distance_pct": -0.05
+      },
+      "historical_reaction": {
+        "status": "available",
+        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+        "lookback_sessions": 252,
+        "tolerance_abs": 1.7046,
+        "test_count": 10,
+        "defense_count": 4,
+        "defense_rate_pct": 40.0,
+        "last_test_date": "2026-09-28",
+        "last_test_rebound_5d_pct": 3.88,
+        "median_rebound_5d_pct": 1.71,
+        "max_rebound_5d_pct": 8.9,
+        "defense_min_rebound_pct": 2.27,
+        "observation_policy": "complete_forward_window_only",
+        "forward_sessions": 5,
+        "pending_test_count": 1,
+        "last_pending_test_date": "2026-10-16",
+        "last_pending_observed_sessions": 0,
+        "excluded_incomplete_data_test_count": 0,
+        "measurement_basis": {
+          "calibration": "completed_daily_atr10_v1",
+          "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+          "history_end": "2026-10-16",
+          "atr10": 8.522769999999998,
+          "parameters_sha256": "edec1c5ba6c69bb2182adf75dc7274bebd32328a1e86328430e495c85a6f7e10"
+        },
+        "path_evidence": {
+          "status": "available",
+          "method": "horizontal_coordinate_post_contact_close_path_v40",
+          "measurement_origin": "contact_session_close",
+          "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+          "intraday_order": "unknown_with_daily_bars",
+          "forward_sessions": 5,
+          "coordinate": 187.5,
+          "tolerance_abs": 1.7045539999999997,
+          "history_first_session": "2025-09-15",
+          "history_last_session": "2026-10-16",
+          "contact_count": 14,
+          "completed_count": 13,
+          "pending_count": 1,
+          "incomplete_data_count": 0,
+          "overlapping_window_count": 5,
+          "independent_trials_assumed": false,
+          "summary_scope": "all_completed_contacts",
+          "event_detail_selection": "latest_completed_contacts",
+          "negative_terminal_count": 10,
+          "positive_excursion_negative_terminal_count": 7,
+          "adverse_extreme_first_count": 3,
+          "same_session_extremes_count": 0,
+          "events": [
+            {
+              "contact_date": "2026-09-03",
+              "window_end": "2026-09-11",
+              "contact_close": 182.53,
+              "approach": "from_below",
+              "favorable_excursion_pct": 0.0,
+              "adverse_excursion_pct": 9.850436,
+              "terminal_close_return_pct": -8.382184,
+              "favorable_extreme_session": 1,
+              "adverse_extreme_session": 4,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": null,
+              "overlaps_previous_window": true
+            },
+            {
+              "contact_date": "2026-09-23",
+              "window_end": "2026-09-30",
+              "contact_close": 191.79,
+              "approach": "from_below",
+              "favorable_excursion_pct": 1.506856,
+              "adverse_excursion_pct": 3.639397,
+              "terminal_close_return_pct": -2.471453,
+              "favorable_extreme_session": 1,
+              "adverse_extreme_session": 4,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": false
+            },
+            {
+              "contact_date": "2026-09-28",
+              "window_end": "2026-10-05",
+              "contact_close": 187.48,
+              "approach": "from_above",
+              "favorable_excursion_pct": 3.893749,
+              "adverse_excursion_pct": 1.424152,
+              "terminal_close_return_pct": 1.024109,
+              "favorable_extreme_session": 4,
+              "adverse_extreme_session": 1,
+              "extreme_order": "adverse_extreme_first",
+              "first_close_at_or_above_contact_close_session": 3,
+              "overlaps_previous_window": true
+            }
+          ],
+          "events_omitted": 10,
+          "max_adverse_excursion_pct": 15.03538,
+          "min_terminal_close_return_pct": -11.54899,
+          "median_favorable_excursion_pct": 1.506856,
+          "median_adverse_excursion_pct": 7.666937,
+          "median_terminal_close_return_pct": -1.828645
+        }
+      }
+    },
+    {
+      "level": 185.0,
+      "expiration": "2026-10-23",
+      "option_details": {
+        "scope": "parsed_contracts_in_sampled_expirations",
+        "option_type": "put",
+        "strike": 185.0,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
+        "sampled_expirations": [
+          "2026-10-23",
+          "2026-10-30",
+          "2026-11-06"
+        ],
+        "by_expiration": [
+          {
+            "expiration": "2026-10-23",
+            "status": "observed",
+            "aggregate_oi": 1821.0,
+            "gamma_usd_millions": 188.12914220636821,
+            "observed_contracts": [
+              {
+                "strike": 185.0,
+                "option_type": "put",
+                "oi": 1821,
+                "gamma": 0.03048,
+                "bid": 4.35,
+                "ask": 4.5,
+                "last": 4.4,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180796175",
+                "symbol": "PLTR261023P00185000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.488,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-10-30",
+            "status": "observed",
+            "aggregate_oi": 1602.0,
+            "gamma_usd_millions": 118.53522114649515,
+            "observed_contracts": [
+              {
+                "strike": 185.0,
+                "option_type": "put",
+                "oi": 1602,
+                "gamma": 0.02183,
+                "bid": 6.35,
+                "ask": 6.8,
+                "last": 6.48,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180794556",
+                "symbol": "PLTR261030P00185000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.499,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 612.0,
+            "gamma_usd_millions": 26.904353776208097,
+            "observed_contracts": [
+              {
+                "strike": 185.0,
+                "option_type": "put",
+                "oi": 612,
+                "gamma": 0.01297,
+                "bid": 11.6,
+                "ask": 12.1,
+                "last": 12.0,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180228095",
+                "symbol": "PLTR261106P00185000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.705,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          }
+        ]
+      },
+      "gamma_usd_millions": 333.569,
+      "gamma_share_pct": 7.0,
+      "oi": 4035,
+      "oi_share_pct": 4.0,
+      "cluster_neighbors": [
+        177.5,
+        180.0,
+        182.5,
+        185.0,
+        187.5,
+        190.0,
+        192.5
+      ],
+      "cluster_gamma_usd": 2345.096,
+      "cluster_share_pct": 49.1,
+      "distance": 0.49,
+      "volume_profile_proximity": {
+        "status": "available",
+        "nearest_type": "hvn",
+        "nearest_level": 187.4075,
+        "nearest_distance_pct": 1.3,
+        "nearest_abs_distance_pct": 1.3,
+        "poc_distance_pct": -27.5,
+        "nearest_hvn_distance_pct": 1.3
+      },
+      "historical_reaction": {
+        "status": "available",
+        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+        "lookback_sessions": 252,
+        "tolerance_abs": 1.7046,
+        "test_count": 14,
+        "defense_count": 5,
+        "defense_rate_pct": 35.7,
+        "last_test_date": "2026-10-01",
+        "last_test_rebound_5d_pct": 10.51,
+        "median_rebound_5d_pct": 2.4,
+        "max_rebound_5d_pct": 10.51,
+        "defense_min_rebound_pct": 2.3,
+        "observation_policy": "complete_forward_window_only",
+        "forward_sessions": 5,
+        "pending_test_count": 1,
+        "last_pending_test_date": "2026-10-16",
+        "last_pending_observed_sessions": 0,
+        "excluded_incomplete_data_test_count": 0,
+        "measurement_basis": {
+          "calibration": "completed_daily_atr10_v1",
+          "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+          "history_end": "2026-10-16",
+          "atr10": 8.522769999999998,
+          "parameters_sha256": "b4f9f2e9e412ab91e0302340ee1c043b7858b0c09623f3773f1f66db369b145e"
+        },
+        "path_evidence": {
+          "status": "available",
+          "method": "horizontal_coordinate_post_contact_close_path_v40",
+          "measurement_origin": "contact_session_close",
+          "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+          "intraday_order": "unknown_with_daily_bars",
+          "forward_sessions": 5,
+          "coordinate": 185.0,
+          "tolerance_abs": 1.7045539999999997,
+          "history_first_session": "2025-09-15",
+          "history_last_session": "2026-10-16",
+          "contact_count": 19,
+          "completed_count": 18,
+          "pending_count": 1,
+          "incomplete_data_count": 0,
+          "overlapping_window_count": 8,
+          "independent_trials_assumed": false,
+          "summary_scope": "all_completed_contacts",
+          "event_detail_selection": "latest_completed_contacts",
+          "negative_terminal_count": 12,
+          "positive_excursion_negative_terminal_count": 9,
+          "adverse_extreme_first_count": 5,
+          "same_session_extremes_count": 0,
+          "events": [
+            {
+              "contact_date": "2026-09-21",
+              "window_end": "2026-09-28",
+              "contact_close": 183.09,
+              "approach": "from_below",
+              "favorable_excursion_pct": 6.33022,
+              "adverse_excursion_pct": 0.57895,
+              "terminal_close_return_pct": 2.397728,
+              "favorable_extreme_session": 3,
+              "adverse_extreme_session": 1,
+              "extreme_order": "adverse_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": false
+            },
+            {
+              "contact_date": "2026-09-28",
+              "window_end": "2026-10-05",
+              "contact_close": 187.48,
+              "approach": "from_above",
+              "favorable_excursion_pct": 3.893749,
+              "adverse_excursion_pct": 1.424152,
+              "terminal_close_return_pct": 1.024109,
+              "favorable_extreme_session": 4,
+              "adverse_extreme_session": 1,
+              "extreme_order": "adverse_extreme_first",
+              "first_close_at_or_above_contact_close_session": 3,
+              "overlaps_previous_window": true
+            },
+            {
+              "contact_date": "2026-10-01",
+              "window_end": "2026-10-08",
+              "contact_close": 190.04,
+              "approach": "from_above",
+              "favorable_excursion_pct": 7.577352,
+              "adverse_excursion_pct": 1.268154,
+              "terminal_close_return_pct": 4.599032,
+              "favorable_extreme_session": 5,
+              "adverse_extreme_session": 2,
+              "extreme_order": "adverse_extreme_first",
+              "first_close_at_or_above_contact_close_session": 3,
+              "overlaps_previous_window": true
+            }
+          ],
+          "events_omitted": 15,
+          "max_adverse_excursion_pct": 15.03538,
+          "min_terminal_close_return_pct": -11.54899,
+          "median_favorable_excursion_pct": 2.016436,
+          "median_adverse_excursion_pct": 5.875355,
+          "median_terminal_close_return_pct": -1.569646
         }
       }
     },
     {
       "level": 200.0,
-      "expiration": "2026-10-16",
+      "expiration": "2026-10-23",
       "option_details": {
         "scope": "parsed_contracts_in_sampled_expirations",
         "option_type": "put",
         "strike": 200.0,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
         "sampled_expirations": [
-          "2026-10-16",
           "2026-10-23",
-          "2026-10-30"
+          "2026-10-30",
+          "2026-11-06"
         ],
         "by_expiration": [
-          {
-            "expiration": "2026-10-16",
-            "status": "observed",
-            "aggregate_oi": 8938.0,
-            "gamma_usd_millions": 1446.9951338101785,
-            "observed_contracts": [
-              {
-                "oi": 8938.0,
-                "included_in_wall_aggregate": true,
-                "bid": 12.65,
-                "ask": 12.85,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166985000"
-              }
-            ]
-          },
           {
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 2368.0,
-            "gamma_usd_millions": 254.49486425664801,
+            "gamma_usd_millions": 148.80673734482878,
             "observed_contracts": [
               {
-                "oi": 2368.0,
-                "included_in_wall_aggregate": true,
-                "bid": 13.65,
-                "ask": 13.8,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166987000"
+                "strike": 200.0,
+                "option_type": "put",
+                "oi": 2368,
+                "gamma": 0.01854,
+                "bid": 14.4,
+                "ask": 14.85,
+                "last": 14.62,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180765410",
+                "symbol": "PLTR261023P00200000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.462,
+                "included_in_wall_aggregate": true
               }
             ]
           },
@@ -1275,24 +2484,64 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 2473.0,
-            "gamma_usd_millions": 207.85429171692954,
+            "gamma_usd_millions": 147.69343363726165,
             "observed_contracts": [
               {
-                "oi": 2473.0,
-                "included_in_wall_aggregate": true,
-                "bid": 15.05,
-                "ask": 15.2,
-                "bid_date": "1792166987000",
-                "ask_date": "1792166987000"
+                "strike": 200.0,
+                "option_type": "put",
+                "oi": 2473,
+                "gamma": 0.01762,
+                "bid": 15.55,
+                "ask": 16.15,
+                "last": 15.56,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180492227",
+                "symbol": "PLTR261030P00200000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.474,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 787.0,
+            "gamma_usd_millions": 32.94373659049363,
+            "observed_contracts": [
+              {
+                "strike": 200.0,
+                "option_type": "put",
+                "oi": 787,
+                "gamma": 0.01235,
+                "bid": 20.3,
+                "ask": 20.8,
+                "last": 20.45,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180642044",
+                "symbol": "PLTR261106P00200000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.685,
+                "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 1909.344,
-      "gamma_share_pct": 13.8,
-      "oi": 13779,
-      "oi_share_pct": 10.8,
+      "gamma_usd_millions": 329.444,
+      "gamma_share_pct": 6.9,
+      "oi": 5628,
+      "oi_share_pct": 5.6,
       "cluster_neighbors": [
         192.5,
         195.0,
@@ -1302,9 +2551,9 @@
         205.0,
         207.5
       ],
-      "cluster_gamma_usd": 10460.567,
-      "cluster_share_pct": 75.6,
-      "distance": 6.81,
+      "cluster_gamma_usd": 1425.373,
+      "cluster_share_pct": 29.8,
+      "distance": 8.63,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -1318,7 +2567,7 @@
         "status": "available",
         "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
         "lookback_sessions": 252,
-        "tolerance_abs": 1.453,
+        "tolerance_abs": 1.7046,
         "test_count": 3,
         "defense_count": 2,
         "defense_rate_pct": 66.7,
@@ -1326,157 +2575,115 @@
         "last_test_rebound_5d_pct": 6.47,
         "median_rebound_5d_pct": 3.76,
         "max_rebound_5d_pct": 6.47,
-        "defense_min_rebound_pct": 1.82,
+        "defense_min_rebound_pct": 2.13,
         "observation_policy": "complete_forward_window_only",
         "forward_sessions": 5,
         "pending_test_count": 1,
         "last_pending_test_date": "2026-10-14",
-        "last_pending_observed_sessions": 1,
+        "last_pending_observed_sessions": 2,
         "excluded_incomplete_data_test_count": 0,
         "measurement_basis": {
           "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "6c470067ae8d27c1b371229f67bc3d0b2628d269d98acea88019290cd2cd8db1",
-          "history_end": "2026-10-15",
-          "atr10": 7.264769999999996,
-          "parameters_sha256": "71cd924291d54f6b84766a285fcf0bf9f280651292b7413cf0ed9417fe0d4470"
-        }
-      }
-    },
-    {
-      "level": 192.5,
-      "expiration": "2026-10-16",
-      "option_details": {
-        "scope": "parsed_contracts_in_sampled_expirations",
-        "option_type": "put",
-        "strike": 192.5,
-        "sampled_expirations": [
-          "2026-10-16",
-          "2026-10-23",
-          "2026-10-30"
-        ],
-        "by_expiration": [
-          {
-            "expiration": "2026-10-16",
-            "status": "observed",
-            "aggregate_oi": 4867.0,
-            "gamma_usd_millions": 1500.2597988993402,
-            "observed_contracts": [
-              {
-                "oi": 4867.0,
-                "included_in_wall_aggregate": true,
-                "bid": 5.2,
-                "ask": 5.4,
-                "bid_date": "1792166985000",
-                "ask_date": "1792166985000"
-              }
-            ]
-          },
-          {
-            "expiration": "2026-10-23",
-            "status": "observed",
-            "aggregate_oi": 1748.0,
-            "gamma_usd_millions": 186.81994362743762,
-            "observed_contracts": [
-              {
-                "oi": 1748.0,
-                "included_in_wall_aggregate": true,
-                "bid": 8.0,
-                "ask": 8.15,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166986000"
-              }
-            ]
-          },
-          {
-            "expiration": "2026-10-30",
-            "status": "observed",
-            "aggregate_oi": 684.0,
-            "gamma_usd_millions": 55.97882768227141,
-            "observed_contracts": [
-              {
-                "oi": 684.0,
-                "included_in_wall_aggregate": true,
-                "bid": 9.9,
-                "ask": 10.05,
-                "bid_date": "1792166986000",
-                "ask_date": "1792166987000"
-              }
-            ]
-          }
-        ]
-      },
-      "gamma_usd_millions": 1743.059,
-      "gamma_share_pct": 12.6,
-      "oi": 7299,
-      "oi_share_pct": 5.7,
-      "cluster_neighbors": [
-        185.0,
-        187.5,
-        190.0,
-        192.5,
-        195.0,
-        197.5,
-        200.0
-      ],
-      "cluster_gamma_usd": 11989.543,
-      "cluster_share_pct": 86.7,
-      "distance": 2.8,
-      "volume_profile_proximity": {
-        "status": "available",
-        "nearest_type": "hvn",
-        "nearest_level": 187.4075,
-        "nearest_distance_pct": -2.65,
-        "nearest_abs_distance_pct": 2.65,
-        "poc_distance_pct": -30.33,
-        "nearest_hvn_distance_pct": -2.65
-      },
-      "historical_reaction": {
-        "status": "available",
-        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
-        "lookback_sessions": 252,
-        "tolerance_abs": 1.453,
-        "test_count": 7,
-        "defense_count": 1,
-        "defense_rate_pct": 14.3,
-        "last_test_date": "2026-10-01",
-        "last_test_rebound_5d_pct": 6.2,
-        "median_rebound_5d_pct": 1.26,
-        "max_rebound_5d_pct": 7.8,
-        "defense_min_rebound_pct": 1.89,
-        "observation_policy": "complete_forward_window_only",
-        "forward_sessions": 5,
-        "pending_test_count": 1,
-        "last_pending_test_date": "2026-10-15",
-        "last_pending_observed_sessions": 0,
-        "excluded_incomplete_data_test_count": 0,
-        "measurement_basis": {
-          "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "6c470067ae8d27c1b371229f67bc3d0b2628d269d98acea88019290cd2cd8db1",
-          "history_end": "2026-10-15",
-          "atr10": 7.264769999999996,
-          "parameters_sha256": "6b0f8f4138d3a54cdf0eba10251370b356718b16bed7285498639b9b2c6a03a4"
+          "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+          "history_end": "2026-10-16",
+          "atr10": 8.522769999999998,
+          "parameters_sha256": "20c77f5efb8c6dd3763155f5553595abd685f4ff7d95e819ff97864e1d15c501"
+        },
+        "path_evidence": {
+          "status": "available",
+          "method": "horizontal_coordinate_post_contact_close_path_v40",
+          "measurement_origin": "contact_session_close",
+          "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+          "intraday_order": "unknown_with_daily_bars",
+          "forward_sessions": 5,
+          "coordinate": 200.0,
+          "tolerance_abs": 1.7045539999999997,
+          "history_first_session": "2025-09-15",
+          "history_last_session": "2026-10-16",
+          "contact_count": 4,
+          "completed_count": 3,
+          "pending_count": 1,
+          "incomplete_data_count": 0,
+          "overlapping_window_count": 0,
+          "independent_trials_assumed": false,
+          "summary_scope": "all_completed_contacts",
+          "event_detail_selection": "latest_completed_contacts",
+          "negative_terminal_count": 2,
+          "positive_excursion_negative_terminal_count": 2,
+          "adverse_extreme_first_count": 0,
+          "same_session_extremes_count": 0,
+          "events": [
+            {
+              "contact_date": "2025-10-29",
+              "window_end": "2025-11-05",
+              "contact_close": 198.81,
+              "approach": "from_below",
+              "favorable_excursion_pct": 4.381067,
+              "adverse_excursion_pct": 8.852673,
+              "terminal_close_return_pct": -5.487652,
+              "favorable_extreme_session": 3,
+              "adverse_extreme_session": 5,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": 2,
+              "overlaps_previous_window": false
+            },
+            {
+              "contact_date": "2025-12-22",
+              "window_end": "2025-12-30",
+              "contact_close": 193.98,
+              "approach": "from_below",
+              "favorable_excursion_pct": 1.221775,
+              "adverse_excursion_pct": 6.846067,
+              "terminal_close_return_pct": -6.773894,
+              "favorable_extreme_session": 3,
+              "adverse_extreme_session": 5,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": false
+            },
+            {
+              "contact_date": "2026-10-08",
+              "window_end": "2026-10-15",
+              "contact_close": 198.78,
+              "approach": "from_below",
+              "favorable_excursion_pct": 7.123403,
+              "adverse_excursion_pct": 3.108965,
+              "terminal_close_return_pct": 0.865278,
+              "favorable_extreme_session": 2,
+              "adverse_extreme_session": 5,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": false
+            }
+          ],
+          "events_omitted": 0,
+          "max_adverse_excursion_pct": 8.852673,
+          "min_terminal_close_return_pct": -6.773894,
+          "median_favorable_excursion_pct": 4.381067,
+          "median_adverse_excursion_pct": 6.846067,
+          "median_terminal_close_return_pct": -5.487652
         }
       }
     }
   ],
   "technicals": {
-    "rsi14": 49.77,
+    "rsi14": 48.5,
     "sma": {
-      "20": 193.612,
-      "50": 182.5932,
-      "200": 152.653
+      "20": 193.5505,
+      "50": 182.5686,
+      "200": 152.6469
     },
     "bollinger20_2": {
-      "upper": 209.4677,
-      "middle": 193.612,
-      "lower": 177.7562,
-      "width_pct": 16.38,
+      "upper": 209.5134,
+      "middle": 193.5505,
+      "lower": 177.5876,
+      "width_pct": 16.49,
       "method": "SMA20 ± 2·σ(cierre)"
     },
     "keltner_ema20_atr10": {
-      "upper": 211.1603,
-      "center": 194.6008,
-      "lower": 178.0413,
+      "upper": 211.5302,
+      "center": 194.4846,
+      "lower": 177.4391,
       "mult": 2.0,
       "method": "EMA20(typical) ± mult·ATR10"
     },
@@ -1484,15 +2691,15 @@
       "high": 212.9399,
       "low": 176.76
     },
-    "atr10": 8.2798,
+    "atr10": 8.5228,
     "volume": {
-      "avg_20d": 22240494.55,
-      "median_20d": 18500003.0,
-      "avg_dollar_20d": 4333382901.38,
+      "avg_20d": 23119877.45,
+      "median_20d": 20263825.5,
+      "avg_dollar_20d": 4496005212.18,
       "last_complete_day": {
         "date": "2026-10-16",
-        "shares": 15767224,
-        "rel_to_20d": 0.709
+        "shares": 33354882,
+        "rel_to_20d": 1.443
       },
       "series": {
         "shares_20d": [
@@ -1515,7 +2722,7 @@
           18535937,
           24263806,
           24781506,
-          15767224
+          33354882
         ],
         "dollar_volume_20d": [
           4029206153.73,
@@ -1537,11 +2744,11 @@
           3867893973.79,
           4876297091.82,
           4968691953.0,
-          2952562482.63
+          6205008698.46
         ]
       },
       "current_session": {
-        "shares": 15766328.0,
+        "shares": 33354882.0,
         "comparable_to_avg_20d": false
       },
       "note": "ratios calculados contra último día COMPLETO; intradía solo informativo"
@@ -1549,31 +2756,26 @@
     "trend": {
       "above_sma200": true,
       "price_vs_sma": {
-        "20": -3.28,
-        "50": 2.56,
-        "200": 22.67
+        "20": -3.89,
+        "50": 1.9,
+        "200": 21.87
       },
-      "price_20d_change_pct": 5.42,
-      "price_50d_change_pct": 20.1,
-      "bollinger_pos_pct": 30.0
+      "price_20d_change_pct": 4.72,
+      "price_50d_change_pct": 19.31,
+      "bollinger_pos_pct": 26.4
     }
   },
   "price_history": {
     "status": "available",
     "source": "tradier_daily_history",
-    "observation_policy": "completed_sessions_before_snapshot_utc_day",
+    "observation_policy": "completed_nyse_sessions_at_snapshot",
+    "expected_last_session": "2026-10-16",
+    "observed_sessions": 20,
+    "window_complete": true,
     "window_sessions": 20,
-    "first_session": "2026-09-18",
-    "last_session": "2026-10-15",
+    "first_session": "2026-09-21",
+    "last_session": "2026-10-16",
     "sessions": [
-      {
-        "date": "2026-09-18",
-        "open": 177.18,
-        "high": 177.75,
-        "low": 172.0,
-        "close": 177.64,
-        "volume": 39302689.0
-      },
       {
         "date": "2026-09-21",
         "open": 178.725,
@@ -1725,6 +2927,14 @@
         "low": 192.6,
         "close": 200.5,
         "volume": 24781506.0
+      },
+      {
+        "date": "2026-10-16",
+        "open": 201.79,
+        "high": 203.55,
+        "low": 184.45,
+        "close": 186.03,
+        "volume": 33354882.0
       }
     ],
     "scope": "Recent OHLCV only. Not intraday ordering, breakout confirmation, a fixed close-count rule or the five-session rebound metric."
@@ -1734,82 +2944,157 @@
     "method": "daily_ohlcv_uniform_range_48_bins",
     "approximate": true,
     "lookback_sessions": 126,
-    "start_date": "2026-04-17",
-    "end_date": "2026-10-15",
+    "start_date": "2026-04-20",
+    "end_date": "2026-10-16",
     "price_low": 106.37,
     "price_high": 212.9399,
     "bin_width": 2.2202,
     "poc": {
       "type": "poc",
       "level": 134.1226,
-      "volume_share_pct": 7.31
+      "volume_share_pct": 7.34
     },
     "hvn": [
       {
         "type": "hvn",
         "level": 171.8661,
-        "volume_share_pct": 3.82
+        "volume_share_pct": 3.84
       },
       {
         "type": "hvn",
         "level": 143.0034,
-        "volume_share_pct": 3.4
+        "volume_share_pct": 3.05
       },
       {
         "type": "hvn",
         "level": 118.5811,
-        "volume_share_pct": 1.98
+        "volume_share_pct": 1.99
       },
       {
         "type": "hvn",
         "level": 187.4075,
-        "volume_share_pct": 1.7
+        "volume_share_pct": 1.78
       }
     ]
   },
   "options": {
     "status": "ok",
-    "expected_move_1w": {
-      "target": "1w",
+    "atm_straddle": {
+      "strike_atm": 185.0,
+      "move_abs": 10.3,
+      "move_pct": 0.05594633497189105,
+      "units": {
+        "move_abs": "USD_per_share",
+        "move_pct": "fraction"
+      },
+      "call_quote": {
+        "strike": 185.0,
+        "option_type": "call",
+        "oi": 656,
+        "gamma": 0.03048,
+        "bid": 5.55,
+        "ask": 6.2,
+        "last": 5.6,
+        "bid_date": "1792180799000",
+        "ask_date": "1792180799000",
+        "trade_date": "1792180798343",
+        "symbol": "PLTR261023C00185000",
+        "root_symbol": "PLTR",
+        "expiration_date": "2026-10-23",
+        "contract_size": 100.0,
+        "multiplier_basis": "provider_contract_size",
+        "greeks_updated_at": "2026-10-16 20:00:06",
+        "greeks_smv_vol": 0.488
+      },
+      "put_quote": {
+        "strike": 185.0,
+        "option_type": "put",
+        "oi": 1821,
+        "gamma": 0.03048,
+        "bid": 4.35,
+        "ask": 4.5,
+        "last": 4.4,
+        "bid_date": "1792180799000",
+        "ask_date": "1792180799000",
+        "trade_date": "1792180796175",
+        "symbol": "PLTR261023P00185000",
+        "root_symbol": "PLTR",
+        "expiration_date": "2026-10-23",
+        "contract_size": 100.0,
+        "multiplier_basis": "provider_contract_size",
+        "greeks_updated_at": "2026-10-16 20:00:06",
+        "greeks_smv_vol": 0.488
+      },
+      "price_method": "valid_bid_ask_mid_or_last_fallback",
+      "quote_timestamps_supplied": true,
+      "scope": "nearest_strike_in_sampled_chain; not calibrated volatility or probability",
       "expiration": "2026-10-23",
-      "source_expiration": "2026-10-23",
-      "dte": 7,
-      "weeklyized": false,
-      "dollars": 10.4,
-      "percent": 5.55,
-      "method": "ATM straddle mid (~1W)"
+      "dte_calendar": 5,
+      "horizon": "actual_expiration",
+      "probability_interpretation": "none"
+    },
+    "capture": {
+      "status": "complete",
+      "scope": "sampled_expirations",
+      "sampled_expirations": [
+        "2026-10-23",
+        "2026-10-30",
+        "2026-11-06"
+      ]
     },
     "max_pain": {
       "expiration": "2026-10-23",
       "strike": 195.0
     },
-    "dealer_gamma": {
-      "gex_total_usd_millions": -2627.355,
-      "gamma_regime": "negative",
-      "method": "sum_calls_minus_puts"
-    },
     "summary_by_expiration": [
       {
-        "date": "2026-10-16",
-        "dte": 0,
-        "atm_iv": 16.2879,
-        "expected_move": {
-          "dollars": 2.44,
-          "percent": 0.013,
-          "method": "ATM straddle mid"
-        },
-        "total_call_oi": 216260,
-        "total_put_oi": 263500,
-        "put_call_oi_ratio": 1.218
-      },
-      {
         "date": "2026-10-23",
-        "dte": 7,
-        "atm_iv": 0.5013,
+        "dte": 5,
+        "strike_atm": 185.0,
+        "call_quote": {
+          "strike": 185.0,
+          "option_type": "call",
+          "oi": 656,
+          "gamma": 0.03048,
+          "bid": 5.55,
+          "ask": 6.2,
+          "last": 5.6,
+          "bid_date": "1792180799000",
+          "ask_date": "1792180799000",
+          "trade_date": "1792180798343",
+          "symbol": "PLTR261023C00185000",
+          "root_symbol": "PLTR",
+          "expiration_date": "2026-10-23",
+          "contract_size": 100.0,
+          "multiplier_basis": "provider_contract_size",
+          "greeks_updated_at": "2026-10-16 20:00:06",
+          "greeks_smv_vol": 0.488
+        },
+        "put_quote": {
+          "strike": 185.0,
+          "option_type": "put",
+          "oi": 1821,
+          "gamma": 0.03048,
+          "bid": 4.35,
+          "ask": 4.5,
+          "last": 4.4,
+          "bid_date": "1792180799000",
+          "ask_date": "1792180799000",
+          "trade_date": "1792180796175",
+          "symbol": "PLTR261023P00185000",
+          "root_symbol": "PLTR",
+          "expiration_date": "2026-10-23",
+          "contract_size": 100.0,
+          "multiplier_basis": "provider_contract_size",
+          "greeks_updated_at": "2026-10-16 20:00:06",
+          "greeks_smv_vol": 0.488
+        },
+        "unknown_oi_contracts": 0,
         "expected_move": {
-          "dollars": 10.4,
-          "percent": 0.0555,
-          "method": "ATM straddle mid"
+          "dollars": 10.3,
+          "percent": 0.0559,
+          "method": "ATM straddle observed price; actual expiration; not sigma",
+          "percent_unit": "fraction"
         },
         "total_call_oi": 50431,
         "total_put_oi": 70696,
@@ -1817,64 +3102,173 @@
       },
       {
         "date": "2026-10-30",
-        "dte": 14,
-        "atm_iv": 0.4951,
+        "dte": 12,
+        "strike_atm": 185.0,
+        "call_quote": {
+          "strike": 185.0,
+          "option_type": "call",
+          "oi": 1867,
+          "gamma": 0.02183,
+          "bid": 7.65,
+          "ask": 8.3,
+          "last": 7.95,
+          "bid_date": "1792180800000",
+          "ask_date": "1792180799000",
+          "trade_date": "1792180593281",
+          "symbol": "PLTR261030C00185000",
+          "root_symbol": "PLTR",
+          "expiration_date": "2026-10-30",
+          "contract_size": 100.0,
+          "multiplier_basis": "provider_contract_size",
+          "greeks_updated_at": "2026-10-16 20:00:06",
+          "greeks_smv_vol": 0.499
+        },
+        "put_quote": {
+          "strike": 185.0,
+          "option_type": "put",
+          "oi": 1602,
+          "gamma": 0.02183,
+          "bid": 6.35,
+          "ask": 6.8,
+          "last": 6.48,
+          "bid_date": "1792180799000",
+          "ask_date": "1792180799000",
+          "trade_date": "1792180794556",
+          "symbol": "PLTR261030P00185000",
+          "root_symbol": "PLTR",
+          "expiration_date": "2026-10-30",
+          "contract_size": 100.0,
+          "multiplier_basis": "provider_contract_size",
+          "greeks_updated_at": "2026-10-16 20:00:06",
+          "greeks_smv_vol": 0.499
+        },
+        "unknown_oi_contracts": 0,
         "expected_move": {
-          "dollars": 14.525,
-          "percent": 0.0776,
-          "method": "ATM straddle mid"
+          "dollars": 14.55,
+          "percent": 0.079,
+          "method": "ATM straddle observed price; actual expiration; not sigma",
+          "percent_unit": "fraction"
         },
         "total_call_oi": 42469,
         "total_put_oi": 40933,
         "put_call_oi_ratio": 0.964
+      },
+      {
+        "date": "2026-11-06",
+        "dte": 19,
+        "strike_atm": 185.0,
+        "call_quote": {
+          "strike": 185.0,
+          "option_type": "call",
+          "oi": 372,
+          "gamma": 0.01297,
+          "bid": 12.95,
+          "ask": 13.4,
+          "last": 13.4,
+          "bid_date": "1792180799000",
+          "ask_date": "1792180799000",
+          "trade_date": "1792180536691",
+          "symbol": "PLTR261106C00185000",
+          "root_symbol": "PLTR",
+          "expiration_date": "2026-11-06",
+          "contract_size": 100.0,
+          "multiplier_basis": "provider_contract_size",
+          "greeks_updated_at": "2026-10-16 20:00:06",
+          "greeks_smv_vol": 0.705
+        },
+        "put_quote": {
+          "strike": 185.0,
+          "option_type": "put",
+          "oi": 612,
+          "gamma": 0.01297,
+          "bid": 11.6,
+          "ask": 12.1,
+          "last": 12.0,
+          "bid_date": "1792180799000",
+          "ask_date": "1792180799000",
+          "trade_date": "1792180228095",
+          "symbol": "PLTR261106P00185000",
+          "root_symbol": "PLTR",
+          "expiration_date": "2026-11-06",
+          "contract_size": 100.0,
+          "multiplier_basis": "provider_contract_size",
+          "greeks_updated_at": "2026-10-16 20:00:06",
+          "greeks_smv_vol": 0.705
+        },
+        "unknown_oi_contracts": 0,
+        "expected_move": {
+          "dollars": 25.025,
+          "percent": 0.1359,
+          "method": "ATM straddle observed price; actual expiration; not sigma",
+          "percent_unit": "fraction"
+        },
+        "total_call_oi": 19149,
+        "total_put_oi": 18840,
+        "put_call_oi_ratio": 0.984
       }
     ],
     "max_pain_by_expiration": [
       {
-        "date": "2026-10-16",
-        "strike": 185.0,
-        "confidence": 0.0
-      },
-      {
         "date": "2026-10-23",
         "strike": 195.0,
-        "confidence": 0.0
+        "objective_gap_fraction": 0.0
       },
       {
         "date": "2026-10-30",
         "strike": 192.5,
-        "confidence": 0.0
+        "objective_gap_fraction": 0.0
+      },
+      {
+        "date": "2026-11-06",
+        "strike": 190.0,
+        "objective_gap_fraction": 0.0
       }
-    ]
+    ],
+    "gamma_concentration": {
+      "call_minus_put_notional_usd_millions": -1094.676,
+      "eligible_contracts": 488,
+      "unknown_metric_contracts": 0,
+      "assumed_standard_multiplier_contracts": 0,
+      "sampled_expirations": [
+        "2026-10-23",
+        "2026-10-30",
+        "2026-11-06"
+      ],
+      "dealer_position_sign": "unknown",
+      "method": "sum_call_abs_gamma_OI_multiplier_S2_minus_puts",
+      "units": "USD_millions_per_unit_underlying_return",
+      "scope": "gamma_eligible_contracts_in_sampled_expirations; hypothetical_long_contract_exposure"
+    }
   },
   "options_overview": {
     "put_call_oi_ratio": {
       "near_term": {
         "scope": "near_term",
         "expirations_considered": [
-          "2026-10-16",
           "2026-10-23",
-          "2026-10-30"
+          "2026-10-30",
+          "2026-11-06"
         ],
-        "total_put_oi": 375129,
-        "total_call_oi": 309160,
-        "ratio": 1.213,
+        "total_put_oi": 130469,
+        "total_call_oi": 112049,
+        "ratio": 1.164,
+        "unknown_oi_contracts": 0,
         "dte_buckets": {
           "0_7": {
-            "puts": 334196,
-            "calls": 266691,
-            "ratio": 1.253,
+            "puts": 70696,
+            "calls": 50431,
+            "ratio": 1.402,
             "expirations": [
-              "2026-10-16",
               "2026-10-23"
             ]
           },
           "8_30": {
-            "puts": 40933,
-            "calls": 42469,
-            "ratio": 0.964,
+            "puts": 59773,
+            "calls": 61618,
+            "ratio": 0.97,
             "expirations": [
-              "2026-10-30"
+              "2026-10-30",
+              "2026-11-06"
             ]
           },
           "31_60": {
@@ -1892,32 +3286,40 @@
         },
         "per_expiration": [
           {
-            "expiration": "2026-10-16",
-            "dte": 0,
-            "puts": 263500,
-            "calls": 216260,
-            "ratio": 1.218
-          },
-          {
             "expiration": "2026-10-23",
-            "dte": 7,
+            "dte": 5,
             "puts": 70696,
             "calls": 50431,
-            "ratio": 1.402
+            "ratio": 1.402,
+            "unknown_oi_contracts": 0,
+            "known_put_oi": 70696,
+            "known_call_oi": 50431
           },
           {
             "expiration": "2026-10-30",
-            "dte": 14,
+            "dte": 12,
             "puts": 40933,
             "calls": 42469,
-            "ratio": 0.964
+            "ratio": 0.964,
+            "unknown_oi_contracts": 0,
+            "known_put_oi": 40933,
+            "known_call_oi": 42469
+          },
+          {
+            "expiration": "2026-11-06",
+            "dte": 19,
+            "puts": 18840,
+            "calls": 19149,
+            "ratio": 0.984,
+            "unknown_oi_contracts": 0,
+            "known_put_oi": 18840,
+            "known_call_oi": 19149
           }
         ]
       },
       "thru_60d": {
         "scope": "thru_60d",
         "expirations_considered": [
-          "2026-10-16",
           "2026-10-23",
           "2026-10-30",
           "2026-11-06",
@@ -1925,16 +3327,16 @@
           "2026-11-20",
           "2026-11-27"
         ],
-        "total_put_oi": 561992,
-        "total_call_oi": 487988,
-        "ratio": 1.152,
+        "total_put_oi": 298492,
+        "total_call_oi": 271728,
+        "ratio": 1.098,
+        "unknown_oi_contracts": 0,
         "dte_buckets": {
           "0_7": {
-            "puts": 334196,
-            "calls": 266691,
-            "ratio": 1.253,
+            "puts": 70696,
+            "calls": 50431,
+            "ratio": 1.402,
             "expirations": [
-              "2026-10-16",
               "2026-10-23"
             ]
           },
@@ -1966,71 +3368,78 @@
         },
         "per_expiration": [
           {
-            "expiration": "2026-10-16",
-            "dte": 0,
-            "puts": 263500,
-            "calls": 216260,
-            "ratio": 1.218
-          },
-          {
             "expiration": "2026-10-23",
-            "dte": 7,
+            "dte": 5,
             "puts": 70696,
             "calls": 50431,
-            "ratio": 1.402
+            "ratio": 1.402,
+            "unknown_oi_contracts": 0,
+            "known_put_oi": 70696,
+            "known_call_oi": 50431
           },
           {
             "expiration": "2026-10-30",
-            "dte": 14,
+            "dte": 12,
             "puts": 40933,
             "calls": 42469,
-            "ratio": 0.964
+            "ratio": 0.964,
+            "unknown_oi_contracts": 0,
+            "known_put_oi": 40933,
+            "known_call_oi": 42469
           },
           {
             "expiration": "2026-11-06",
-            "dte": 21,
+            "dte": 19,
             "puts": 18840,
             "calls": 19149,
-            "ratio": 0.984
+            "ratio": 0.984,
+            "unknown_oi_contracts": 0,
+            "known_put_oi": 18840,
+            "known_call_oi": 19149
           },
           {
             "expiration": "2026-11-13",
-            "dte": 28,
+            "dte": 26,
             "puts": 10062,
             "calls": 8339,
-            "ratio": 1.207
+            "ratio": 1.207,
+            "unknown_oi_contracts": 0,
+            "known_put_oi": 10062,
+            "known_call_oi": 8339
           },
           {
             "expiration": "2026-11-20",
-            "dte": 35,
+            "dte": 33,
             "puts": 154927,
             "calls": 148445,
-            "ratio": 1.044
+            "ratio": 1.044,
+            "unknown_oi_contracts": 0,
+            "known_put_oi": 154927,
+            "known_call_oi": 148445
           },
           {
             "expiration": "2026-11-27",
-            "dte": 42,
+            "dte": 40,
             "puts": 3034,
             "calls": 2895,
-            "ratio": 1.048
+            "ratio": 1.048,
+            "unknown_oi_contracts": 0,
+            "known_put_oi": 3034,
+            "known_call_oi": 2895
           }
         ]
       },
       "default_scope": "near_term",
-      "ratio": 1.213,
-      "total_put_oi": 375129,
-      "total_call_oi": 309160
+      "ratio": 1.164,
+      "total_put_oi": 130469,
+      "total_call_oi": 112049
     }
   },
   "vols": {
-    "rv20_annual_pct": 39.503,
-    "rv60_annual_pct": 71.081,
-    "rv20_weekly_pct": 5.478,
-    "rv60_weekly_pct": 9.857,
-    "em_pct_1w": 5.55,
-    "em_abs_1w": 10.4,
-    "iv_to_rv_ratio": 1.013,
-    "em_to_atr_ratio": 1.256,
+    "rv20_annual_pct": 41.03,
+    "rv60_annual_pct": 71.386,
+    "rv20_weekly_pct": 5.69,
+    "rv60_weekly_pct": 9.9,
     "windows": {
       "rv": [
         20,
@@ -2043,12 +3452,7 @@
       "em_pct_1w": "percent",
       "em_abs_1w": "dollars"
     },
-    "method": "std(log_returns_daily) * sqrt(252); weekly = annual/sqrt(52)",
-    "em_basis": {
-      "source_expiration": "2026-10-23",
-      "dte": 7,
-      "weeklyized_from_dte": false
-    }
+    "method": "std(log_returns_daily) * sqrt(252); weekly = annual/sqrt(52)"
   },
   "forward_returns": {
     "lookback_days": 252,
@@ -2813,7 +4217,7 @@
         -0.158,
         -3.69,
         -0.234,
-        -6.604
+        -7.217
       ],
       "t1_high_from_close_pct": [
         2.895,
@@ -3321,13 +4725,13 @@
         0.284,
         -2.922,
         1.854,
-        -7.201
+        -7.81
       ]
     },
     "stats": {
       "close_from_close": {
         "count": 252,
-        "mean": 0.086,
+        "mean": 0.084,
         "median": 0.025,
         "up_rate_pct": 51.19,
         "p05": -6.089,
@@ -3343,7 +4747,7 @@
       },
       "close_from_open": {
         "count": 252,
-        "mean": -0.023,
+        "mean": -0.026,
         "median": 0.101,
         "up_rate_pct": 52.78,
         "p05": -4.969,
@@ -3353,122 +4757,257 @@
     "latest": {
       "anchor_date": "2026-10-15",
       "t1_date": "2026-10-16",
-      "close_from_close_pct": -6.604,
+      "close_from_close_pct": -7.217,
       "high_from_close_pct": 1.521,
-      "close_from_open_pct": -7.201
+      "close_from_open_pct": -7.81
     }
   },
   "conventions": {
     "returns": {
       "basis": "close_to_close",
-      "intraday_high_basis": "close_to_high",
       "t_is_trading_days": true
     },
-    "probabilities": {
-      "touch_1w": "Normal(0, sigma) con sigma = EM 1W (%) si disponible; si no, RV20 semanal (%)"
-    }
-  },
-  "trend_1_2w": {
-    "horizon": "1-2w",
-    "bias": -15,
-    "confidence": 83,
-    "components": {
-      "A_technicals": {
-        "score": -5,
-        "signals": {
-          "rsi14": 49.77,
-          "price_vs_sma20_pct": -3.28,
-          "price_vs_sma50_pct": 2.56,
-          "donchian20_pos_pct": 29.0,
-          "bb_width_pct": 16.38
-        }
-      },
-      "B_options_7_21DTE": {
-        "score": 0,
-        "signals": {
-          "nearest_call_wall_dist_pct": 1.47,
-          "nearest_put_wall_dist_pct": 0.0,
-          "gamma_regime": "negative"
-        }
-      },
-      "C_vol_risk": {
-        "score": -5,
-        "signals": {
-          "iv_to_rv": 1.013,
-          "em_2w_to_atr": 1.256,
-          "em_pct_1w": 5.55
-        }
-      },
-      "D_volume_tape": {
-        "score": -5,
-        "signals": {
-          "volume_rel_20d_last_close": 0.709
-        }
-      }
+    "options": {
+      "dealer_position_sign": "unobserved",
+      "straddle_is_sigma": false
     },
-    "rules_triggered": [
-      {
-        "code": "PX_LT_SMA20",
-        "weight": 10,
-        "side": -1
-      },
-      {
-        "code": "PX_GT_SMA50",
-        "weight": 10,
-        "side": 1
-      },
-      {
-        "code": "DONCH_POS_LE_30",
-        "weight": 5,
-        "side": -1
-      },
-      {
-        "code": "PUTWALL_NEAR",
-        "weight": 5,
-        "side": 1
-      },
-      {
-        "code": "GAMMA_REGIME_NEG",
-        "weight": 5,
-        "side": -1
-      },
-      {
-        "code": "BB_WIDTH_GE_12",
-        "weight": 5,
-        "side": -1
-      },
-      {
-        "code": "VOL_REL_LT_0_9",
-        "weight": 5,
-        "side": -1
-      }
-    ],
-    "features_flat": {
-      "rsi14": 49.77,
-      "price_vs_sma20_pct": -3.28,
-      "price_vs_sma50_pct": 2.56,
-      "donchian20_pos_pct": 29.0078,
-      "bb_width_pct": 16.38,
-      "nearest_call_wall_dist_pct": 1.47,
-      "nearest_put_wall_dist_pct": 0.0,
-      "gamma_regime": "negative",
-      "iv_to_rv": 1.013,
-      "em_2w_to_atr": 1.256,
-      "em_pct_1w": 5.55,
-      "volume_rel_20d_last_close": 0.709
-    },
-    "config": {
-      "entry_threshold_bias": 55
-    }
+    "uncertainty": "No calibrated price-touch probabilities or directional confidence supplied."
   },
   "liquidity": {
-    "adv20_usd": 4333382901.38,
+    "adv20_usd": 4496005212.18,
     "bid_ask": {
-      "bid": 187.21,
-      "ask": 187.3,
-      "mid": 187.255,
-      "spread_abs": 0.09,
-      "spread_pct": 0.048
+      "bid": 184.01,
+      "ask": 184.2,
+      "mid": 184.105,
+      "spread_abs": 0.19,
+      "spread_pct": 0.103
     }
+  },
+  "option_origins": [
+    {
+      "type": "option_origin_observation",
+      "level": 190.0,
+      "status": "available",
+      "reason": "requested_identity_observed",
+      "option_details": {
+        "scope": "parsed_contracts_in_sampled_expirations",
+        "option_type": "put",
+        "strike": 190.0,
+        "aggregate_oi_basis": "all_observed_contracts_not_only_gamma_eligible",
+        "sampled_expirations": [
+          "2026-10-23",
+          "2026-10-30",
+          "2026-11-06"
+        ],
+        "by_expiration": [
+          {
+            "expiration": "2026-10-23",
+            "status": "observed",
+            "reason": "requested_identity_observed",
+            "aggregate_oi": 2980,
+            "gamma_usd_millions": 306.65439832546207,
+            "observed_contracts": [
+              {
+                "strike": 190.0,
+                "option_type": "put",
+                "oi": 2980,
+                "gamma": 0.03036,
+                "bid": 7.0,
+                "ask": 7.15,
+                "last": 7.0,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180778327",
+                "symbol": "PLTR261023P00190000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-23",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.473
+              }
+            ]
+          },
+          {
+            "expiration": "2026-10-30",
+            "status": "observed",
+            "reason": "requested_identity_observed",
+            "aggregate_oi": 4251,
+            "gamma_usd_millions": 317.9981584465559,
+            "observed_contracts": [
+              {
+                "strike": 190.0,
+                "option_type": "put",
+                "oi": 4251,
+                "gamma": 0.02207,
+                "bid": 8.9,
+                "ask": 9.3,
+                "last": 9.0,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180754461",
+                "symbol": "PLTR261030P00190000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-10-30",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.487
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "reason": "requested_identity_observed",
+            "aggregate_oi": 3044,
+            "gamma_usd_millions": 135.4691921664913,
+            "observed_contracts": [
+              {
+                "strike": 190.0,
+                "option_type": "put",
+                "oi": 3044,
+                "gamma": 0.01313,
+                "bid": 14.15,
+                "ask": 14.7,
+                "last": 14.35,
+                "bid_date": "1792180799000",
+                "ask_date": "1792180799000",
+                "trade_date": "1792180478787",
+                "symbol": "PLTR261106P00190000",
+                "root_symbol": "PLTR",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-10-16 20:00:06",
+                "greeks_smv_vol": 0.698
+              }
+            ]
+          }
+        ]
+      },
+      "volume_profile_proximity": {
+        "status": "available",
+        "nearest_type": "hvn",
+        "nearest_level": 187.4075,
+        "nearest_distance_pct": -1.36,
+        "nearest_abs_distance_pct": 1.36,
+        "poc_distance_pct": -29.41,
+        "nearest_hvn_distance_pct": -1.36
+      },
+      "historical_reaction": {
+        "status": "available",
+        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+        "lookback_sessions": 252,
+        "tolerance_abs": 1.7046,
+        "test_count": 9,
+        "defense_count": 4,
+        "defense_rate_pct": 44.4,
+        "last_test_date": "2026-09-23",
+        "last_test_rebound_5d_pct": 2.46,
+        "median_rebound_5d_pct": 2.46,
+        "max_rebound_5d_pct": 9.22,
+        "defense_min_rebound_pct": 2.24,
+        "observation_policy": "complete_forward_window_only",
+        "forward_sessions": 5,
+        "pending_test_count": 1,
+        "last_pending_test_date": "2026-10-16",
+        "last_pending_observed_sessions": 0,
+        "excluded_incomplete_data_test_count": 0,
+        "measurement_basis": {
+          "calibration": "completed_daily_atr10_v1",
+          "history_sha256": "acf92067b9b65562630d2590e42e440a4cc5a16a6497673352a96df1c70a7a0f",
+          "history_end": "2026-10-16",
+          "atr10": 8.522769999999998,
+          "parameters_sha256": "9eeec247cc3770b392fd15a92f726a76e3a443d398cf2559881127cb45fc9a1c"
+        },
+        "path_evidence": {
+          "status": "available",
+          "method": "horizontal_coordinate_post_contact_close_path_v40",
+          "measurement_origin": "contact_session_close",
+          "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+          "intraday_order": "unknown_with_daily_bars",
+          "forward_sessions": 5,
+          "coordinate": 190.0,
+          "tolerance_abs": 1.7045539999999997,
+          "history_first_session": "2025-09-15",
+          "history_last_session": "2026-10-16",
+          "contact_count": 10,
+          "completed_count": 9,
+          "pending_count": 1,
+          "incomplete_data_count": 0,
+          "overlapping_window_count": 4,
+          "independent_trials_assumed": false,
+          "summary_scope": "all_completed_contacts",
+          "event_detail_selection": "latest_completed_contacts",
+          "negative_terminal_count": 6,
+          "positive_excursion_negative_terminal_count": 4,
+          "adverse_extreme_first_count": 3,
+          "same_session_extremes_count": 0,
+          "events": [
+            {
+              "contact_date": "2025-12-26",
+              "window_end": "2026-01-05",
+              "contact_close": 188.71,
+              "approach": "from_above",
+              "favorable_excursion_pct": 0.0,
+              "adverse_excursion_pct": 11.848869,
+              "terminal_close_return_pct": -7.773833,
+              "favorable_extreme_session": 1,
+              "adverse_extreme_session": 4,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": null,
+              "overlaps_previous_window": true
+            },
+            {
+              "contact_date": "2026-08-28",
+              "window_end": "2026-09-04",
+              "contact_close": 186.29,
+              "approach": "from_below",
+              "favorable_excursion_pct": 0.885716,
+              "adverse_excursion_pct": 11.047292,
+              "terminal_close_return_pct": -6.420098,
+              "favorable_extreme_session": 1,
+              "adverse_extreme_session": 3,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": false
+            },
+            {
+              "contact_date": "2026-09-23",
+              "window_end": "2026-09-30",
+              "contact_close": 191.79,
+              "approach": "from_below",
+              "favorable_excursion_pct": 1.506856,
+              "adverse_excursion_pct": 3.639397,
+              "terminal_close_return_pct": -2.471453,
+              "favorable_extreme_session": 1,
+              "adverse_extreme_session": 4,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": false
+            }
+          ],
+          "events_omitted": 6,
+          "max_adverse_excursion_pct": 15.03538,
+          "min_terminal_close_return_pct": -11.54899,
+          "median_favorable_excursion_pct": 1.506856,
+          "median_adverse_excursion_pct": 6.072056,
+          "median_terminal_close_return_pct": -4.757472
+        }
+      }
+    }
+  ],
+  "measurement_policy": {
+    "version": 40,
+    "removed_auxiliaries": [
+      "prob_touch_1w_pct",
+      "strength_score",
+      "trend_1_2w",
+      "dealer_gamma_regime",
+      "atm_iv_straddle_heuristic",
+      "iv_to_rv_ratio"
+    ],
+    "reason": "No calibrated probability, independent strength or dealer position inferred from these measurements."
   }
 }
