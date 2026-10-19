@@ -1,15 +1,15 @@
 {
   "symbol": "CIFR",
   "data_contract_revision": 40,
-  "latest_price": 8.985,
-  "as_of": "2026-10-18T09:45:08.307033+00:00",
+  "latest_price": 9.365,
+  "as_of": "2026-10-19T09:45:15.725611+00:00",
   "quote_observation": {
     "status": "available",
-    "price": 8.985,
+    "price": 9.365,
     "source": "bid_ask_mid",
-    "provider_timestamp": "2026-10-16T23:59:52+00:00",
-    "fetched_at": "2026-10-18T09:45:08.307033+00:00",
-    "age_seconds": 121516.307033,
+    "provider_timestamp": "2026-10-19T09:43:46+00:00",
+    "fetched_at": "2026-10-19T09:45:15.725611+00:00",
+    "age_seconds": 89.725611,
     "freshness_basis": "current_open_session_or_latest_completed_session",
     "expected_market_date": "2026-10-16"
   },
@@ -17,7 +17,7 @@
     {
       "type": "52_week_high",
       "level": 30.14,
-      "distance": 235.45,
+      "distance": 221.84,
       "notes": "Primer test (pendiente) — señal débil (γ-$ bajo)",
       "meta": {
         "level_date": "2026-06-22",
@@ -32,7 +32,7 @@
     {
       "type": "range_top_3_6m",
       "level": 25.57,
-      "distance": 184.59,
+      "distance": 173.04,
       "notes": "Techo de rango 3–6m con 2 toques; último 2026-06-09 (pendiente)",
       "meta": {
         "first_touch_date": "2026-05-27",
@@ -47,14 +47,14 @@
     {
       "type": "gap_down_upper",
       "level": 12.95,
-      "distance": 44.13,
-      "notes": "Gap bajista del 2026-10-13 (tam. 11.91%); abierto (pendiente)",
+      "distance": 38.28,
+      "notes": "Gap bajista del 2026-10-13 (tam. 11.43%); abierto (pendiente)",
       "meta": {
         "gap_date": "2026-10-13",
         "gap_upper": 12.95,
         "gap_lower": 11.88,
         "gap_size": 1.07,
-        "gap_size_pct_vs_price": 11.91,
+        "gap_size_pct_vs_price": 11.43,
         "vol_factor_vs_median": 4.43,
         "touches_since_gap": 0,
         "last_touch_date": null,
@@ -67,7 +67,7 @@
     {
       "type": "avwap_event",
       "level": 10.3555,
-      "distance": 15.25,
+      "distance": 10.58,
       "notes": "AVWAP anclado a gap del 2026-10-13 (pendiente)",
       "meta": {
         "anchor_type": "gap",
@@ -81,108 +81,20 @@
         "method": "daily_typical_price_vwap"
       },
       "unit": "pct"
-    },
-    {
-      "type": "call_wall_gamma",
-      "level": 9.5,
-      "distance": 5.73,
-      "notes": "Call wall (γ-$) exp 2026-10-23; dominante (21.8% del lado call) — pendiente",
-      "meta": {
-        "expiration": "2026-10-23",
-        "option_details": {
-          "scope": "parsed_contracts_in_sampled_expirations",
-          "option_type": "call",
-          "strike": 9.5,
-          "aggregate_oi_basis": "gamma_eligible_contracts",
-          "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
-          "sampled_expirations": [
-            "2026-10-23",
-            "2026-10-30",
-            "2026-11-06"
-          ],
-          "by_expiration": [
-            {
-              "expiration": "2026-10-23",
-              "status": "observed",
-              "aggregate_oi": 7321.0,
-              "gamma_usd_millions": 15.435825447185323,
-              "observed_contracts": [
-                {
-                  "strike": 9.5,
-                  "option_type": "call",
-                  "oi": 7321,
-                  "gamma": 0.26117,
-                  "bid": 0.34,
-                  "ask": 0.43,
-                  "last": 0.36,
-                  "bid_date": "1792180799000",
-                  "ask_date": "1792180799000",
-                  "trade_date": "1792180764831",
-                  "symbol": "CIFR261023C00009500",
-                  "root_symbol": "CIFR",
-                  "expiration_date": "2026-10-23",
-                  "contract_size": 100.0,
-                  "multiplier_basis": "provider_contract_size",
-                  "greeks_updated_at": "2026-10-16 20:00:03",
-                  "greeks_smv_vol": 1.189,
-                  "included_in_wall_aggregate": true
-                }
-              ]
-            },
-            {
-              "expiration": "2026-10-30",
-              "status": "not_observed",
-              "aggregate_oi": null,
-              "gamma_usd_millions": null,
-              "observed_contracts": []
-            },
-            {
-              "expiration": "2026-11-06",
-              "status": "not_observed",
-              "aggregate_oi": null,
-              "gamma_usd_millions": null,
-              "observed_contracts": []
-            }
-          ]
-        },
-        "gamma_usd": 15.436,
-        "gamma_usd_units": "millions",
-        "gamma_usd_total_calls": 70.798,
-        "gamma_usd_share_pct": 21.8,
-        "oi": 7321,
-        "oi_share_pct": 6.9,
-        "atr10": 1.2003,
-        "tolerance": 0.2401,
-        "window": "calls agregadas en top 3 expiraciones; sin filtro de distancia",
-        "testing_now": false,
-        "cluster": {
-          "neighbors": [
-            8.5,
-            9.0,
-            9.5,
-            10.0,
-            10.5
-          ],
-          "cluster_gamma_usd": 40.226,
-          "cluster_share_pct": 56.8
-        },
-        "method": "sum(|γ|·OI·spot²) por strike multi-exp (sin límites de distancia)"
-      },
-      "unit": "pct"
     }
   ],
   "supports": [
     {
       "type": "52_week_low",
       "level": 8.78,
-      "distance": 2.28,
-      "notes": "Primer test (en curso)",
+      "distance": 6.25,
+      "notes": "Primer test (pendiente)",
       "meta": {
         "level_date": "2026-10-16",
         "atr10": 1.2003,
         "tolerance": 0.2401,
         "retests_since_origin": 0,
-        "testing_now": true,
+        "testing_now": false,
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "hvn",
@@ -474,7 +386,7 @@
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 7321.0,
-            "gamma_usd_millions": 15.435825447185323,
+            "gamma_usd_millions": 16.769080877146326,
             "observed_contracts": [
               {
                 "strike": 9.5,
@@ -484,8 +396,8 @@
                 "bid": 0.34,
                 "ask": 0.43,
                 "last": 0.36,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180764831",
                 "symbol": "CIFR261023C00009500",
                 "root_symbol": "CIFR",
@@ -514,7 +426,7 @@
           }
         ]
       },
-      "gamma_usd_millions": 15.436,
+      "gamma_usd_millions": 16.769,
       "gamma_share_pct": 21.8,
       "oi": 7321,
       "oi_share_pct": 6.9,
@@ -525,9 +437,9 @@
         10.0,
         10.5
       ],
-      "cluster_gamma_usd": 40.226,
+      "cluster_gamma_usd": 43.7,
       "cluster_share_pct": 56.8,
-      "distance": 5.73
+      "distance": 1.44
     },
     {
       "level": 10.0,
@@ -548,7 +460,7 @@
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 5315.0,
-            "gamma_usd_millions": 9.663336486250873,
+            "gamma_usd_millions": 10.497998415145876,
             "observed_contracts": [
               {
                 "strike": 10.0,
@@ -558,8 +470,8 @@
                 "bid": 0.22,
                 "ask": 0.24,
                 "last": 0.23,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180789643",
                 "symbol": "CIFR261023C00010000",
                 "root_symbol": "CIFR",
@@ -576,7 +488,7 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 815.0,
-            "gamma_usd_millions": 1.24866004119075,
+            "gamma_usd_millions": 1.3565119203007503,
             "observed_contracts": [
               {
                 "strike": 10.0,
@@ -586,8 +498,8 @@
                 "bid": 0.42,
                 "ask": 0.5,
                 "last": 0.45,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180750439",
                 "symbol": "CIFR261030C00010000",
                 "root_symbol": "CIFR",
@@ -604,7 +516,7 @@
             "expiration": "2026-11-06",
             "status": "observed",
             "aggregate_oi": 3077.0,
-            "gamma_usd_millions": 3.928058346465225,
+            "gamma_usd_millions": 4.267340825238225,
             "observed_contracts": [
               {
                 "strike": 10.0,
@@ -614,8 +526,8 @@
                 "bid": 0.63,
                 "ask": 0.74,
                 "last": 0.66,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180433988",
                 "symbol": "CIFR261106C00010000",
                 "root_symbol": "CIFR",
@@ -630,7 +542,7 @@
           }
         ]
       },
-      "gamma_usd_millions": 14.84,
+      "gamma_usd_millions": 16.122,
       "gamma_share_pct": 21.0,
       "oi": 9207,
       "oi_share_pct": 8.7,
@@ -641,9 +553,9 @@
         10.5,
         11.0
       ],
-      "cluster_gamma_usd": 47.541,
+      "cluster_gamma_usd": 51.647,
       "cluster_share_pct": 67.2,
-      "distance": 11.3
+      "distance": 6.78
     },
     {
       "level": 11.0,
@@ -664,7 +576,7 @@
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 1952.0,
-            "gamma_usd_millions": 2.0895823933919995,
+            "gamma_usd_millions": 2.2700681783519996,
             "observed_contracts": [
               {
                 "strike": 11.0,
@@ -674,8 +586,8 @@
                 "bid": 0.07,
                 "ask": 0.09,
                 "last": 0.08,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180675461",
                 "symbol": "CIFR261023C00011000",
                 "root_symbol": "CIFR",
@@ -692,7 +604,7 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 3114.0,
-            "gamma_usd_millions": 3.7266634797155995,
+            "gamma_usd_millions": 4.0485506594436,
             "observed_contracts": [
               {
                 "strike": 11.0,
@@ -702,8 +614,8 @@
                 "bid": 0.21,
                 "ask": 0.27,
                 "last": 0.25,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180800000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180354487",
                 "symbol": "CIFR261030C00011000",
                 "root_symbol": "CIFR",
@@ -720,7 +632,7 @@
             "expiration": "2026-11-06",
             "status": "observed",
             "aggregate_oi": 1456.0,
-            "gamma_usd_millions": 1.6048174133628001,
+            "gamma_usd_millions": 1.7434320626268005,
             "observed_contracts": [
               {
                 "strike": 11.0,
@@ -730,8 +642,8 @@
                 "bid": 0.39,
                 "ask": 0.47,
                 "last": 0.44,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180553132",
                 "symbol": "CIFR261106C00011000",
                 "root_symbol": "CIFR",
@@ -746,7 +658,7 @@
           }
         ]
       },
-      "gamma_usd_millions": 7.421,
+      "gamma_usd_millions": 8.062,
       "gamma_share_pct": 10.5,
       "oi": 6522,
       "oi_share_pct": 6.2,
@@ -757,9 +669,9 @@
         11.5,
         12.0
       ],
-      "cluster_gamma_usd": 38.19,
+      "cluster_gamma_usd": 41.489,
       "cluster_share_pct": 53.9,
-      "distance": 22.43
+      "distance": 17.46
     },
     {
       "level": 10.5,
@@ -780,7 +692,7 @@
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 3351.0,
-            "gamma_usd_millions": 4.820520327450524,
+            "gamma_usd_millions": 5.2368884007875245,
             "observed_contracts": [
               {
                 "strike": 10.5,
@@ -790,8 +702,8 @@
                 "bid": 0.1,
                 "ask": 0.15,
                 "last": 0.11,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180031911",
                 "symbol": "CIFR261023C00010500",
                 "root_symbol": "CIFR",
@@ -808,7 +720,7 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 562.0,
-            "gamma_usd_millions": 0.7761965713865999,
+            "gamma_usd_millions": 0.8432398465946,
             "observed_contracts": [
               {
                 "strike": 10.5,
@@ -818,8 +730,8 @@
                 "bid": 0.29,
                 "ask": 0.38,
                 "last": 0.3,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180014940",
                 "symbol": "CIFR261030C00010500",
                 "root_symbol": "CIFR",
@@ -841,7 +753,7 @@
           }
         ]
       },
-      "gamma_usd_millions": 5.597,
+      "gamma_usd_millions": 6.08,
       "gamma_share_pct": 7.9,
       "oi": 3913,
       "oi_share_pct": 3.7,
@@ -852,9 +764,9 @@
         11.0,
         11.5
       ],
-      "cluster_gamma_usd": 48.311,
+      "cluster_gamma_usd": 52.484,
       "cluster_share_pct": 68.2,
-      "distance": 16.86
+      "distance": 12.12
     },
     {
       "level": 12.0,
@@ -875,7 +787,7 @@
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 5538.0,
-            "gamma_usd_millions": 2.8675966865247,
+            "gamma_usd_millions": 3.1152827507607004,
             "observed_contracts": [
               {
                 "strike": 12.0,
@@ -885,8 +797,8 @@
                 "bid": 0.02,
                 "ask": 0.03,
                 "last": 0.03,
-                "bid_date": "1792180763000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180763165",
                 "symbol": "CIFR261023C00012000",
                 "root_symbol": "CIFR",
@@ -903,7 +815,7 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 1917.0,
-            "gamma_usd_millions": 1.6203355386727498,
+            "gamma_usd_millions": 1.76029055194275,
             "observed_contracts": [
               {
                 "strike": 12.0,
@@ -913,8 +825,8 @@
                 "bid": 0.09,
                 "ask": 0.14,
                 "last": 0.11,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792179140687",
                 "symbol": "CIFR261030C00012000",
                 "root_symbol": "CIFR",
@@ -931,7 +843,7 @@
             "expiration": "2026-11-06",
             "status": "observed",
             "aggregate_oi": 970.0,
-            "gamma_usd_millions": 0.82685753240175,
+            "gamma_usd_millions": 0.8982766021917502,
             "observed_contracts": [
               {
                 "strike": 12.0,
@@ -941,8 +853,8 @@
                 "bid": 0.24,
                 "ask": 0.39,
                 "last": 0.26,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792176799125",
                 "symbol": "CIFR261106C00012000",
                 "root_symbol": "CIFR",
@@ -957,7 +869,7 @@
           }
         ]
       },
-      "gamma_usd_millions": 5.315,
+      "gamma_usd_millions": 5.774,
       "gamma_share_pct": 7.5,
       "oi": 8425,
       "oi_share_pct": 8.0,
@@ -968,9 +880,9 @@
         12.5,
         13.0
       ],
-      "cluster_gamma_usd": 25.493,
+      "cluster_gamma_usd": 27.695,
       "cluster_share_pct": 36.0,
-      "distance": 33.56
+      "distance": 28.14
     }
   ],
   "put_walls_top": [
@@ -993,7 +905,7 @@
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 2006.0,
-            "gamma_usd_millions": 4.394534943513599,
+            "gamma_usd_millions": 4.7741089154816,
             "observed_contracts": [
               {
                 "strike": 9.0,
@@ -1003,8 +915,8 @@
                 "bid": 0.56,
                 "ask": 0.64,
                 "last": 0.65,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180788000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180105749",
                 "symbol": "CIFR261023P00009000",
                 "root_symbol": "CIFR",
@@ -1021,7 +933,7 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 696.0,
-            "gamma_usd_millions": 1.0916250606648,
+            "gamma_usd_millions": 1.1859131856888,
             "observed_contracts": [
               {
                 "strike": 9.0,
@@ -1031,8 +943,8 @@
                 "bid": 0.8,
                 "ask": 0.95,
                 "last": 0.9,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180661593",
                 "symbol": "CIFR261030P00009000",
                 "root_symbol": "CIFR",
@@ -1049,7 +961,7 @@
             "expiration": "2026-11-06",
             "status": "observed",
             "aggregate_oi": 5276.0,
-            "gamma_usd_millions": 6.690550334806799,
+            "gamma_usd_millions": 7.268440554790799,
             "observed_contracts": [
               {
                 "strike": 9.0,
@@ -1059,8 +971,8 @@
                 "bid": 1.02,
                 "ask": 1.29,
                 "last": 1.09,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792179091545",
                 "symbol": "CIFR261106P00009000",
                 "root_symbol": "CIFR",
@@ -1075,7 +987,7 @@
           }
         ]
       },
-      "gamma_usd_millions": 12.177,
+      "gamma_usd_millions": 13.228,
       "gamma_share_pct": 20.5,
       "oi": 7978,
       "oi_share_pct": 10.7,
@@ -1086,9 +998,9 @@
         9.5,
         10.0
       ],
-      "cluster_gamma_usd": 31.084,
+      "cluster_gamma_usd": 33.769,
       "cluster_share_pct": 52.2,
-      "distance": 0.17,
+      "distance": -3.9,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -1163,7 +1075,7 @@
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 5654.0,
-            "gamma_usd_millions": 11.92107049288155,
+            "gamma_usd_millions": 12.95074214989555,
             "observed_contracts": [
               {
                 "strike": 9.5,
@@ -1173,8 +1085,8 @@
                 "bid": 0.8,
                 "ask": 1.15,
                 "last": 1.04,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180554006",
                 "symbol": "CIFR261023P00009500",
                 "root_symbol": "CIFR",
@@ -1203,7 +1115,7 @@
           }
         ]
       },
-      "gamma_usd_millions": 11.921,
+      "gamma_usd_millions": 12.951,
       "gamma_share_pct": 20.0,
       "oi": 5654,
       "oi_share_pct": 7.6,
@@ -1214,9 +1126,9 @@
         10.0,
         10.5
       ],
-      "cluster_gamma_usd": 37.992,
+      "cluster_gamma_usd": 41.273,
       "cluster_share_pct": 63.8,
-      "distance": 5.73,
+      "distance": 1.44,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -1291,7 +1203,7 @@
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 5335.0,
-            "gamma_usd_millions": 7.674567575932124,
+            "gamma_usd_millions": 8.337451393077124,
             "observed_contracts": [
               {
                 "strike": 10.5,
@@ -1301,8 +1213,8 @@
                 "bid": 1.57,
                 "ask": 1.7,
                 "last": 1.67,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180793202",
                 "symbol": "CIFR261023P00010500",
                 "root_symbol": "CIFR",
@@ -1319,7 +1231,7 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 328.0,
-            "gamma_usd_millions": 0.4530115220903999,
+            "gamma_usd_millions": 0.4921399816424,
             "observed_contracts": [
               {
                 "strike": 10.5,
@@ -1329,8 +1241,8 @@
                 "bid": 1.77,
                 "ask": 2.06,
                 "last": 1.88,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180422503",
                 "symbol": "CIFR261030P00010500",
                 "root_symbol": "CIFR",
@@ -1352,7 +1264,7 @@
           }
         ]
       },
-      "gamma_usd_millions": 8.128,
+      "gamma_usd_millions": 8.83,
       "gamma_share_pct": 13.7,
       "oi": 5663,
       "oi_share_pct": 7.6,
@@ -1363,9 +1275,9 @@
         11.0,
         11.5
       ],
-      "cluster_gamma_usd": 27.824,
+      "cluster_gamma_usd": 30.227,
       "cluster_share_pct": 46.8,
-      "distance": 16.86,
+      "distance": 12.12,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -1459,7 +1371,7 @@
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 5557.0,
-            "gamma_usd_millions": 1.0928331077517,
+            "gamma_usd_millions": 1.1872255767476998,
             "observed_contracts": [
               {
                 "strike": 13.0,
@@ -1469,8 +1381,8 @@
                 "bid": 3.95,
                 "ask": 4.65,
                 "last": 4.01,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180796000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792171010194",
                 "symbol": "CIFR261023P00013000",
                 "root_symbol": "CIFR",
@@ -1487,7 +1399,7 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 9171.0,
-            "gamma_usd_millions": 5.068620212729849,
+            "gamma_usd_millions": 5.50641768874785,
             "observed_contracts": [
               {
                 "strike": 13.0,
@@ -1497,8 +1409,8 @@
                 "bid": 3.9,
                 "ask": 4.35,
                 "last": 4.2,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792179523147",
                 "symbol": "CIFR261030P00013000",
                 "root_symbol": "CIFR",
@@ -1515,7 +1427,7 @@
             "expiration": "2026-11-06",
             "status": "observed",
             "aggregate_oi": 531.0,
-            "gamma_usd_millions": 0.3311104969449,
+            "gamma_usd_millions": 0.3597098659569001,
             "observed_contracts": [
               {
                 "strike": 13.0,
@@ -1525,8 +1437,8 @@
                 "bid": 3.8,
                 "ask": 4.35,
                 "last": 4.15,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180798000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792176426910",
                 "symbol": "CIFR261106P00013000",
                 "root_symbol": "CIFR",
@@ -1541,7 +1453,7 @@
           }
         ]
       },
-      "gamma_usd_millions": 6.493,
+      "gamma_usd_millions": 7.053,
       "gamma_share_pct": 10.9,
       "oi": 15259,
       "oi_share_pct": 20.4,
@@ -1552,9 +1464,9 @@
         13.5,
         14.0
       ],
-      "cluster_gamma_usd": 16.159,
+      "cluster_gamma_usd": 17.554,
       "cluster_share_pct": 27.2,
-      "distance": 44.69,
+      "distance": 38.81,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -1685,7 +1597,7 @@
             "expiration": "2026-10-23",
             "status": "observed",
             "aggregate_oi": 8600.0,
-            "gamma_usd_millions": 4.45311150309,
+            "gamma_usd_millions": 4.83774497229,
             "observed_contracts": [
               {
                 "strike": 12.0,
@@ -1695,8 +1607,8 @@
                 "bid": 2.8,
                 "ask": 3.25,
                 "last": 3.0,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792178870711",
                 "symbol": "CIFR261023P00012000",
                 "root_symbol": "CIFR",
@@ -1713,7 +1625,7 @@
             "expiration": "2026-10-30",
             "status": "observed",
             "aggregate_oi": 1259.0,
-            "gamma_usd_millions": 1.06416402878925,
+            "gamma_usd_millions": 1.15608023207925,
             "observed_contracts": [
               {
                 "strike": 12.0,
@@ -1723,8 +1635,8 @@
                 "bid": 2.78,
                 "ask": 3.35,
                 "last": 3.26,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792179993736",
                 "symbol": "CIFR261030P00012000",
                 "root_symbol": "CIFR",
@@ -1741,7 +1653,7 @@
             "expiration": "2026-11-06",
             "status": "observed",
             "aggregate_oi": 871.0,
-            "gamma_usd_millions": 0.742466918270025,
+            "gamma_usd_millions": 0.8065968252670251,
             "observed_contracts": [
               {
                 "strike": 12.0,
@@ -1751,8 +1663,8 @@
                 "bid": 3.2,
                 "ask": 3.5,
                 "last": 3.33,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792179310158",
                 "symbol": "CIFR261106P00012000",
                 "root_symbol": "CIFR",
@@ -1767,7 +1679,7 @@
           }
         ]
       },
-      "gamma_usd_millions": 6.26,
+      "gamma_usd_millions": 6.8,
       "gamma_share_pct": 10.5,
       "oi": 10730,
       "oi_share_pct": 14.4,
@@ -1778,9 +1690,9 @@
         12.5,
         13.0
       ],
-      "cluster_gamma_usd": 16.486,
+      "cluster_gamma_usd": 17.91,
       "cluster_share_pct": 27.7,
-      "distance": 33.56,
+      "distance": 28.14,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -1975,7 +1887,7 @@
         ]
       },
       "current_session": {
-        "shares": 49555527.0,
+        "shares": 320186.0,
         "comparable_to_avg_20d": false
       },
       "note": "ratios calculados contra último día COMPLETO; intradía solo informativo"
@@ -2207,56 +2119,56 @@
   "options": {
     "status": "ok",
     "atm_straddle": {
-      "strike_atm": 9.0,
-      "move_abs": 1.1600000000000001,
-      "move_pct": 0.12910406232609908,
+      "strike_atm": 9.5,
+      "move_abs": 1.3599999999999999,
+      "move_pct": 0.14522156967431926,
       "units": {
         "move_abs": "USD_per_share",
         "move_pct": "fraction"
       },
       "call_quote": {
-        "strike": 9.0,
+        "strike": 9.5,
         "option_type": "call",
-        "oi": 915,
-        "gamma": 0.27136,
-        "bid": 0.52,
-        "ask": 0.6,
-        "last": 0.56,
-        "bid_date": "1792180799000",
-        "ask_date": "1792180799000",
-        "trade_date": "1792180781519",
-        "symbol": "CIFR261023C00009000",
+        "oi": 7321,
+        "gamma": 0.26117,
+        "bid": 0.34,
+        "ask": 0.43,
+        "last": 0.36,
+        "bid_date": "1792393200000",
+        "ask_date": "1792393200000",
+        "trade_date": "1792180764831",
+        "symbol": "CIFR261023C00009500",
         "root_symbol": "CIFR",
         "expiration_date": "2026-10-23",
         "contract_size": 100.0,
         "multiplier_basis": "provider_contract_size",
         "greeks_updated_at": "2026-10-16 20:00:03",
-        "greeks_smv_vol": 1.18
+        "greeks_smv_vol": 1.189
       },
       "put_quote": {
-        "strike": 9.0,
+        "strike": 9.5,
         "option_type": "put",
-        "oi": 2006,
-        "gamma": 0.27136,
-        "bid": 0.56,
-        "ask": 0.64,
-        "last": 0.65,
-        "bid_date": "1792180799000",
-        "ask_date": "1792180788000",
-        "trade_date": "1792180105749",
-        "symbol": "CIFR261023P00009000",
+        "oi": 5654,
+        "gamma": 0.26117,
+        "bid": 0.8,
+        "ask": 1.15,
+        "last": 1.04,
+        "bid_date": "1792393200000",
+        "ask_date": "1792393200000",
+        "trade_date": "1792180554006",
+        "symbol": "CIFR261023P00009500",
         "root_symbol": "CIFR",
         "expiration_date": "2026-10-23",
         "contract_size": 100.0,
         "multiplier_basis": "provider_contract_size",
         "greeks_updated_at": "2026-10-16 20:00:03",
-        "greeks_smv_vol": 1.18
+        "greeks_smv_vol": 1.189
       },
       "price_method": "valid_bid_ask_mid_or_last_fallback",
       "quote_timestamps_supplied": true,
       "scope": "nearest_strike_in_sampled_chain; not calibrated volatility or probability",
       "expiration": "2026-10-23",
-      "dte_calendar": 5,
+      "dte_calendar": 4,
       "horizon": "actual_expiration",
       "probability_interpretation": "none"
     },
@@ -2276,50 +2188,50 @@
     "summary_by_expiration": [
       {
         "date": "2026-10-23",
-        "dte": 5,
-        "strike_atm": 9.0,
+        "dte": 4,
+        "strike_atm": 9.5,
         "call_quote": {
-          "strike": 9.0,
+          "strike": 9.5,
           "option_type": "call",
-          "oi": 915,
-          "gamma": 0.27136,
-          "bid": 0.52,
-          "ask": 0.6,
-          "last": 0.56,
-          "bid_date": "1792180799000",
-          "ask_date": "1792180799000",
-          "trade_date": "1792180781519",
-          "symbol": "CIFR261023C00009000",
+          "oi": 7321,
+          "gamma": 0.26117,
+          "bid": 0.34,
+          "ask": 0.43,
+          "last": 0.36,
+          "bid_date": "1792393200000",
+          "ask_date": "1792393200000",
+          "trade_date": "1792180764831",
+          "symbol": "CIFR261023C00009500",
           "root_symbol": "CIFR",
           "expiration_date": "2026-10-23",
           "contract_size": 100.0,
           "multiplier_basis": "provider_contract_size",
           "greeks_updated_at": "2026-10-16 20:00:03",
-          "greeks_smv_vol": 1.18
+          "greeks_smv_vol": 1.189
         },
         "put_quote": {
-          "strike": 9.0,
+          "strike": 9.5,
           "option_type": "put",
-          "oi": 2006,
-          "gamma": 0.27136,
-          "bid": 0.56,
-          "ask": 0.64,
-          "last": 0.65,
-          "bid_date": "1792180799000",
-          "ask_date": "1792180788000",
-          "trade_date": "1792180105749",
-          "symbol": "CIFR261023P00009000",
+          "oi": 5654,
+          "gamma": 0.26117,
+          "bid": 0.8,
+          "ask": 1.15,
+          "last": 1.04,
+          "bid_date": "1792393200000",
+          "ask_date": "1792393200000",
+          "trade_date": "1792180554006",
+          "symbol": "CIFR261023P00009500",
           "root_symbol": "CIFR",
           "expiration_date": "2026-10-23",
           "contract_size": 100.0,
           "multiplier_basis": "provider_contract_size",
           "greeks_updated_at": "2026-10-16 20:00:03",
-          "greeks_smv_vol": 1.18
+          "greeks_smv_vol": 1.189
         },
         "unknown_oi_contracts": 0,
         "expected_move": {
-          "dollars": 1.16,
-          "percent": 0.1291,
+          "dollars": 1.36,
+          "percent": 0.1452,
           "method": "ATM straddle observed price; actual expiration; not sigma",
           "percent_unit": "fraction"
         },
@@ -2329,7 +2241,7 @@
       },
       {
         "date": "2026-10-30",
-        "dte": 12,
+        "dte": 11,
         "strike_atm": 9.0,
         "call_quote": {
           "strike": 9.0,
@@ -2339,8 +2251,8 @@
           "bid": 0.75,
           "ask": 1.01,
           "last": 0.76,
-          "bid_date": "1792180799000",
-          "ask_date": "1792180799000",
+          "bid_date": "1792393200000",
+          "ask_date": "1792393200000",
           "trade_date": "1792180202567",
           "symbol": "CIFR261030C00009000",
           "root_symbol": "CIFR",
@@ -2358,8 +2270,8 @@
           "bid": 0.8,
           "ask": 0.95,
           "last": 0.9,
-          "bid_date": "1792180799000",
-          "ask_date": "1792180799000",
+          "bid_date": "1792393200000",
+          "ask_date": "1792393200000",
           "trade_date": "1792180661593",
           "symbol": "CIFR261030P00009000",
           "root_symbol": "CIFR",
@@ -2372,7 +2284,7 @@
         "unknown_oi_contracts": 0,
         "expected_move": {
           "dollars": 1.755,
-          "percent": 0.1953,
+          "percent": 0.1874,
           "method": "ATM straddle observed price; actual expiration; not sigma",
           "percent_unit": "fraction"
         },
@@ -2382,7 +2294,7 @@
       },
       {
         "date": "2026-11-06",
-        "dte": 19,
+        "dte": 18,
         "strike_atm": 9.0,
         "call_quote": {
           "strike": 9.0,
@@ -2392,8 +2304,8 @@
           "bid": 1.0,
           "ask": 1.14,
           "last": 1.05,
-          "bid_date": "1792180799000",
-          "ask_date": "1792180799000",
+          "bid_date": "1792393200000",
+          "ask_date": "1792393200000",
           "trade_date": "1792176432062",
           "symbol": "CIFR261106C00009000",
           "root_symbol": "CIFR",
@@ -2411,8 +2323,8 @@
           "bid": 1.02,
           "ask": 1.29,
           "last": 1.09,
-          "bid_date": "1792180799000",
-          "ask_date": "1792180799000",
+          "bid_date": "1792393200000",
+          "ask_date": "1792393200000",
           "trade_date": "1792179091545",
           "symbol": "CIFR261106P00009000",
           "root_symbol": "CIFR",
@@ -2425,7 +2337,7 @@
         "unknown_oi_contracts": 0,
         "expected_move": {
           "dollars": 2.225,
-          "percent": 0.2476,
+          "percent": 0.2376,
           "method": "ATM straddle observed price; actual expiration; not sigma",
           "percent_unit": "fraction"
         },
@@ -2452,7 +2364,7 @@
       }
     ],
     "gamma_concentration": {
-      "call_minus_put_notional_usd_millions": 11.288,
+      "call_minus_put_notional_usd_millions": 12.263,
       "eligible_contracts": 260,
       "unknown_metric_contracts": 0,
       "assumed_standard_multiplier_contracts": 0,
@@ -2514,7 +2426,7 @@
         "per_expiration": [
           {
             "expiration": "2026-10-23",
-            "dte": 5,
+            "dte": 4,
             "puts": 40558,
             "calls": 60482,
             "ratio": 0.671,
@@ -2524,7 +2436,7 @@
           },
           {
             "expiration": "2026-10-30",
-            "dte": 12,
+            "dte": 11,
             "puts": 21545,
             "calls": 32417,
             "ratio": 0.665,
@@ -2534,7 +2446,7 @@
           },
           {
             "expiration": "2026-11-06",
-            "dte": 19,
+            "dte": 18,
             "puts": 12604,
             "calls": 21443,
             "ratio": 0.588,
@@ -2552,11 +2464,12 @@
           "2026-11-06",
           "2026-11-13",
           "2026-11-20",
-          "2026-11-27"
+          "2026-11-27",
+          "2026-12-18"
         ],
-        "total_put_oi": 131432,
-        "total_call_oi": 406144,
-        "ratio": 0.324,
+        "total_put_oi": 184015,
+        "total_call_oi": 516771,
+        "ratio": 0.356,
         "unknown_oi_contracts": 0,
         "dte_buckets": {
           "0_7": {
@@ -2578,12 +2491,13 @@
             ]
           },
           "31_60": {
-            "puts": 51845,
-            "calls": 288547,
-            "ratio": 0.18,
+            "puts": 104428,
+            "calls": 399174,
+            "ratio": 0.262,
             "expirations": [
               "2026-11-20",
-              "2026-11-27"
+              "2026-11-27",
+              "2026-12-18"
             ]
           },
           "61_plus": {
@@ -2596,7 +2510,7 @@
         "per_expiration": [
           {
             "expiration": "2026-10-23",
-            "dte": 5,
+            "dte": 4,
             "puts": 40558,
             "calls": 60482,
             "ratio": 0.671,
@@ -2606,7 +2520,7 @@
           },
           {
             "expiration": "2026-10-30",
-            "dte": 12,
+            "dte": 11,
             "puts": 21545,
             "calls": 32417,
             "ratio": 0.665,
@@ -2616,7 +2530,7 @@
           },
           {
             "expiration": "2026-11-06",
-            "dte": 19,
+            "dte": 18,
             "puts": 12604,
             "calls": 21443,
             "ratio": 0.588,
@@ -2626,7 +2540,7 @@
           },
           {
             "expiration": "2026-11-13",
-            "dte": 26,
+            "dte": 25,
             "puts": 4880,
             "calls": 3255,
             "ratio": 1.499,
@@ -2636,7 +2550,7 @@
           },
           {
             "expiration": "2026-11-20",
-            "dte": 33,
+            "dte": 32,
             "puts": 50351,
             "calls": 286738,
             "ratio": 0.176,
@@ -2646,13 +2560,23 @@
           },
           {
             "expiration": "2026-11-27",
-            "dte": 40,
+            "dte": 39,
             "puts": 1494,
             "calls": 1809,
             "ratio": 0.826,
             "unknown_oi_contracts": 0,
             "known_put_oi": 1494,
             "known_call_oi": 1809
+          },
+          {
+            "expiration": "2026-12-18",
+            "dte": 60,
+            "puts": 52583,
+            "calls": 110627,
+            "ratio": 0.475,
+            "unknown_oi_contracts": 0,
+            "known_put_oi": 52583,
+            "known_call_oi": 110627
           }
         ]
       },
@@ -4003,11 +3927,11 @@
   "liquidity": {
     "adv20_usd": 577859899.77,
     "bid_ask": {
-      "bid": 8.97,
-      "ask": 9.0,
-      "mid": 8.985,
+      "bid": 9.35,
+      "ask": 9.38,
+      "mid": 9.365,
       "spread_abs": 0.03,
-      "spread_pct": 0.334
+      "spread_pct": 0.321
     }
   },
   "option_origins": [
@@ -4032,7 +3956,7 @@
             "status": "observed",
             "reason": "requested_identity_observed",
             "aggregate_oi": 2006,
-            "gamma_usd_millions": 4.394534943513599,
+            "gamma_usd_millions": 4.7741089154816,
             "observed_contracts": [
               {
                 "strike": 9.0,
@@ -4042,8 +3966,8 @@
                 "bid": 0.56,
                 "ask": 0.64,
                 "last": 0.65,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180788000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180105749",
                 "symbol": "CIFR261023P00009000",
                 "root_symbol": "CIFR",
@@ -4060,7 +3984,7 @@
             "status": "observed",
             "reason": "requested_identity_observed",
             "aggregate_oi": 696,
-            "gamma_usd_millions": 1.0916250606648,
+            "gamma_usd_millions": 1.1859131856888,
             "observed_contracts": [
               {
                 "strike": 9.0,
@@ -4070,8 +3994,8 @@
                 "bid": 0.8,
                 "ask": 0.95,
                 "last": 0.9,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792180661593",
                 "symbol": "CIFR261030P00009000",
                 "root_symbol": "CIFR",
@@ -4088,7 +4012,7 @@
             "status": "observed",
             "reason": "requested_identity_observed",
             "aggregate_oi": 5276,
-            "gamma_usd_millions": 6.690550334806799,
+            "gamma_usd_millions": 7.268440554790799,
             "observed_contracts": [
               {
                 "strike": 9.0,
@@ -4098,8 +4022,8 @@
                 "bid": 1.02,
                 "ask": 1.29,
                 "last": 1.09,
-                "bid_date": "1792180799000",
-                "ask_date": "1792180799000",
+                "bid_date": "1792393200000",
+                "ask_date": "1792393200000",
                 "trade_date": "1792179091545",
                 "symbol": "CIFR261106P00009000",
                 "root_symbol": "CIFR",
