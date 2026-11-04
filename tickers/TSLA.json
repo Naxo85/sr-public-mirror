@@ -1,15 +1,15 @@
 {
   "symbol": "TSLA",
   "data_contract_revision": 41,
-  "latest_price": 398.145,
-  "as_of": "2026-11-03T21:07:44.148816+00:00",
+  "latest_price": 380.48,
+  "as_of": "2026-11-04T11:35:29.456054+00:00",
   "quote_observation": {
     "status": "available",
-    "price": 398.145,
+    "price": 380.48,
     "source": "bid_ask_mid",
-    "provider_timestamp": "2026-11-03T21:07:35+00:00",
-    "fetched_at": "2026-11-03T21:07:44.148816+00:00",
-    "age_seconds": 9.148816,
+    "provider_timestamp": "2026-11-04T11:35:28+00:00",
+    "fetched_at": "2026-11-04T11:35:29.456054+00:00",
+    "age_seconds": 1.456054,
     "freshness_basis": "current_open_session_or_latest_completed_session",
     "expected_market_date": "2026-11-03"
   },
@@ -17,7 +17,7 @@
     {
       "type": "52_week_high",
       "level": 498.83,
-      "distance": 25.29,
+      "distance": 31.11,
       "notes": "Primer test (pendiente) — señal débil (γ-$ bajo)",
       "meta": {
         "level_date": "2025-12-22",
@@ -31,14 +31,14 @@
     },
     {
       "type": "range_top_3_6m",
-      "level": 433.23,
-      "distance": 8.81,
-      "notes": "Techo de rango 3–6m con 2 toques; último 2026-07-01 (pendiente)",
+      "level": 413.955,
+      "distance": 8.8,
+      "notes": "Techo de rango 3–6m con 4 toques; último 2026-10-28 (pendiente)",
       "meta": {
-        "first_touch_date": "2026-06-03",
-        "last_touch_date": "2026-07-01",
-        "touches": 2,
-        "vol_factor_vs_median": 1.09,
+        "first_touch_date": "2026-06-15",
+        "last_touch_date": "2026-10-28",
+        "touches": 4,
+        "vol_factor_vs_median": 1.04,
         "tolerance": 2.9531,
         "testing_now": false
       },
@@ -47,14 +47,14 @@
     {
       "type": "gap_down_upper",
       "level": 441.16,
-      "distance": 10.8,
-      "notes": "Gap bajista del 2026-05-15 (tam. 1.63%); abierto (pendiente)",
+      "distance": 15.95,
+      "notes": "Gap bajista del 2026-05-15 (tam. 1.71%); abierto (pendiente)",
       "meta": {
         "gap_date": "2026-05-15",
         "gap_upper": 441.16,
         "gap_lower": 434.66,
         "gap_size": 6.5,
-        "gap_size_pct_vs_price": 1.63,
+        "gap_size_pct_vs_price": 1.71,
         "vol_factor_vs_median": 0.98,
         "touches_since_gap": 2,
         "last_touch_date": "2026-05-29",
@@ -63,13 +63,167 @@
         "filled": false
       },
       "unit": "pct"
+    },
+    {
+      "type": "avwap_event",
+      "level": 402.0515,
+      "distance": 5.67,
+      "notes": "AVWAP anclado a techo de rango 2026-10-28 (pendiente)",
+      "meta": {
+        "anchor_type": "range_top",
+        "anchor_date": "2026-10-28",
+        "vol_factor_vs_median": 1.04,
+        "gap_size_atr": null,
+        "touches": 4,
+        "tolerance": 2.9531,
+        "testing_now": false,
+        "min_distance_pct": 0.05,
+        "method": "daily_typical_price_vwap"
+      },
+      "unit": "pct"
+    },
+    {
+      "type": "call_wall_gamma",
+      "level": 410.0,
+      "distance": 7.76,
+      "notes": "Call wall (γ-$) exp 2026-11-06; dominante (11.2% del lado call) — pendiente",
+      "meta": {
+        "expiration": "2026-11-06",
+        "option_details": {
+          "scope": "parsed_contracts_in_sampled_expirations",
+          "option_type": "call",
+          "strike": 410.0,
+          "aggregate_oi_basis": "gamma_eligible_contracts",
+          "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
+          "sampled_expirations": [
+            "2026-11-04",
+            "2026-11-06",
+            "2026-11-09"
+          ],
+          "by_expiration": [
+            {
+              "expiration": "2026-11-04",
+              "status": "observed",
+              "aggregate_oi": 4481.0,
+              "gamma_usd_millions": 1398.5801702354945,
+              "observed_contracts": [
+                {
+                  "strike": 410.0,
+                  "option_type": "call",
+                  "oi": 4481,
+                  "gamma": 0.02156,
+                  "bid": 1.46,
+                  "ask": 1.47,
+                  "last": 1.49,
+                  "bid_date": "1793791800000",
+                  "ask_date": "1793791800000",
+                  "trade_date": "1793739598616",
+                  "symbol": "TSLA261104C00410000",
+                  "root_symbol": "TSLA",
+                  "expiration_date": "2026-11-04",
+                  "contract_size": 100.0,
+                  "multiplier_basis": "provider_contract_size",
+                  "greeks_updated_at": "2026-11-03 21:00:05",
+                  "greeks_smv_vol": 0.646,
+                  "included_in_wall_aggregate": true
+                }
+              ]
+            },
+            {
+              "expiration": "2026-11-06",
+              "status": "observed",
+              "aggregate_oi": 10769.0,
+              "gamma_usd_millions": 2640.9029933676547,
+              "observed_contracts": [
+                {
+                  "strike": 410.0,
+                  "option_type": "call",
+                  "oi": 10769,
+                  "gamma": 0.01694,
+                  "bid": 3.95,
+                  "ask": 4.05,
+                  "last": 3.95,
+                  "bid_date": "1793791800000",
+                  "ask_date": "1793791800000",
+                  "trade_date": "1793739595365",
+                  "symbol": "TSLA261106C00410000",
+                  "root_symbol": "TSLA",
+                  "expiration_date": "2026-11-06",
+                  "contract_size": 100.0,
+                  "multiplier_basis": "provider_contract_size",
+                  "greeks_updated_at": "2026-11-03 21:00:05",
+                  "greeks_smv_vol": 0.579,
+                  "included_in_wall_aggregate": true
+                }
+              ]
+            },
+            {
+              "expiration": "2026-11-09",
+              "status": "observed",
+              "aggregate_oi": 1177.0,
+              "gamma_usd_millions": 260.5239259538432,
+              "observed_contracts": [
+                {
+                  "strike": 410.0,
+                  "option_type": "call",
+                  "oi": 1177,
+                  "gamma": 0.01529,
+                  "bid": 5.05,
+                  "ask": 5.15,
+                  "last": 5.2,
+                  "bid_date": "1793791800000",
+                  "ask_date": "1793791800000",
+                  "trade_date": "1793739574104",
+                  "symbol": "TSLA261109C00410000",
+                  "root_symbol": "TSLA",
+                  "expiration_date": "2026-11-09",
+                  "contract_size": 100.0,
+                  "multiplier_basis": "provider_contract_size",
+                  "greeks_updated_at": "2026-11-03 21:00:05",
+                  "greeks_smv_vol": 0.468,
+                  "included_in_wall_aggregate": true
+                }
+              ]
+            }
+          ]
+        },
+        "gamma_usd": 4300.007,
+        "gamma_usd_units": "millions",
+        "gamma_usd_total_calls": 38272.32,
+        "gamma_usd_share_pct": 11.2,
+        "oi": 16427,
+        "oi_share_pct": 6.7,
+        "atr10": 14.7653,
+        "tolerance": 2.9531,
+        "window": "calls agregadas en top 3 expiraciones; sin filtro de distancia",
+        "testing_now": false,
+        "cluster": {
+          "neighbors": [
+            397.5,
+            400.0,
+            402.5,
+            405.0,
+            407.5,
+            410.0,
+            412.5,
+            415.0,
+            417.5,
+            420.0,
+            422.5
+          ],
+          "cluster_gamma_usd": 29027.128,
+          "cluster_share_pct": 75.8
+        },
+        "method": "sum(|γ|·OI·spot²) por strike multi-exp (sin límites de distancia)"
+      },
+      "unit": "pct"
     }
   ],
   "supports": [
     {
       "type": "52_week_low",
       "level": 297.38,
-      "distance": 25.31,
+      "distance": 21.84,
       "notes": "Primer test (pendiente)",
       "meta": {
         "level_date": "2026-07-29",
@@ -121,7 +275,7 @@
             "forward_sessions": 5,
             "coordinate": 297.38,
             "tolerance_abs": 2.953050000000003,
-            "history_first_session": "2025-09-29",
+            "history_first_session": "2025-09-30",
             "history_last_session": "2026-11-03",
             "contact_count": 1,
             "completed_count": 1,
@@ -163,39 +317,44 @@
       "unit": "pct"
     },
     {
-      "type": "range_bottom_3_6m",
-      "level": 368.3151,
-      "distance": 7.49,
-      "notes": "Suelo de rango 3–6m con 4 toques; último 2026-10-23 (pendiente)",
+      "type": "gap_up_lower",
+      "level": 360.62,
+      "distance": 5.22,
+      "notes": "Gap alcista del 2026-09-03 (tam. 1.37%); relleno (pendiente)",
       "meta": {
-        "first_touch_date": "2026-06-26",
-        "last_touch_date": "2026-10-23",
-        "touches": 4,
-        "vol_factor_vs_median": 0.97,
+        "gap_date": "2026-09-03",
+        "gap_upper": 365.82,
+        "gap_lower": 360.62,
+        "gap_size": 5.2,
+        "gap_size_pct_vs_price": 1.37,
+        "vol_factor_vs_median": 1.19,
+        "touches_since_gap": 5,
+        "last_touch_date": "2026-10-02",
         "tolerance": 2.9531,
         "testing_now": false,
+        "filled": true,
         "volume_profile_proximity": {
           "status": "available",
           "nearest_type": "hvn",
-          "nearest_level": 370.5144,
-          "nearest_distance_pct": 0.6,
-          "nearest_abs_distance_pct": 0.6,
-          "poc_distance_pct": 10.3,
-          "nearest_hvn_distance_pct": 0.6
+          "nearest_level": 364.0135,
+          "nearest_distance_pct": 0.94,
+          "nearest_abs_distance_pct": 0.94,
+          "poc_distance_pct": 12.66,
+          "nearest_hvn_distance_pct": 0.94
         },
         "historical_reaction": {
           "status": "available",
           "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
           "lookback_sessions": 252,
           "tolerance_abs": 2.9531,
-          "test_count": 19,
-          "defense_count": 11,
-          "defense_rate_pct": 57.9,
-          "last_test_date": "2026-10-23",
-          "last_test_rebound_5d_pct": 11.55,
-          "median_rebound_5d_pct": 4.99,
-          "max_rebound_5d_pct": 17.52,
-          "defense_min_rebound_pct": 2.0,
+          "test_count": 11,
+          "defense_count": 4,
+          "defense_rate_pct": 36.4,
+          "last_test_date": "2026-10-15",
+          "last_test_rebound_5d_pct": 7.83,
+          "median_rebound_5d_pct": 6.24,
+          "max_rebound_5d_pct": 13.49,
+          "defense_min_rebound_pct": 2.05,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
           "pending_test_count": 0,
@@ -207,7 +366,7 @@
             "history_sha256": "7a75fc88131ec727809add1797a5f076283bfdfeecc61a02f56d720099ab76ed",
             "history_end": "2026-11-03",
             "atr10": 14.765250000000014,
-            "parameters_sha256": "7bf5126cb309ac555e06296cabe6509aba3e70271fc8adfeca2ab2b7a9ca3a9d"
+            "parameters_sha256": "1e8dd6f6dbf62e684900b6e205b5cd6250d72f66bfd8ae7d3d0ae862bbf174d3"
           },
           "path_evidence": {
             "status": "available",
@@ -216,220 +375,72 @@
             "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
             "intraday_order": "unknown_with_daily_bars",
             "forward_sessions": 5,
-            "coordinate": 368.3151,
+            "coordinate": 360.62,
             "tolerance_abs": 2.953050000000003,
-            "history_first_session": "2025-09-29",
+            "history_first_session": "2025-09-30",
             "history_last_session": "2026-11-03",
-            "contact_count": 19,
-            "completed_count": 19,
+            "contact_count": 11,
+            "completed_count": 11,
             "pending_count": 0,
             "incomplete_data_count": 0,
-            "overlapping_window_count": 10,
+            "overlapping_window_count": 7,
             "independent_trials_assumed": false,
             "summary_scope": "all_completed_contacts",
             "event_detail_selection": "latest_completed_contacts",
-            "negative_terminal_count": 9,
-            "positive_excursion_negative_terminal_count": 8,
-            "adverse_extreme_first_count": 12,
+            "negative_terminal_count": 3,
+            "positive_excursion_negative_terminal_count": 3,
+            "adverse_extreme_first_count": 8,
             "same_session_extremes_count": 0,
             "events": [
               {
-                "contact_date": "2026-10-14",
-                "window_end": "2026-10-21",
-                "contact_close": 367.16,
+                "contact_date": "2026-09-28",
+                "window_end": "2026-10-05",
+                "contact_close": 357.45,
                 "approach": "from_above",
-                "favorable_excursion_pct": 5.9056,
-                "adverse_excursion_pct": 4.856193,
-                "terminal_close_return_pct": 5.259288,
+                "favorable_excursion_pct": 6.753392,
+                "adverse_excursion_pct": 3.236816,
+                "terminal_close_return_pct": 5.95328,
                 "favorable_extreme_session": 5,
                 "adverse_extreme_session": 2,
                 "extreme_order": "adverse_extreme_first",
-                "first_close_at_or_above_contact_close_session": 3,
-                "overlaps_previous_window": true
+                "first_close_at_or_above_contact_close_session": 4,
+                "overlaps_previous_window": false
               },
               {
-                "contact_date": "2026-10-16",
-                "window_end": "2026-10-23",
-                "contact_close": 354.72,
+                "contact_date": "2026-10-01",
+                "window_end": "2026-10-08",
+                "contact_close": 354.11,
                 "approach": "from_below",
-                "favorable_excursion_pct": 9.624352,
-                "adverse_excursion_pct": 0.070478,
-                "terminal_close_return_pct": 4.933469,
-                "favorable_extreme_session": 4,
-                "adverse_extreme_session": 1,
-                "extreme_order": "adverse_extreme_first",
-                "first_close_at_or_above_contact_close_session": 1,
-                "overlaps_previous_window": true
-              },
-              {
-                "contact_date": "2026-10-23",
-                "window_end": "2026-10-30",
-                "contact_close": 372.22,
-                "approach": "from_above",
-                "favorable_excursion_pct": 10.378271,
+                "favorable_excursion_pct": 8.251673,
                 "adverse_excursion_pct": 0.0,
-                "terminal_close_return_pct": 7.412283,
+                "terminal_close_return_pct": 5.899297,
                 "favorable_extreme_session": 3,
                 "adverse_extreme_session": 1,
                 "extreme_order": "adverse_extreme_first",
                 "first_close_at_or_above_contact_close_session": 1,
                 "overlaps_previous_window": true
-              }
-            ],
-            "events_omitted": 16,
-            "max_adverse_excursion_pct": 17.666477,
-            "min_terminal_close_return_pct": -16.329789,
-            "median_favorable_excursion_pct": 4.849025,
-            "median_adverse_excursion_pct": 3.832573,
-            "median_terminal_close_return_pct": 0.057073
-          }
-        },
-        "origin_identity": {
-          "schema_version": 1,
-          "origin_type": "range_bottom_3_6m",
-          "method": "swing_lows_k2_dated_members_v1",
-          "formation_dates": [
-            "2026-06-26",
-            "2026-07-20",
-            "2026-10-08",
-            "2026-10-23"
-          ],
-          "confirmation_dates": [
-            "2026-06-30",
-            "2026-07-22",
-            "2026-10-12",
-            "2026-10-27"
-          ],
-          "availability_date": "2026-10-27"
-        }
-      },
-      "unit": "pct"
-    },
-    {
-      "type": "gap_up_lower",
-      "level": 377.32,
-      "distance": 5.23,
-      "notes": "Gap alcista del 2026-10-26 (tam. 1.61%); abierto (pendiente)",
-      "meta": {
-        "gap_date": "2026-10-26",
-        "gap_upper": 383.73,
-        "gap_lower": 377.32,
-        "gap_size": 6.41,
-        "gap_size_pct_vs_price": 1.61,
-        "vol_factor_vs_median": 0.99,
-        "touches_since_gap": 0,
-        "last_touch_date": null,
-        "tolerance": 2.9531,
-        "testing_now": false,
-        "filled": false,
-        "volume_profile_proximity": {
-          "status": "available",
-          "nearest_type": "hvn",
-          "nearest_level": 380.2656,
-          "nearest_distance_pct": 0.78,
-          "nearest_abs_distance_pct": 0.78,
-          "poc_distance_pct": 7.67,
-          "nearest_hvn_distance_pct": 0.78
-        },
-        "historical_reaction": {
-          "status": "available",
-          "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
-          "lookback_sessions": 252,
-          "tolerance_abs": 2.9531,
-          "test_count": 14,
-          "defense_count": 7,
-          "defense_rate_pct": 50.0,
-          "last_test_date": "2026-10-22",
-          "last_test_rebound_5d_pct": 8.89,
-          "median_rebound_5d_pct": 2.75,
-          "max_rebound_5d_pct": 12.51,
-          "defense_min_rebound_pct": 1.96,
-          "observation_policy": "complete_forward_window_only",
-          "forward_sessions": 5,
-          "pending_test_count": 0,
-          "last_pending_test_date": null,
-          "last_pending_observed_sessions": null,
-          "excluded_incomplete_data_test_count": 0,
-          "measurement_basis": {
-            "calibration": "completed_daily_atr10_v1",
-            "history_sha256": "7a75fc88131ec727809add1797a5f076283bfdfeecc61a02f56d720099ab76ed",
-            "history_end": "2026-11-03",
-            "atr10": 14.765250000000014,
-            "parameters_sha256": "1ccbc7e1bd49a1762b08eea6cefd3615a6e1a6791199beb9ed5c4977e5d83f92"
-          },
-          "path_evidence": {
-            "status": "available",
-            "method": "horizontal_coordinate_post_contact_close_path_v40",
-            "measurement_origin": "contact_session_close",
-            "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
-            "intraday_order": "unknown_with_daily_bars",
-            "forward_sessions": 5,
-            "coordinate": 377.32,
-            "tolerance_abs": 2.953050000000003,
-            "history_first_session": "2025-09-29",
-            "history_last_session": "2026-11-03",
-            "contact_count": 14,
-            "completed_count": 14,
-            "pending_count": 0,
-            "incomplete_data_count": 0,
-            "overlapping_window_count": 4,
-            "independent_trials_assumed": false,
-            "summary_scope": "all_completed_contacts",
-            "event_detail_selection": "latest_completed_contacts",
-            "negative_terminal_count": 8,
-            "positive_excursion_negative_terminal_count": 6,
-            "adverse_extreme_first_count": 10,
-            "same_session_extremes_count": 0,
-            "events": [
-              {
-                "contact_date": "2026-10-02",
-                "window_end": "2026-10-09",
-                "contact_close": 370.59,
-                "approach": "from_below",
-                "favorable_excursion_pct": 4.849025,
-                "adverse_excursion_pct": 1.532691,
-                "terminal_close_return_pct": 3.267762,
-                "favorable_extreme_session": 5,
-                "adverse_extreme_session": 1,
-                "extreme_order": "adverse_extreme_first",
-                "first_close_at_or_above_contact_close_session": 1,
-                "overlaps_previous_window": false
               },
               {
-                "contact_date": "2026-10-20",
-                "window_end": "2026-10-27",
-                "contact_close": 373.71,
-                "approach": "from_below",
-                "favorable_excursion_pct": 9.295978,
-                "adverse_excursion_pct": 2.258436,
-                "terminal_close_return_pct": 9.031067,
-                "favorable_extreme_session": 5,
-                "adverse_extreme_session": 3,
-                "extreme_order": "adverse_extreme_first",
-                "first_close_at_or_above_contact_close_session": 1,
-                "overlaps_previous_window": false
-              },
-              {
-                "contact_date": "2026-10-22",
-                "window_end": "2026-10-29",
-                "contact_close": 374.58,
+                "contact_date": "2026-10-15",
+                "window_end": "2026-10-22",
+                "contact_close": 362.44,
                 "approach": "from_above",
-                "favorable_excursion_pct": 9.682845,
-                "adverse_excursion_pct": 2.48545,
-                "terminal_close_return_pct": 7.667254,
-                "favorable_extreme_session": 4,
+                "favorable_excursion_pct": 7.289344,
+                "adverse_excursion_pct": 3.61715,
+                "terminal_close_return_pct": 3.34952,
+                "favorable_extreme_session": 5,
                 "adverse_extreme_session": 1,
                 "extreme_order": "adverse_extreme_first",
                 "first_close_at_or_above_contact_close_session": 2,
-                "overlaps_previous_window": true
+                "overlaps_previous_window": false
               }
             ],
-            "events_omitted": 11,
-            "max_adverse_excursion_pct": 19.517383,
-            "min_terminal_close_return_pct": -17.805378,
-            "median_favorable_excursion_pct": 3.630504,
-            "median_adverse_excursion_pct": 3.575151,
-            "median_terminal_close_return_pct": -1.643181
+            "events_omitted": 8,
+            "max_adverse_excursion_pct": 6.475498,
+            "min_terminal_close_return_pct": -3.888552,
+            "median_favorable_excursion_pct": 6.753392,
+            "median_adverse_excursion_pct": 2.615799,
+            "median_terminal_close_return_pct": 1.528315
           }
         },
         "origin_identity": {
@@ -437,21 +448,21 @@
           "origin_type": "gap_up_lower",
           "method": "strict_bullish_gap_dated_bars_v1",
           "formation_dates": [
-            "2026-10-23",
-            "2026-10-26"
+            "2026-09-02",
+            "2026-09-03"
           ],
           "confirmation_dates": [
-            "2026-10-26"
+            "2026-09-03"
           ],
-          "availability_date": "2026-10-26"
+          "availability_date": "2026-09-03"
         }
       },
       "unit": "pct"
     },
     {
       "type": "avwap_event_support",
-      "level": 361.0529,
-      "distance": 9.32,
+      "level": 361.0642,
+      "distance": 5.1,
       "notes": "AVWAP anclado a 52w low 2026-07-29 (pendiente)",
       "meta": {
         "anchor_type": "52w_low",
@@ -481,9 +492,9 @@
           "defense_count": 4,
           "defense_rate_pct": 36.4,
           "last_test_date": "2026-10-14",
-          "last_test_rebound_5d_pct": 7.7,
-          "median_rebound_5d_pct": 6.12,
-          "max_rebound_5d_pct": 13.36,
+          "last_test_rebound_5d_pct": 7.69,
+          "median_rebound_5d_pct": 6.11,
+          "max_rebound_5d_pct": 13.35,
           "defense_min_rebound_pct": 2.04,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
@@ -496,7 +507,7 @@
             "history_sha256": "7a75fc88131ec727809add1797a5f076283bfdfeecc61a02f56d720099ab76ed",
             "history_end": "2026-11-03",
             "atr10": 14.765250000000014,
-            "parameters_sha256": "adec69a42198eb8c9ac609dee8d37892d723c57642dbda98ba1973ebd8333403"
+            "parameters_sha256": "3518eaf20c974600741d948f90f795087b64430dfa76da89e9644dba579c57a3"
           },
           "path_evidence": {
             "status": "available",
@@ -505,9 +516,9 @@
             "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
             "intraday_order": "unknown_with_daily_bars",
             "forward_sessions": 5,
-            "coordinate": 361.0529,
+            "coordinate": 361.0642,
             "tolerance_abs": 2.953050000000003,
-            "history_first_session": "2025-09-29",
+            "history_first_session": "2025-09-30",
             "history_last_session": "2026-11-03",
             "contact_count": 11,
             "completed_count": 11,
@@ -580,7 +591,7 @@
   "observed_origins": [
     {
       "type": "avwap_observation",
-      "level": 394.3278,
+      "level": 394.3282,
       "status": "available",
       "reason": null,
       "meta": {
@@ -620,7 +631,7 @@
             "history_sha256": "7a75fc88131ec727809add1797a5f076283bfdfeecc61a02f56d720099ab76ed",
             "history_end": "2026-11-03",
             "atr10": 14.765250000000014,
-            "parameters_sha256": "5ff7b2bf38dd29f5e08a72d8454a2ebde14fff3f0bf559e93b972740663ab433"
+            "parameters_sha256": "ab5624a8f5290c7f9c36874198d93d333999bd943d67435b3341dc6525a43f11"
           },
           "path_evidence": {
             "status": "available",
@@ -629,9 +640,9 @@
             "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
             "intraday_order": "unknown_with_daily_bars",
             "forward_sessions": 5,
-            "coordinate": 394.3278,
+            "coordinate": 394.3282,
             "tolerance_abs": 2.953050000000003,
-            "history_first_session": "2025-09-29",
+            "history_first_session": "2025-09-30",
             "history_last_session": "2026-11-03",
             "contact_count": 21,
             "completed_count": 19,
@@ -701,7 +712,7 @@
     },
     {
       "type": "avwap_observation",
-      "level": 361.0529,
+      "level": 361.0642,
       "status": "available",
       "reason": null,
       "meta": {
@@ -726,9 +737,9 @@
           "defense_count": 4,
           "defense_rate_pct": 36.4,
           "last_test_date": "2026-10-14",
-          "last_test_rebound_5d_pct": 7.7,
-          "median_rebound_5d_pct": 6.12,
-          "max_rebound_5d_pct": 13.36,
+          "last_test_rebound_5d_pct": 7.69,
+          "median_rebound_5d_pct": 6.11,
+          "max_rebound_5d_pct": 13.35,
           "defense_min_rebound_pct": 2.04,
           "observation_policy": "complete_forward_window_only",
           "forward_sessions": 5,
@@ -741,7 +752,7 @@
             "history_sha256": "7a75fc88131ec727809add1797a5f076283bfdfeecc61a02f56d720099ab76ed",
             "history_end": "2026-11-03",
             "atr10": 14.765250000000014,
-            "parameters_sha256": "adec69a42198eb8c9ac609dee8d37892d723c57642dbda98ba1973ebd8333403"
+            "parameters_sha256": "3518eaf20c974600741d948f90f795087b64430dfa76da89e9644dba579c57a3"
           },
           "path_evidence": {
             "status": "available",
@@ -750,9 +761,9 @@
             "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
             "intraday_order": "unknown_with_daily_bars",
             "forward_sessions": 5,
-            "coordinate": 361.0529,
+            "coordinate": 361.0642,
             "tolerance_abs": 2.953050000000003,
-            "history_first_session": "2025-09-29",
+            "history_first_session": "2025-09-30",
             "history_last_session": "2026-11-03",
             "contact_count": 11,
             "completed_count": 11,
@@ -846,27 +857,27 @@
           {
             "expiration": "2026-11-04",
             "status": "observed",
-            "aggregate_oi": 2162.0,
-            "gamma_usd_millions": 665.9030781968252,
+            "aggregate_oi": 4481.0,
+            "gamma_usd_millions": 1398.5801702354945,
             "observed_contracts": [
               {
                 "strike": 410.0,
                 "option_type": "call",
-                "oi": 2162,
-                "gamma": 0.01943,
+                "oi": 4481,
+                "gamma": 0.02156,
                 "bid": 1.46,
-                "ask": 1.49,
+                "ask": 1.47,
                 "last": 1.49,
-                "bid_date": "1793739929000",
-                "ask_date": "1793739657000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739598616",
                 "symbol": "TSLA261104C00410000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-04",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.643,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.646,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -874,27 +885,27 @@
           {
             "expiration": "2026-11-06",
             "status": "observed",
-            "aggregate_oi": 10249.0,
-            "gamma_usd_millions": 2618.961190717142,
+            "aggregate_oi": 10769.0,
+            "gamma_usd_millions": 2640.9029933676547,
             "observed_contracts": [
               {
                 "strike": 410.0,
                 "option_type": "call",
-                "oi": 10249,
-                "gamma": 0.01612,
+                "oi": 10769,
+                "gamma": 0.01694,
                 "bid": 3.95,
                 "ask": 4.05,
                 "last": 3.95,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739625000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739595365",
                 "symbol": "TSLA261106C00410000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-06",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.581,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.579,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -902,37 +913,37 @@
           {
             "expiration": "2026-11-09",
             "status": "observed",
-            "aggregate_oi": 862.0,
-            "gamma_usd_millions": 200.7296807422549,
+            "aggregate_oi": 1177.0,
+            "gamma_usd_millions": 260.5239259538432,
             "observed_contracts": [
               {
                 "strike": 410.0,
                 "option_type": "call",
-                "oi": 862,
-                "gamma": 0.01469,
+                "oi": 1177,
+                "gamma": 0.01529,
                 "bid": 5.05,
                 "ask": 5.15,
                 "last": 5.2,
-                "bid_date": "1793739748000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739574104",
                 "symbol": "TSLA261109C00410000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-09",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.477,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.468,
                 "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 3485.594,
-      "gamma_share_pct": 10.7,
-      "oi": 13273,
-      "oi_share_pct": 6.5,
+      "gamma_usd_millions": 4300.007,
+      "gamma_share_pct": 11.2,
+      "oi": 16427,
+      "oi_share_pct": 6.7,
       "cluster_neighbors": [
         397.5,
         400.0,
@@ -946,9 +957,131 @@
         420.0,
         422.5
       ],
-      "cluster_gamma_usd": 23071.011,
-      "cluster_share_pct": 71.0,
-      "distance": 2.98
+      "cluster_gamma_usd": 29027.128,
+      "cluster_share_pct": 75.8,
+      "distance": 7.76
+    },
+    {
+      "level": 402.5,
+      "expiration": "2026-11-04",
+      "option_details": {
+        "scope": "parsed_contracts_in_sampled_expirations",
+        "option_type": "call",
+        "strike": 402.5,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
+        "sampled_expirations": [
+          "2026-11-04",
+          "2026-11-06",
+          "2026-11-09"
+        ],
+        "by_expiration": [
+          {
+            "expiration": "2026-11-04",
+            "status": "observed",
+            "aggregate_oi": 5692.0,
+            "gamma_usd_millions": 2364.0633246625794,
+            "observed_contracts": [
+              {
+                "strike": 402.5,
+                "option_type": "call",
+                "oi": 5692,
+                "gamma": 0.02869,
+                "bid": 3.6,
+                "ask": 3.7,
+                "last": 3.7,
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
+                "trade_date": "1793739597086",
+                "symbol": "TSLA261104C00402500",
+                "root_symbol": "TSLA",
+                "expiration_date": "2026-11-04",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.66,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 6121.0,
+            "gamma_usd_millions": 1642.8419164993538,
+            "observed_contracts": [
+              {
+                "strike": 402.5,
+                "option_type": "call",
+                "oi": 6121,
+                "gamma": 0.01854,
+                "bid": 6.7,
+                "ask": 6.8,
+                "last": 6.81,
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
+                "trade_date": "1793739589190",
+                "symbol": "TSLA261106C00402500",
+                "root_symbol": "TSLA",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.592,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-09",
+            "status": "observed",
+            "aggregate_oi": 201.0,
+            "gamma_usd_millions": 47.34207359662081,
+            "observed_contracts": [
+              {
+                "strike": 402.5,
+                "option_type": "call",
+                "oi": 201,
+                "gamma": 0.01627,
+                "bid": 7.9,
+                "ask": 8.1,
+                "last": 8.13,
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
+                "trade_date": "1793739577633",
+                "symbol": "TSLA261109C00402500",
+                "root_symbol": "TSLA",
+                "expiration_date": "2026-11-09",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.479,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          }
+        ]
+      },
+      "gamma_usd_millions": 4054.247,
+      "gamma_share_pct": 10.6,
+      "oi": 12014,
+      "oi_share_pct": 4.9,
+      "cluster_neighbors": [
+        390.0,
+        392.5,
+        395.0,
+        397.5,
+        400.0,
+        402.5,
+        405.0,
+        407.5,
+        410.0,
+        412.5,
+        415.0
+      ],
+      "cluster_gamma_usd": 25765.305,
+      "cluster_share_pct": 67.3,
+      "distance": 5.79
     },
     {
       "level": 400.0,
@@ -968,27 +1101,27 @@
           {
             "expiration": "2026-11-04",
             "status": "observed",
-            "aggregate_oi": 2120.0,
-            "gamma_usd_millions": 985.3314823008359,
+            "aggregate_oi": 2989.0,
+            "gamma_usd_millions": 1271.2804616931328,
             "observed_contracts": [
               {
                 "strike": 400.0,
                 "option_type": "call",
-                "oi": 2120,
-                "gamma": 0.02932,
+                "oi": 2989,
+                "gamma": 0.02938,
                 "bid": 4.7,
                 "ask": 4.8,
                 "last": 4.75,
-                "bid_date": "1793740022000",
-                "ask_date": "1793740022000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739598647",
                 "symbol": "TSLA261104C00400000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-04",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.661,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.668,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -996,27 +1129,27 @@
           {
             "expiration": "2026-11-06",
             "status": "observed",
-            "aggregate_oi": 7161.0,
-            "gamma_usd_millions": 2160.2051357935866,
+            "aggregate_oi": 8227.0,
+            "gamma_usd_millions": 2208.080452056883,
             "observed_contracts": [
               {
                 "strike": 400.0,
                 "option_type": "call",
-                "oi": 7161,
-                "gamma": 0.01903,
+                "oi": 8227,
+                "gamma": 0.01854,
                 "bid": 7.85,
                 "ask": 8.0,
                 "last": 7.99,
-                "bid_date": "1793740048000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739595688",
                 "symbol": "TSLA261106C00400000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-06",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.594,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.6,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1024,36 +1157,36 @@
           {
             "expiration": "2026-11-09",
             "status": "observed",
-            "aggregate_oi": 1058.0,
-            "gamma_usd_millions": 277.5659560403647,
+            "aggregate_oi": 1393.0,
+            "gamma_usd_millions": 327.2904265645057,
             "observed_contracts": [
               {
                 "strike": 400.0,
                 "option_type": "call",
-                "oi": 1058,
-                "gamma": 0.01655,
+                "oi": 1393,
+                "gamma": 0.01623,
                 "bid": 9.1,
                 "ask": 9.3,
                 "last": 9.25,
-                "bid_date": "1793739945000",
-                "ask_date": "1793739600000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739578583",
                 "symbol": "TSLA261109C00400000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-09",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.4844,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.486,
                 "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 3423.103,
-      "gamma_share_pct": 10.5,
-      "oi": 10339,
+      "gamma_usd_millions": 3806.651,
+      "gamma_share_pct": 9.9,
+      "oi": 12609,
       "oi_share_pct": 5.1,
       "cluster_neighbors": [
         387.5,
@@ -1068,9 +1201,9 @@
         410.0,
         412.5
       ],
-      "cluster_gamma_usd": 18724.151,
-      "cluster_share_pct": 57.6,
-      "distance": 0.47
+      "cluster_gamma_usd": 23034.748,
+      "cluster_share_pct": 60.2,
+      "distance": 5.13
     },
     {
       "level": 420.0,
@@ -1090,27 +1223,27 @@
           {
             "expiration": "2026-11-04",
             "status": "observed",
-            "aggregate_oi": 5626.0,
-            "gamma_usd_millions": 771.4332745537521,
+            "aggregate_oi": 6929.0,
+            "gamma_usd_millions": 986.024588415693,
             "observed_contracts": [
               {
                 "strike": 420.0,
                 "option_type": "call",
-                "oi": 5626,
-                "gamma": 0.00865,
+                "oi": 6929,
+                "gamma": 0.00983,
                 "bid": 0.36,
-                "ask": 0.36,
+                "ask": 0.37,
                 "last": 0.36,
-                "bid_date": "1793739800000",
-                "ask_date": "1793740014000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739599849",
                 "symbol": "TSLA261104C00420000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-04",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.648,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.647,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1118,27 +1251,27 @@
           {
             "expiration": "2026-11-06",
             "status": "observed",
-            "aggregate_oi": 9357.0,
-            "gamma_usd_millions": 1682.0241085668288,
+            "aggregate_oi": 10269.0,
+            "gamma_usd_millions": 1815.1289506538499,
             "observed_contracts": [
               {
                 "strike": 420.0,
                 "option_type": "call",
-                "oi": 9357,
-                "gamma": 0.01134,
+                "oi": 10269,
+                "gamma": 0.01221,
                 "bid": 1.76,
                 "ask": 1.8,
                 "last": 1.8,
-                "bid_date": "1793739721000",
-                "ask_date": "1793739600000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739596392",
                 "symbol": "TSLA261106C00420000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-06",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.574,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.581,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1146,37 +1279,37 @@
           {
             "expiration": "2026-11-09",
             "status": "observed",
-            "aggregate_oi": 1823.0,
-            "gamma_usd_millions": 325.10355861214686,
+            "aggregate_oi": 2432.0,
+            "gamma_usd_millions": 422.48226471936005,
             "observed_contracts": [
               {
                 "strike": 420.0,
                 "option_type": "call",
-                "oi": 1823,
-                "gamma": 0.01125,
+                "oi": 2432,
+                "gamma": 0.012,
                 "bid": 2.55,
                 "ask": 2.62,
                 "last": 2.6,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739607000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739586560",
                 "symbol": "TSLA261109C00420000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-09",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.463,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.456,
                 "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 2778.561,
-      "gamma_share_pct": 8.5,
-      "oi": 16806,
-      "oi_share_pct": 8.2,
+      "gamma_usd_millions": 3223.636,
+      "gamma_share_pct": 8.4,
+      "oi": 19630,
+      "oi_share_pct": 8.0,
       "cluster_neighbors": [
         407.5,
         410.0,
@@ -1190,17 +1323,17 @@
         430.0,
         432.5
       ],
-      "cluster_gamma_usd": 16987.344,
-      "cluster_share_pct": 52.3,
-      "distance": 5.49
+      "cluster_gamma_usd": 19894.084,
+      "cluster_share_pct": 52.0,
+      "distance": 10.39
     },
     {
-      "level": 402.5,
-      "expiration": "2026-11-06",
+      "level": 405.0,
+      "expiration": "2026-11-04",
       "option_details": {
         "scope": "parsed_contracts_in_sampled_expirations",
         "option_type": "call",
-        "strike": 402.5,
+        "strike": 405.0,
         "aggregate_oi_basis": "gamma_eligible_contracts",
         "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
         "sampled_expirations": [
@@ -1212,27 +1345,27 @@
           {
             "expiration": "2026-11-04",
             "status": "observed",
-            "aggregate_oi": 1800.0,
-            "gamma_usd_millions": 795.2286278460149,
+            "aggregate_oi": 4461.0,
+            "gamma_usd_millions": 1741.713971257037,
             "observed_contracts": [
               {
-                "strike": 402.5,
+                "strike": 405.0,
                 "option_type": "call",
-                "oi": 1800,
-                "gamma": 0.02787,
-                "bid": 3.6,
-                "ask": 3.7,
-                "last": 3.7,
-                "bid_date": "1793740054000",
-                "ask_date": "1793740060000",
-                "trade_date": "1793739597086",
-                "symbol": "TSLA261104C00402500",
+                "oi": 4461,
+                "gamma": 0.02697,
+                "bid": 2.75,
+                "ask": 2.78,
+                "last": 2.78,
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
+                "trade_date": "1793739598434",
+                "symbol": "TSLA261104C00405000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-04",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.656,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.653,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1240,27 +1373,27 @@
           {
             "expiration": "2026-11-06",
             "status": "observed",
-            "aggregate_oi": 5427.0,
-            "gamma_usd_millions": 1605.2918220220313,
+            "aggregate_oi": 4001.0,
+            "gamma_usd_millions": 1058.7865327603715,
             "observed_contracts": [
               {
-                "strike": 402.5,
+                "strike": 405.0,
                 "option_type": "call",
-                "oi": 5427,
-                "gamma": 0.01866,
-                "bid": 6.7,
-                "ask": 6.8,
-                "last": 6.81,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739600000",
-                "trade_date": "1793739589190",
-                "symbol": "TSLA261106C00402500",
+                "oi": 4001,
+                "gamma": 0.01828,
+                "bid": 5.65,
+                "ask": 5.75,
+                "last": 5.72,
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
+                "trade_date": "1793739598361",
+                "symbol": "TSLA261106C00405000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-06",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.589,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.585,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1268,39 +1401,38 @@
           {
             "expiration": "2026-11-09",
             "status": "observed",
-            "aggregate_oi": 98.0,
-            "gamma_usd_millions": 25.33743041455395,
+            "aggregate_oi": 812.0,
+            "gamma_usd_millions": 189.48931795189762,
             "observed_contracts": [
               {
-                "strike": 402.5,
+                "strike": 405.0,
                 "option_type": "call",
-                "oi": 98,
-                "gamma": 0.01631,
-                "bid": 7.9,
-                "ask": 8.1,
-                "last": 8.13,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739600000",
-                "trade_date": "1793739577633",
-                "symbol": "TSLA261109C00402500",
+                "oi": 812,
+                "gamma": 0.01612,
+                "bid": 6.85,
+                "ask": 7.0,
+                "last": 6.96,
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
+                "trade_date": "1793739599012",
+                "symbol": "TSLA261109C00405000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-09",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.485,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.473,
                 "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 2425.858,
-      "gamma_share_pct": 7.5,
-      "oi": 7325,
-      "oi_share_pct": 3.6,
+      "gamma_usd_millions": 2989.99,
+      "gamma_share_pct": 7.8,
+      "oi": 9274,
+      "oi_share_pct": 3.8,
       "cluster_neighbors": [
-        390.0,
         392.5,
         395.0,
         397.5,
@@ -1310,133 +1442,12 @@
         407.5,
         410.0,
         412.5,
-        415.0
-      ],
-      "cluster_gamma_usd": 20885.363,
-      "cluster_share_pct": 64.3,
-      "distance": 1.09
-    },
-    {
-      "level": 415.0,
-      "expiration": "2026-11-06",
-      "option_details": {
-        "scope": "parsed_contracts_in_sampled_expirations",
-        "option_type": "call",
-        "strike": 415.0,
-        "aggregate_oi_basis": "gamma_eligible_contracts",
-        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
-        "sampled_expirations": [
-          "2026-11-04",
-          "2026-11-06",
-          "2026-11-09"
-        ],
-        "by_expiration": [
-          {
-            "expiration": "2026-11-04",
-            "status": "observed",
-            "aggregate_oi": 3238.0,
-            "gamma_usd_millions": 694.9891763527382,
-            "observed_contracts": [
-              {
-                "strike": 415.0,
-                "option_type": "call",
-                "oi": 3238,
-                "gamma": 0.01354,
-                "bid": 0.75,
-                "ask": 0.76,
-                "last": 0.76,
-                "bid_date": "1793739943000",
-                "ask_date": "1793739636000",
-                "trade_date": "1793739599925",
-                "symbol": "TSLA261104C00415000",
-                "root_symbol": "TSLA",
-                "expiration_date": "2026-11-04",
-                "contract_size": 100.0,
-                "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.642,
-                "included_in_wall_aggregate": true
-              }
-            ]
-          },
-          {
-            "expiration": "2026-11-06",
-            "status": "observed",
-            "aggregate_oi": 6888.0,
-            "gamma_usd_millions": 1505.705153586896,
-            "observed_contracts": [
-              {
-                "strike": 415.0,
-                "option_type": "call",
-                "oi": 6888,
-                "gamma": 0.01379,
-                "bid": 2.67,
-                "ask": 2.72,
-                "last": 2.71,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739600000",
-                "trade_date": "1793739596855",
-                "symbol": "TSLA261106C00415000",
-                "root_symbol": "TSLA",
-                "expiration_date": "2026-11-06",
-                "contract_size": 100.0,
-                "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.5792,
-                "included_in_wall_aggregate": true
-              }
-            ]
-          },
-          {
-            "expiration": "2026-11-09",
-            "status": "observed",
-            "aggregate_oi": 450.0,
-            "gamma_usd_millions": 93.37587673577623,
-            "observed_contracts": [
-              {
-                "strike": 415.0,
-                "option_type": "call",
-                "oi": 450,
-                "gamma": 0.01309,
-                "bid": 3.6,
-                "ask": 3.75,
-                "last": 3.69,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739599000",
-                "trade_date": "1793739591348",
-                "symbol": "TSLA261109C00415000",
-                "root_symbol": "TSLA",
-                "expiration_date": "2026-11-09",
-                "contract_size": 100.0,
-                "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.468,
-                "included_in_wall_aggregate": true
-              }
-            ]
-          }
-        ]
-      },
-      "gamma_usd_millions": 2294.07,
-      "gamma_share_pct": 7.1,
-      "oi": 10576,
-      "oi_share_pct": 5.2,
-      "cluster_neighbors": [
-        402.5,
-        405.0,
-        407.5,
-        410.0,
-        412.5,
         415.0,
-        417.5,
-        420.0,
-        422.5,
-        425.0,
-        427.5
+        417.5
       ],
-      "cluster_gamma_usd": 20504.262,
-      "cluster_share_pct": 63.1,
-      "distance": 4.23
+      "cluster_gamma_usd": 25673.375,
+      "cluster_share_pct": 67.1,
+      "distance": 6.44
     }
   ],
   "put_walls_top": [
@@ -1458,27 +1469,27 @@
           {
             "expiration": "2026-11-04",
             "status": "observed",
-            "aggregate_oi": 3748.0,
-            "gamma_usd_millions": 1741.991696067704,
+            "aggregate_oi": 3951.0,
+            "gamma_usd_millions": 1680.4379739543556,
             "observed_contracts": [
               {
                 "strike": 400.0,
                 "option_type": "put",
-                "oi": 3748,
-                "gamma": 0.02932,
+                "oi": 3951,
+                "gamma": 0.02938,
                 "bid": 6.35,
                 "ask": 6.5,
                 "last": 6.46,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739918000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739600000",
                 "symbol": "TSLA261104P00400000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-04",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.661,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.668,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1486,27 +1497,27 @@
           {
             "expiration": "2026-11-06",
             "status": "observed",
-            "aggregate_oi": 5459.0,
-            "gamma_usd_millions": 1646.7755671410684,
+            "aggregate_oi": 5614.0,
+            "gamma_usd_millions": 1506.7659727540226,
             "observed_contracts": [
               {
                 "strike": 400.0,
                 "option_type": "put",
-                "oi": 5459,
-                "gamma": 0.01903,
+                "oi": 5614,
+                "gamma": 0.01854,
                 "bid": 9.35,
                 "ask": 9.55,
                 "last": 9.39,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739637000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739588194",
                 "symbol": "TSLA261106P00400000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-06",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.594,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.6,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1514,37 +1525,37 @@
           {
             "expiration": "2026-11-09",
             "status": "observed",
-            "aggregate_oi": 661.0,
-            "gamma_usd_millions": 173.41313510650383,
+            "aggregate_oi": 714.0,
+            "gamma_usd_millions": 167.7569020581888,
             "observed_contracts": [
               {
                 "strike": 400.0,
                 "option_type": "put",
-                "oi": 661,
-                "gamma": 0.01655,
+                "oi": 714,
+                "gamma": 0.01623,
                 "bid": 10.55,
                 "ask": 10.8,
                 "last": 10.45,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739561500",
                 "symbol": "TSLA261109P00400000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-09",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.4844,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.486,
                 "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 3562.18,
-      "gamma_share_pct": 13.1,
-      "oi": 9868,
-      "oi_share_pct": 6.1,
+      "gamma_usd_millions": 3354.961,
+      "gamma_share_pct": 12.1,
+      "oi": 10279,
+      "oi_share_pct": 5.7,
       "cluster_neighbors": [
         387.5,
         390.0,
@@ -1558,9 +1569,9 @@
         410.0,
         412.5
       ],
-      "cluster_gamma_usd": 16911.015,
-      "cluster_share_pct": 62.2,
-      "distance": 0.47,
+      "cluster_gamma_usd": 17732.634,
+      "cluster_share_pct": 63.8,
+      "distance": 5.13,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -1605,7 +1616,7 @@
           "forward_sessions": 5,
           "coordinate": 400.0,
           "tolerance_abs": 2.953050000000003,
-          "history_first_session": "2025-09-29",
+          "history_first_session": "2025-09-30",
           "history_last_session": "2026-11-03",
           "contact_count": 15,
           "completed_count": 15,
@@ -1690,27 +1701,27 @@
           {
             "expiration": "2026-11-04",
             "status": "observed",
-            "aggregate_oi": 2106.0,
-            "gamma_usd_millions": 449.3512550069828,
+            "aggregate_oi": 5244.0,
+            "gamma_usd_millions": 901.867609468109,
             "observed_contracts": [
               {
                 "strike": 380.0,
                 "option_type": "put",
-                "oi": 2106,
-                "gamma": 0.01346,
+                "oi": 5244,
+                "gamma": 0.01188,
                 "bid": 0.83,
-                "ask": 0.83,
+                "ask": 0.84,
                 "last": 0.83,
-                "bid_date": "1793739600000",
-                "ask_date": "1793740046000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739591060",
                 "symbol": "TSLA261104P00380000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-04",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.742,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.747,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1718,27 +1729,27 @@
           {
             "expiration": "2026-11-06",
             "status": "observed",
-            "aggregate_oi": 10447.0,
-            "gamma_usd_millions": 2070.0657504852184,
+            "aggregate_oi": 10015.0,
+            "gamma_usd_millions": 1703.5405908608002,
             "observed_contracts": [
               {
                 "strike": 380.0,
                 "option_type": "put",
-                "oi": 10447,
-                "gamma": 0.0125,
+                "oi": 10015,
+                "gamma": 0.01175,
                 "bid": 2.73,
                 "ask": 2.76,
                 "last": 2.73,
-                "bid_date": "1793739627000",
-                "ask_date": "1793739627000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739596064",
                 "symbol": "TSLA261106P00380000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-06",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.635,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.655,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1746,37 +1757,37 @@
           {
             "expiration": "2026-11-09",
             "status": "observed",
-            "aggregate_oi": 1333.0,
-            "gamma_usd_millions": 252.299859374272,
+            "aggregate_oi": 1394.0,
+            "gamma_usd_millions": 225.41333930577923,
             "observed_contracts": [
               {
                 "strike": 380.0,
                 "option_type": "put",
-                "oi": 1333,
-                "gamma": 0.01194,
+                "oi": 1394,
+                "gamma": 0.01117,
                 "bid": 3.55,
                 "ask": 3.65,
                 "last": 3.55,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739598168",
                 "symbol": "TSLA261109P00380000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-09",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.5156,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.5221,
                 "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 2771.717,
+      "gamma_usd_millions": 2830.822,
       "gamma_share_pct": 10.2,
-      "oi": 13886,
-      "oi_share_pct": 8.6,
+      "oi": 16653,
+      "oi_share_pct": 9.2,
       "cluster_neighbors": [
         367.5,
         370.0,
@@ -1790,9 +1801,9 @@
         390.0,
         392.5
       ],
-      "cluster_gamma_usd": 12516.905,
-      "cluster_share_pct": 46.1,
-      "distance": -4.56,
+      "cluster_gamma_usd": 13186.427,
+      "cluster_share_pct": 47.5,
+      "distance": -0.13,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -1837,7 +1848,7 @@
           "forward_sessions": 5,
           "coordinate": 380.0,
           "tolerance_abs": 2.953050000000003,
-          "history_first_session": "2025-09-29",
+          "history_first_session": "2025-09-30",
           "history_last_session": "2026-11-03",
           "contact_count": 16,
           "completed_count": 16,
@@ -1906,7 +1917,7 @@
     },
     {
       "level": 390.0,
-      "expiration": "2026-11-06",
+      "expiration": "2026-11-04",
       "option_details": {
         "scope": "parsed_contracts_in_sampled_expirations",
         "option_type": "put",
@@ -1922,27 +1933,27 @@
           {
             "expiration": "2026-11-04",
             "status": "observed",
-            "aggregate_oi": 2517.0,
-            "gamma_usd_millions": 941.6245020214228,
+            "aggregate_oi": 4396.0,
+            "gamma_usd_millions": 1418.5067871399938,
             "observed_contracts": [
               {
                 "strike": 390.0,
                 "option_type": "put",
-                "oi": 2517,
-                "gamma": 0.0236,
+                "oi": 4396,
+                "gamma": 0.02229,
                 "bid": 2.5,
                 "ask": 2.53,
                 "last": 2.5,
-                "bid_date": "1793739600000",
-                "ask_date": "1793739791000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739598452",
                 "symbol": "TSLA261104P00390000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-04",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.684,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.699,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1950,27 +1961,27 @@
           {
             "expiration": "2026-11-06",
             "status": "observed",
-            "aggregate_oi": 4169.0,
-            "gamma_usd_millions": 1143.9617284151125,
+            "aggregate_oi": 3937.0,
+            "gamma_usd_millions": 922.7327380646913,
             "observed_contracts": [
               {
                 "strike": 390.0,
                 "option_type": "put",
-                "oi": 4169,
-                "gamma": 0.01731,
+                "oi": 3937,
+                "gamma": 0.01619,
                 "bid": 5.25,
-                "ask": 5.3,
+                "ask": 5.35,
                 "last": 5.25,
-                "bid_date": "1793739634000",
-                "ask_date": "1793739880000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739590054",
                 "symbol": "TSLA261106P00390000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-06",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.612,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.627,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -1978,37 +1989,37 @@
           {
             "expiration": "2026-11-09",
             "status": "observed",
-            "aggregate_oi": 355.0,
-            "gamma_usd_millions": 87.39414562869787,
+            "aggregate_oi": 722.0,
+            "gamma_usd_millions": 151.24094926991364,
             "observed_contracts": [
               {
                 "strike": 390.0,
                 "option_type": "put",
-                "oi": 355,
-                "gamma": 0.01553,
+                "oi": 722,
+                "gamma": 0.01447,
                 "bid": 6.35,
                 "ask": 6.45,
                 "last": 6.16,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739508388",
                 "symbol": "TSLA261109P00390000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-09",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.495,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.504,
                 "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 2172.98,
-      "gamma_share_pct": 8.0,
-      "oi": 7041,
-      "oi_share_pct": 4.4,
+      "gamma_usd_millions": 2492.48,
+      "gamma_share_pct": 9.0,
+      "oi": 9055,
+      "oi_share_pct": 5.0,
       "cluster_neighbors": [
         377.5,
         380.0,
@@ -2022,9 +2033,9 @@
         400.0,
         402.5
       ],
-      "cluster_gamma_usd": 18431.471,
-      "cluster_share_pct": 67.8,
-      "distance": -2.05,
+      "cluster_gamma_usd": 19643.815,
+      "cluster_share_pct": 70.7,
+      "distance": 2.5,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -2069,7 +2080,7 @@
           "forward_sessions": 5,
           "coordinate": 390.0,
           "tolerance_abs": 2.953050000000003,
-          "history_first_session": "2025-09-29",
+          "history_first_session": "2025-09-30",
           "history_last_session": "2026-11-03",
           "contact_count": 23,
           "completed_count": 22,
@@ -2137,238 +2148,6 @@
       }
     },
     {
-      "level": 395.0,
-      "expiration": "2026-11-04",
-      "option_details": {
-        "scope": "parsed_contracts_in_sampled_expirations",
-        "option_type": "put",
-        "strike": 395.0,
-        "aggregate_oi_basis": "gamma_eligible_contracts",
-        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
-        "sampled_expirations": [
-          "2026-11-04",
-          "2026-11-06",
-          "2026-11-09"
-        ],
-        "by_expiration": [
-          {
-            "expiration": "2026-11-04",
-            "status": "observed",
-            "aggregate_oi": 2219.0,
-            "gamma_usd_millions": 997.9279126430054,
-            "observed_contracts": [
-              {
-                "strike": 395.0,
-                "option_type": "put",
-                "oi": 2219,
-                "gamma": 0.02837,
-                "bid": 4.1,
-                "ask": 4.2,
-                "last": 4.18,
-                "bid_date": "1793739600000",
-                "ask_date": "1793740044000",
-                "trade_date": "1793739596015",
-                "symbol": "TSLA261104P00395000",
-                "root_symbol": "TSLA",
-                "expiration_date": "2026-11-04",
-                "contract_size": 100.0,
-                "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.669,
-                "included_in_wall_aggregate": true
-              }
-            ]
-          },
-          {
-            "expiration": "2026-11-06",
-            "status": "observed",
-            "aggregate_oi": 3323.0,
-            "gamma_usd_millions": 991.362512954073,
-            "observed_contracts": [
-              {
-                "strike": 395.0,
-                "option_type": "put",
-                "oi": 3323,
-                "gamma": 0.01882,
-                "bid": 7.1,
-                "ask": 7.2,
-                "last": 7.12,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739599000",
-                "trade_date": "1793739594451",
-                "symbol": "TSLA261106P00395000",
-                "root_symbol": "TSLA",
-                "expiration_date": "2026-11-06",
-                "contract_size": 100.0,
-                "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.603,
-                "included_in_wall_aggregate": true
-              }
-            ]
-          },
-          {
-            "expiration": "2026-11-09",
-            "status": "observed",
-            "aggregate_oi": 482.0,
-            "gamma_usd_millions": 125.68847959431224,
-            "observed_contracts": [
-              {
-                "strike": 395.0,
-                "option_type": "put",
-                "oi": 482,
-                "gamma": 0.01645,
-                "bid": 8.25,
-                "ask": 8.45,
-                "last": 8.0,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739600000",
-                "trade_date": "1793739300124",
-                "symbol": "TSLA261109P00395000",
-                "root_symbol": "TSLA",
-                "expiration_date": "2026-11-09",
-                "contract_size": 100.0,
-                "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.489,
-                "included_in_wall_aggregate": true
-              }
-            ]
-          }
-        ]
-      },
-      "gamma_usd_millions": 2114.979,
-      "gamma_share_pct": 7.8,
-      "oi": 6024,
-      "oi_share_pct": 3.7,
-      "cluster_neighbors": [
-        382.5,
-        385.0,
-        387.5,
-        390.0,
-        392.5,
-        395.0,
-        397.5,
-        400.0,
-        402.5,
-        405.0,
-        407.5
-      ],
-      "cluster_gamma_usd": 17589.671,
-      "cluster_share_pct": 64.7,
-      "distance": -0.79,
-      "volume_profile_proximity": {
-        "status": "available",
-        "nearest_type": "hvn",
-        "nearest_level": 396.5177,
-        "nearest_distance_pct": 0.38,
-        "nearest_abs_distance_pct": 0.38,
-        "poc_distance_pct": 2.85,
-        "nearest_hvn_distance_pct": 0.38
-      },
-      "historical_reaction": {
-        "status": "available",
-        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
-        "lookback_sessions": 252,
-        "tolerance_abs": 2.9531,
-        "test_count": 19,
-        "defense_count": 14,
-        "defense_rate_pct": 73.7,
-        "last_test_date": "2026-10-26",
-        "last_test_rebound_5d_pct": 4.87,
-        "median_rebound_5d_pct": 5.95,
-        "max_rebound_5d_pct": 12.81,
-        "defense_min_rebound_pct": 1.87,
-        "observation_policy": "complete_forward_window_only",
-        "forward_sessions": 5,
-        "pending_test_count": 1,
-        "last_pending_test_date": "2026-10-30",
-        "last_pending_observed_sessions": 2,
-        "excluded_incomplete_data_test_count": 0,
-        "measurement_basis": {
-          "calibration": "completed_daily_atr10_v1",
-          "history_sha256": "7a75fc88131ec727809add1797a5f076283bfdfeecc61a02f56d720099ab76ed",
-          "history_end": "2026-11-03",
-          "atr10": 14.765250000000014,
-          "parameters_sha256": "637a34fd60f18d4c84e19c9e324cbbd8b38ac1f61868fc7f702ed922cde9bf5f"
-        },
-        "path_evidence": {
-          "status": "available",
-          "method": "horizontal_coordinate_post_contact_close_path_v40",
-          "measurement_origin": "contact_session_close",
-          "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
-          "intraday_order": "unknown_with_daily_bars",
-          "forward_sessions": 5,
-          "coordinate": 395.0,
-          "tolerance_abs": 2.953050000000003,
-          "history_first_session": "2025-09-29",
-          "history_last_session": "2026-11-03",
-          "contact_count": 20,
-          "completed_count": 19,
-          "pending_count": 1,
-          "incomplete_data_count": 0,
-          "overlapping_window_count": 8,
-          "independent_trials_assumed": false,
-          "summary_scope": "all_completed_contacts",
-          "event_detail_selection": "latest_completed_contacts",
-          "negative_terminal_count": 9,
-          "positive_excursion_negative_terminal_count": 8,
-          "adverse_extreme_first_count": 8,
-          "same_session_extremes_count": 1,
-          "events": [
-            {
-              "contact_date": "2026-07-08",
-              "window_end": "2026-07-15",
-              "contact_close": 394.06,
-              "approach": "from_above",
-              "favorable_excursion_pct": 4.846978,
-              "adverse_excursion_pct": 0.862813,
-              "terminal_close_return_pct": 0.101507,
-              "favorable_extreme_session": 2,
-              "adverse_extreme_session": 5,
-              "extreme_order": "favorable_extreme_first",
-              "first_close_at_or_above_contact_close_session": 1,
-              "overlaps_previous_window": true
-            },
-            {
-              "contact_date": "2026-07-13",
-              "window_end": "2026-07-20",
-              "contact_close": 394.76,
-              "approach": "from_above",
-              "favorable_excursion_pct": 2.996631,
-              "adverse_excursion_pct": 6.417823,
-              "terminal_close_return_pct": -6.381092,
-              "favorable_extreme_session": 2,
-              "adverse_extreme_session": 5,
-              "extreme_order": "favorable_extreme_first",
-              "first_close_at_or_above_contact_close_session": 1,
-              "overlaps_previous_window": true
-            },
-            {
-              "contact_date": "2026-10-26",
-              "window_end": "2026-11-02",
-              "contact_close": 391.62,
-              "approach": "from_below",
-              "favorable_excursion_pct": 5.773454,
-              "adverse_excursion_pct": 1.046933,
-              "terminal_close_return_pct": 3.115265,
-              "favorable_extreme_session": 5,
-              "adverse_extreme_session": 4,
-              "extreme_order": "adverse_extreme_first",
-              "first_close_at_or_above_contact_close_session": 1,
-              "overlaps_previous_window": false
-            }
-          ],
-          "events_omitted": 16,
-          "max_adverse_excursion_pct": 8.760202,
-          "min_terminal_close_return_pct": -6.381092,
-          "median_favorable_excursion_pct": 5.12968,
-          "median_adverse_excursion_pct": 2.902108,
-          "median_terminal_close_return_pct": 0.101507
-        }
-      }
-    },
-    {
       "level": 397.5,
       "expiration": "2026-11-04",
       "option_details": {
@@ -2386,27 +2165,27 @@
           {
             "expiration": "2026-11-04",
             "status": "observed",
-            "aggregate_oi": 2812.0,
-            "gamma_usd_millions": 1314.5364144106227,
+            "aggregate_oi": 3834.0,
+            "gamma_usd_millions": 1605.1442339930118,
             "observed_contracts": [
               {
                 "strike": 397.5,
                 "option_type": "put",
-                "oi": 2812,
-                "gamma": 0.02949,
+                "oi": 3834,
+                "gamma": 0.02892,
                 "bid": 5.2,
                 "ask": 5.3,
                 "last": 5.25,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739597295",
                 "symbol": "TSLA261104P00397500",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-04",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.665,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.676,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -2414,27 +2193,27 @@
           {
             "expiration": "2026-11-06",
             "status": "observed",
-            "aggregate_oi": 1766.0,
-            "gamma_usd_millions": 534.4156404109361,
+            "aggregate_oi": 2091.0,
+            "gamma_usd_millions": 553.3423244193793,
             "observed_contracts": [
               {
                 "strike": 397.5,
                 "option_type": "put",
-                "oi": 1766,
-                "gamma": 0.01909,
+                "oi": 2091,
+                "gamma": 0.01828,
                 "bid": 8.2,
                 "ask": 8.3,
                 "last": 8.1,
-                "bid_date": "1793739600000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739585615",
                 "symbol": "TSLA261106P00397500",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-06",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.598,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.609,
                 "included_in_wall_aggregate": true
               }
             ]
@@ -2442,37 +2221,37 @@
           {
             "expiration": "2026-11-09",
             "status": "observed",
-            "aggregate_oi": 200.0,
-            "gamma_usd_millions": 52.628454420299995,
+            "aggregate_oi": 244.0,
+            "gamma_usd_millions": 56.586913202995206,
             "observed_contracts": [
               {
                 "strike": 397.5,
                 "option_type": "put",
-                "oi": 200,
-                "gamma": 0.0166,
+                "oi": 244,
+                "gamma": 0.01602,
                 "bid": 9.4,
                 "ask": 9.55,
                 "last": 9.32,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739570585",
                 "symbol": "TSLA261109P00397500",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-09",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.486,
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.493,
                 "included_in_wall_aggregate": true
               }
             ]
           }
         ]
       },
-      "gamma_usd_millions": 1901.581,
-      "gamma_share_pct": 7.0,
-      "oi": 4778,
-      "oi_share_pct": 3.0,
+      "gamma_usd_millions": 2215.073,
+      "gamma_share_pct": 8.0,
+      "oi": 6169,
+      "oi_share_pct": 3.4,
       "cluster_neighbors": [
         385.0,
         387.5,
@@ -2486,9 +2265,9 @@
         407.5,
         410.0
       ],
-      "cluster_gamma_usd": 18007.681,
-      "cluster_share_pct": 66.3,
-      "distance": -0.16,
+      "cluster_gamma_usd": 19163.375,
+      "cluster_share_pct": 69.0,
+      "distance": 4.47,
       "volume_profile_proximity": {
         "status": "available",
         "nearest_type": "hvn",
@@ -2533,7 +2312,7 @@
           "forward_sessions": 5,
           "coordinate": 397.5,
           "tolerance_abs": 2.953050000000003,
-          "history_first_session": "2025-09-29",
+          "history_first_session": "2025-09-30",
           "history_last_session": "2026-11-03",
           "contact_count": 18,
           "completed_count": 17,
@@ -2599,6 +2378,238 @@
           "median_terminal_close_return_pct": -1.132798
         }
       }
+    },
+    {
+      "level": 395.0,
+      "expiration": "2026-11-04",
+      "option_details": {
+        "scope": "parsed_contracts_in_sampled_expirations",
+        "option_type": "put",
+        "strike": 395.0,
+        "aggregate_oi_basis": "gamma_eligible_contracts",
+        "gamma_notional_units": "abs_gamma * OI * contract_multiplier * spot_squared / 1e6; no dealer sign",
+        "sampled_expirations": [
+          "2026-11-04",
+          "2026-11-06",
+          "2026-11-09"
+        ],
+        "by_expiration": [
+          {
+            "expiration": "2026-11-04",
+            "status": "observed",
+            "aggregate_oi": 2618.0,
+            "gamma_usd_millions": 1037.3089033201666,
+            "observed_contracts": [
+              {
+                "strike": 395.0,
+                "option_type": "put",
+                "oi": 2618,
+                "gamma": 0.02737,
+                "bid": 4.1,
+                "ask": 4.2,
+                "last": 4.18,
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
+                "trade_date": "1793739596015",
+                "symbol": "TSLA261104P00395000",
+                "root_symbol": "TSLA",
+                "expiration_date": "2026-11-04",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.683,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-06",
+            "status": "observed",
+            "aggregate_oi": 3339.0,
+            "gamma_usd_millions": 859.4326361069569,
+            "observed_contracts": [
+              {
+                "strike": 395.0,
+                "option_type": "put",
+                "oi": 3339,
+                "gamma": 0.01778,
+                "bid": 7.1,
+                "ask": 7.2,
+                "last": 7.12,
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
+                "trade_date": "1793739594451",
+                "symbol": "TSLA261106P00395000",
+                "root_symbol": "TSLA",
+                "expiration_date": "2026-11-06",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.612,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          },
+          {
+            "expiration": "2026-11-09",
+            "status": "observed",
+            "aggregate_oi": 521.0,
+            "gamma_usd_millions": 117.96091643125762,
+            "observed_contracts": [
+              {
+                "strike": 395.0,
+                "option_type": "put",
+                "oi": 521,
+                "gamma": 0.01564,
+                "bid": 8.25,
+                "ask": 8.45,
+                "last": 8.0,
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
+                "trade_date": "1793739300124",
+                "symbol": "TSLA261109P00395000",
+                "root_symbol": "TSLA",
+                "expiration_date": "2026-11-09",
+                "contract_size": 100.0,
+                "multiplier_basis": "provider_contract_size",
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.4934,
+                "included_in_wall_aggregate": true
+              }
+            ]
+          }
+        ]
+      },
+      "gamma_usd_millions": 2014.702,
+      "gamma_share_pct": 7.3,
+      "oi": 6478,
+      "oi_share_pct": 3.6,
+      "cluster_neighbors": [
+        382.5,
+        385.0,
+        387.5,
+        390.0,
+        392.5,
+        395.0,
+        397.5,
+        400.0,
+        402.5,
+        405.0,
+        407.5
+      ],
+      "cluster_gamma_usd": 18832.156,
+      "cluster_share_pct": 67.8,
+      "distance": 3.82,
+      "volume_profile_proximity": {
+        "status": "available",
+        "nearest_type": "hvn",
+        "nearest_level": 396.5177,
+        "nearest_distance_pct": 0.38,
+        "nearest_abs_distance_pct": 0.38,
+        "poc_distance_pct": 2.85,
+        "nearest_hvn_distance_pct": 0.38
+      },
+      "historical_reaction": {
+        "status": "available",
+        "method": "daily_level_tests_collapsed_then_max_high_5_sessions",
+        "lookback_sessions": 252,
+        "tolerance_abs": 2.9531,
+        "test_count": 19,
+        "defense_count": 14,
+        "defense_rate_pct": 73.7,
+        "last_test_date": "2026-10-26",
+        "last_test_rebound_5d_pct": 4.87,
+        "median_rebound_5d_pct": 5.95,
+        "max_rebound_5d_pct": 12.81,
+        "defense_min_rebound_pct": 1.87,
+        "observation_policy": "complete_forward_window_only",
+        "forward_sessions": 5,
+        "pending_test_count": 1,
+        "last_pending_test_date": "2026-10-30",
+        "last_pending_observed_sessions": 2,
+        "excluded_incomplete_data_test_count": 0,
+        "measurement_basis": {
+          "calibration": "completed_daily_atr10_v1",
+          "history_sha256": "7a75fc88131ec727809add1797a5f076283bfdfeecc61a02f56d720099ab76ed",
+          "history_end": "2026-11-03",
+          "atr10": 14.765250000000014,
+          "parameters_sha256": "637a34fd60f18d4c84e19c9e324cbbd8b38ac1f61868fc7f702ed922cde9bf5f"
+        },
+        "path_evidence": {
+          "status": "available",
+          "method": "horizontal_coordinate_post_contact_close_path_v40",
+          "measurement_origin": "contact_session_close",
+          "scope": "Horizontal coordinate, not a historical AVWAP curve or option inventory; descriptive, not ex-ante validation or executed trades.",
+          "intraday_order": "unknown_with_daily_bars",
+          "forward_sessions": 5,
+          "coordinate": 395.0,
+          "tolerance_abs": 2.953050000000003,
+          "history_first_session": "2025-09-30",
+          "history_last_session": "2026-11-03",
+          "contact_count": 20,
+          "completed_count": 19,
+          "pending_count": 1,
+          "incomplete_data_count": 0,
+          "overlapping_window_count": 8,
+          "independent_trials_assumed": false,
+          "summary_scope": "all_completed_contacts",
+          "event_detail_selection": "latest_completed_contacts",
+          "negative_terminal_count": 9,
+          "positive_excursion_negative_terminal_count": 8,
+          "adverse_extreme_first_count": 8,
+          "same_session_extremes_count": 1,
+          "events": [
+            {
+              "contact_date": "2026-07-08",
+              "window_end": "2026-07-15",
+              "contact_close": 394.06,
+              "approach": "from_above",
+              "favorable_excursion_pct": 4.846978,
+              "adverse_excursion_pct": 0.862813,
+              "terminal_close_return_pct": 0.101507,
+              "favorable_extreme_session": 2,
+              "adverse_extreme_session": 5,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": true
+            },
+            {
+              "contact_date": "2026-07-13",
+              "window_end": "2026-07-20",
+              "contact_close": 394.76,
+              "approach": "from_above",
+              "favorable_excursion_pct": 2.996631,
+              "adverse_excursion_pct": 6.417823,
+              "terminal_close_return_pct": -6.381092,
+              "favorable_extreme_session": 2,
+              "adverse_extreme_session": 5,
+              "extreme_order": "favorable_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": true
+            },
+            {
+              "contact_date": "2026-10-26",
+              "window_end": "2026-11-02",
+              "contact_close": 391.62,
+              "approach": "from_below",
+              "favorable_excursion_pct": 5.773454,
+              "adverse_excursion_pct": 1.046933,
+              "terminal_close_return_pct": 3.115265,
+              "favorable_extreme_session": 5,
+              "adverse_extreme_session": 4,
+              "extreme_order": "adverse_extreme_first",
+              "first_close_at_or_above_contact_close_session": 1,
+              "overlaps_previous_window": false
+            }
+          ],
+          "events_omitted": 16,
+          "max_adverse_excursion_pct": 8.760202,
+          "min_terminal_close_return_pct": -6.381092,
+          "median_favorable_excursion_pct": 5.12968,
+          "median_adverse_excursion_pct": 2.902108,
+          "median_terminal_close_return_pct": 0.101507
+        }
+      }
     }
   ],
   "technicals": {
@@ -2628,13 +2639,13 @@
     },
     "atr10": 14.7653,
     "volume": {
-      "avg_20d": 36262581.75,
+      "avg_20d": 36298684.25,
       "median_20d": 35180869.5,
-      "avg_dollar_20d": 13881489808.14,
+      "avg_dollar_20d": 13895876654.39,
       "last_complete_day": {
         "date": "2026-11-03",
-        "shares": 25925683,
-        "rel_to_20d": 0.715
+        "shares": 26647733,
+        "rel_to_20d": 0.734
       },
       "series": {
         "shares_20d": [
@@ -2657,7 +2668,7 @@
           22858268,
           41737178,
           43141083,
-          25925683
+          26647733
         ],
         "dollar_volume_20d": [
           9669881847.03,
@@ -2679,11 +2690,11 @@
           9218739484.4,
           16686941136.18,
           17421232137.06,
-          10331384675.5
+          10619121600.5
         ]
       },
       "current_session": {
-        "shares": 25924634.0,
+        "shares": 1394076.0,
         "comparable_to_avg_20d": false
       },
       "note": "ratios calculados contra último día COMPLETO; intradía solo informativo"
@@ -2869,7 +2880,7 @@
         "high": 406.5,
         "low": 396.53,
         "close": 398.5,
-        "volume": 25925683.0
+        "volume": 26647733.0
       }
     ],
     "scope": "Recent OHLCV only. Not intraday ordering, breakout confirmation, a fixed close-count rule or the five-session rebound metric."
@@ -2898,7 +2909,7 @@
       {
         "type": "hvn",
         "level": 370.5144,
-        "volume_share_pct": 3.57
+        "volume_share_pct": 3.56
       },
       {
         "type": "hvn",
@@ -2915,56 +2926,56 @@
   "options": {
     "status": "ok",
     "atm_straddle": {
-      "strike_atm": 397.5,
-      "move_abs": 20.175,
-      "move_pct": 0.05067249368948499,
+      "strike_atm": 380.0,
+      "move_abs": 25.9,
+      "move_pct": 0.06807190916736752,
       "units": {
         "move_abs": "USD_per_share",
         "move_pct": "fraction"
       },
       "call_quote": {
-        "strike": 397.5,
+        "strike": 380.0,
         "option_type": "call",
-        "oi": 19,
-        "gamma": 0.0166,
-        "bid": 10.4,
-        "ask": 11.0,
-        "last": 10.4,
-        "bid_date": "1793739599000",
-        "ask_date": "1793739599000",
-        "trade_date": "1793739599849",
-        "symbol": "TSLA261109C00397500",
+        "oi": 54,
+        "gamma": 0.01117,
+        "bid": 21.1,
+        "ask": 23.5,
+        "last": 22.95,
+        "bid_date": "1793791800000",
+        "ask_date": "1793791800000",
+        "trade_date": "1793725504025",
+        "symbol": "TSLA261109C00380000",
         "root_symbol": "TSLA",
         "expiration_date": "2026-11-09",
         "contract_size": 100.0,
         "multiplier_basis": "provider_contract_size",
-        "greeks_updated_at": "2026-11-03 19:59:08",
-        "greeks_smv_vol": 0.486
+        "greeks_updated_at": "2026-11-03 21:00:05",
+        "greeks_smv_vol": 0.5221
       },
       "put_quote": {
-        "strike": 397.5,
+        "strike": 380.0,
         "option_type": "put",
-        "oi": 200,
-        "gamma": 0.0166,
-        "bid": 9.4,
-        "ask": 9.55,
-        "last": 9.32,
-        "bid_date": "1793739599000",
-        "ask_date": "1793739599000",
-        "trade_date": "1793739570585",
-        "symbol": "TSLA261109P00397500",
+        "oi": 1394,
+        "gamma": 0.01117,
+        "bid": 3.55,
+        "ask": 3.65,
+        "last": 3.55,
+        "bid_date": "1793791800000",
+        "ask_date": "1793791800000",
+        "trade_date": "1793739598168",
+        "symbol": "TSLA261109P00380000",
         "root_symbol": "TSLA",
         "expiration_date": "2026-11-09",
         "contract_size": 100.0,
         "multiplier_basis": "provider_contract_size",
-        "greeks_updated_at": "2026-11-03 19:59:08",
-        "greeks_smv_vol": 0.486
+        "greeks_updated_at": "2026-11-03 21:00:05",
+        "greeks_smv_vol": 0.5221
       },
       "price_method": "valid_bid_ask_mid_or_last_fallback",
       "quote_timestamps_supplied": true,
       "scope": "nearest_strike_in_sampled_chain; not calibrated volatility or probability",
       "expiration": "2026-11-09",
-      "dte_calendar": 6,
+      "dte_calendar": 5,
       "horizon": "actual_expiration",
       "probability_interpretation": "none"
     },
@@ -2984,162 +2995,162 @@
     "summary_by_expiration": [
       {
         "date": "2026-11-04",
-        "dte": 1,
-        "strike_atm": 397.5,
+        "dte": 0,
+        "strike_atm": 380.0,
         "call_quote": {
-          "strike": 397.5,
+          "strike": 380.0,
           "option_type": "call",
-          "oi": 1336,
-          "gamma": 0.02949,
-          "bid": 5.95,
-          "ask": 6.05,
-          "last": 5.95,
-          "bid_date": "1793740033000",
-          "ask_date": "1793740033000",
-          "trade_date": "1793739599738",
-          "symbol": "TSLA261104C00397500",
+          "oi": 363,
+          "gamma": 0.01188,
+          "bid": 18.2,
+          "ask": 19.95,
+          "last": 18.76,
+          "bid_date": "1793791800000",
+          "ask_date": "1793791800000",
+          "trade_date": "1793737678912",
+          "symbol": "TSLA261104C00380000",
           "root_symbol": "TSLA",
           "expiration_date": "2026-11-04",
           "contract_size": 100.0,
           "multiplier_basis": "provider_contract_size",
-          "greeks_updated_at": "2026-11-03 19:59:08",
-          "greeks_smv_vol": 0.665
+          "greeks_updated_at": "2026-11-03 21:00:05",
+          "greeks_smv_vol": 0.747
         },
         "put_quote": {
-          "strike": 397.5,
+          "strike": 380.0,
           "option_type": "put",
-          "oi": 2812,
-          "gamma": 0.02949,
-          "bid": 5.2,
-          "ask": 5.3,
-          "last": 5.25,
-          "bid_date": "1793739599000",
-          "ask_date": "1793739599000",
-          "trade_date": "1793739597295",
-          "symbol": "TSLA261104P00397500",
+          "oi": 5244,
+          "gamma": 0.01188,
+          "bid": 0.83,
+          "ask": 0.84,
+          "last": 0.83,
+          "bid_date": "1793791800000",
+          "ask_date": "1793791800000",
+          "trade_date": "1793739591060",
+          "symbol": "TSLA261104P00380000",
           "root_symbol": "TSLA",
           "expiration_date": "2026-11-04",
           "contract_size": 100.0,
           "multiplier_basis": "provider_contract_size",
-          "greeks_updated_at": "2026-11-03 19:59:08",
-          "greeks_smv_vol": 0.665
+          "greeks_updated_at": "2026-11-03 21:00:05",
+          "greeks_smv_vol": 0.747
         },
         "unknown_oi_contracts": 0,
         "expected_move": {
-          "dollars": 11.25,
-          "percent": 0.0283,
+          "dollars": 19.91,
+          "percent": 0.0523,
           "method": "ATM straddle observed price; actual expiration; not sigma",
           "percent_unit": "fraction"
         },
-        "total_call_oi": 46665,
-        "total_put_oi": 53589,
-        "put_call_oi_ratio": 1.148
+        "total_call_oi": 72813,
+        "total_put_oi": 86002,
+        "put_call_oi_ratio": 1.181
       },
       {
         "date": "2026-11-06",
-        "dte": 3,
-        "strike_atm": 397.5,
+        "dte": 2,
+        "strike_atm": 380.0,
         "call_quote": {
-          "strike": 397.5,
+          "strike": 380.0,
           "option_type": "call",
-          "oi": 1267,
-          "gamma": 0.01909,
-          "bid": 9.1,
-          "ask": 9.55,
-          "last": 9.43,
-          "bid_date": "1793739599000",
-          "ask_date": "1793739989000",
-          "trade_date": "1793739565302",
-          "symbol": "TSLA261106C00397500",
+          "oi": 2042,
+          "gamma": 0.01175,
+          "bid": 21.05,
+          "ask": 22.0,
+          "last": 21.45,
+          "bid_date": "1793791800000",
+          "ask_date": "1793791800000",
+          "trade_date": "1793739570455",
+          "symbol": "TSLA261106C00380000",
           "root_symbol": "TSLA",
           "expiration_date": "2026-11-06",
           "contract_size": 100.0,
           "multiplier_basis": "provider_contract_size",
-          "greeks_updated_at": "2026-11-03 19:59:08",
-          "greeks_smv_vol": 0.598
+          "greeks_updated_at": "2026-11-03 21:00:05",
+          "greeks_smv_vol": 0.655
         },
         "put_quote": {
-          "strike": 397.5,
+          "strike": 380.0,
           "option_type": "put",
-          "oi": 1766,
-          "gamma": 0.01909,
-          "bid": 8.2,
-          "ask": 8.3,
-          "last": 8.1,
-          "bid_date": "1793739600000",
-          "ask_date": "1793739599000",
-          "trade_date": "1793739585615",
-          "symbol": "TSLA261106P00397500",
+          "oi": 10015,
+          "gamma": 0.01175,
+          "bid": 2.73,
+          "ask": 2.76,
+          "last": 2.73,
+          "bid_date": "1793791800000",
+          "ask_date": "1793791800000",
+          "trade_date": "1793739596064",
+          "symbol": "TSLA261106P00380000",
           "root_symbol": "TSLA",
           "expiration_date": "2026-11-06",
           "contract_size": 100.0,
           "multiplier_basis": "provider_contract_size",
-          "greeks_updated_at": "2026-11-03 19:59:08",
-          "greeks_smv_vol": 0.598
+          "greeks_updated_at": "2026-11-03 21:00:05",
+          "greeks_smv_vol": 0.655
         },
         "unknown_oi_contracts": 0,
         "expected_move": {
-          "dollars": 17.575,
-          "percent": 0.0441,
+          "dollars": 24.27,
+          "percent": 0.0638,
           "method": "ATM straddle observed price; actual expiration; not sigma",
           "percent_unit": "fraction"
         },
-        "total_call_oi": 158288,
-        "total_put_oi": 252514,
-        "put_call_oi_ratio": 1.595
+        "total_call_oi": 170334,
+        "total_put_oi": 258853,
+        "put_call_oi_ratio": 1.52
       },
       {
         "date": "2026-11-09",
-        "dte": 6,
-        "strike_atm": 397.5,
+        "dte": 5,
+        "strike_atm": 380.0,
         "call_quote": {
-          "strike": 397.5,
+          "strike": 380.0,
           "option_type": "call",
-          "oi": 19,
-          "gamma": 0.0166,
-          "bid": 10.4,
-          "ask": 11.0,
-          "last": 10.4,
-          "bid_date": "1793739599000",
-          "ask_date": "1793739599000",
-          "trade_date": "1793739599849",
-          "symbol": "TSLA261109C00397500",
+          "oi": 54,
+          "gamma": 0.01117,
+          "bid": 21.1,
+          "ask": 23.5,
+          "last": 22.95,
+          "bid_date": "1793791800000",
+          "ask_date": "1793791800000",
+          "trade_date": "1793725504025",
+          "symbol": "TSLA261109C00380000",
           "root_symbol": "TSLA",
           "expiration_date": "2026-11-09",
           "contract_size": 100.0,
           "multiplier_basis": "provider_contract_size",
-          "greeks_updated_at": "2026-11-03 19:59:08",
-          "greeks_smv_vol": 0.486
+          "greeks_updated_at": "2026-11-03 21:00:05",
+          "greeks_smv_vol": 0.5221
         },
         "put_quote": {
-          "strike": 397.5,
+          "strike": 380.0,
           "option_type": "put",
-          "oi": 200,
-          "gamma": 0.0166,
-          "bid": 9.4,
-          "ask": 9.55,
-          "last": 9.32,
-          "bid_date": "1793739599000",
-          "ask_date": "1793739599000",
-          "trade_date": "1793739570585",
-          "symbol": "TSLA261109P00397500",
+          "oi": 1394,
+          "gamma": 0.01117,
+          "bid": 3.55,
+          "ask": 3.65,
+          "last": 3.55,
+          "bid_date": "1793791800000",
+          "ask_date": "1793791800000",
+          "trade_date": "1793739598168",
+          "symbol": "TSLA261109P00380000",
           "root_symbol": "TSLA",
           "expiration_date": "2026-11-09",
           "contract_size": 100.0,
           "multiplier_basis": "provider_contract_size",
-          "greeks_updated_at": "2026-11-03 19:59:08",
-          "greeks_smv_vol": 0.486
+          "greeks_updated_at": "2026-11-03 21:00:05",
+          "greeks_smv_vol": 0.5221
         },
         "unknown_oi_contracts": 0,
         "expected_move": {
-          "dollars": 20.175,
-          "percent": 0.0507,
+          "dollars": 25.9,
+          "percent": 0.0681,
           "method": "ATM straddle observed price; actual expiration; not sigma",
           "percent_unit": "fraction"
         },
-        "total_call_oi": 13585,
-        "total_put_oi": 9559,
-        "put_call_oi_ratio": 0.704
+        "total_call_oi": 20091,
+        "total_put_oi": 15281,
+        "put_call_oi_ratio": 0.761
       }
     ],
     "max_pain_by_expiration": [
@@ -3160,9 +3171,9 @@
       }
     ],
     "gamma_concentration": {
-      "call_minus_put_notional_usd_millions": 5325.524,
+      "call_minus_put_notional_usd_millions": 10492.438,
       "eligible_contracts": 622,
-      "unknown_metric_contracts": 0,
+      "unknown_metric_contracts": 2,
       "assumed_standard_multiplier_contracts": 0,
       "sampled_expirations": [
         "2026-11-04",
@@ -3184,15 +3195,15 @@
           "2026-11-06",
           "2026-11-09"
         ],
-        "total_put_oi": 315662,
-        "total_call_oi": 218538,
-        "ratio": 1.444,
+        "total_put_oi": 360136,
+        "total_call_oi": 263238,
+        "ratio": 1.368,
         "unknown_oi_contracts": 0,
         "dte_buckets": {
           "0_7": {
-            "puts": 315662,
-            "calls": 218538,
-            "ratio": 1.444,
+            "puts": 360136,
+            "calls": 263238,
+            "ratio": 1.368,
             "expirations": [
               "2026-11-04",
               "2026-11-06",
@@ -3221,33 +3232,33 @@
         "per_expiration": [
           {
             "expiration": "2026-11-04",
-            "dte": 1,
-            "puts": 53589,
-            "calls": 46665,
-            "ratio": 1.148,
+            "dte": 0,
+            "puts": 86002,
+            "calls": 72813,
+            "ratio": 1.181,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 53589,
-            "known_call_oi": 46665
+            "known_put_oi": 86002,
+            "known_call_oi": 72813
           },
           {
             "expiration": "2026-11-06",
-            "dte": 3,
-            "puts": 252514,
-            "calls": 158288,
-            "ratio": 1.595,
+            "dte": 2,
+            "puts": 258853,
+            "calls": 170334,
+            "ratio": 1.52,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 252514,
-            "known_call_oi": 158288
+            "known_put_oi": 258853,
+            "known_call_oi": 170334
           },
           {
             "expiration": "2026-11-09",
-            "dte": 6,
-            "puts": 9559,
-            "calls": 13585,
-            "ratio": 0.704,
+            "dte": 5,
+            "puts": 15281,
+            "calls": 20091,
+            "ratio": 0.761,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 9559,
-            "known_call_oi": 13585
+            "known_put_oi": 15281,
+            "known_call_oi": 20091
           }
         ]
       },
@@ -3267,40 +3278,40 @@
           "2026-12-11",
           "2026-12-18"
         ],
-        "total_put_oi": 1048285,
-        "total_call_oi": 1036304,
-        "ratio": 1.012,
+        "total_put_oi": 1108602,
+        "total_call_oi": 1101115,
+        "ratio": 1.007,
         "unknown_oi_contracts": 0,
         "dte_buckets": {
           "0_7": {
-            "puts": 315662,
-            "calls": 218538,
-            "ratio": 1.444,
+            "puts": 365675,
+            "calls": 273252,
+            "ratio": 1.338,
             "expirations": [
               "2026-11-04",
               "2026-11-06",
-              "2026-11-09"
+              "2026-11-09",
+              "2026-11-11"
             ]
           },
           "8_30": {
-            "puts": 345912,
-            "calls": 377675,
-            "ratio": 0.916,
+            "puts": 363490,
+            "calls": 400065,
+            "ratio": 0.909,
             "expirations": [
-              "2026-11-11",
               "2026-11-13",
               "2026-11-16",
               "2026-11-18",
               "2026-11-20",
-              "2026-11-27"
+              "2026-11-27",
+              "2026-12-04"
             ]
           },
           "31_60": {
-            "puts": 386711,
-            "calls": 440091,
-            "ratio": 0.879,
+            "puts": 379437,
+            "calls": 427798,
+            "ratio": 0.887,
             "expirations": [
-              "2026-12-04",
               "2026-12-11",
               "2026-12-18"
             ]
@@ -3315,130 +3326,130 @@
         "per_expiration": [
           {
             "expiration": "2026-11-04",
-            "dte": 1,
-            "puts": 53589,
-            "calls": 46665,
-            "ratio": 1.148,
+            "dte": 0,
+            "puts": 86002,
+            "calls": 72813,
+            "ratio": 1.181,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 53589,
-            "known_call_oi": 46665
+            "known_put_oi": 86002,
+            "known_call_oi": 72813
           },
           {
             "expiration": "2026-11-06",
-            "dte": 3,
-            "puts": 252514,
-            "calls": 158288,
-            "ratio": 1.595,
+            "dte": 2,
+            "puts": 258853,
+            "calls": 170334,
+            "ratio": 1.52,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 252514,
-            "known_call_oi": 158288
+            "known_put_oi": 258853,
+            "known_call_oi": 170334
           },
           {
             "expiration": "2026-11-09",
-            "dte": 6,
-            "puts": 9559,
-            "calls": 13585,
-            "ratio": 0.704,
+            "dte": 5,
+            "puts": 15281,
+            "calls": 20091,
+            "ratio": 0.761,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 9559,
-            "known_call_oi": 13585
+            "known_put_oi": 15281,
+            "known_call_oi": 20091
           },
           {
             "expiration": "2026-11-11",
-            "dte": 8,
-            "puts": 4288,
-            "calls": 7595,
-            "ratio": 0.565,
+            "dte": 7,
+            "puts": 5539,
+            "calls": 10014,
+            "ratio": 0.553,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 4288,
-            "known_call_oi": 7595
+            "known_put_oi": 5539,
+            "known_call_oi": 10014
           },
           {
             "expiration": "2026-11-13",
-            "dte": 10,
-            "puts": 32654,
-            "calls": 46740,
-            "ratio": 0.699,
+            "dte": 9,
+            "puts": 37071,
+            "calls": 51160,
+            "ratio": 0.725,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 32654,
-            "known_call_oi": 46740
+            "known_put_oi": 37071,
+            "known_call_oi": 51160
           },
           {
             "expiration": "2026-11-16",
-            "dte": 13,
-            "puts": 446,
-            "calls": 940,
-            "ratio": 0.474,
+            "dte": 12,
+            "puts": 1103,
+            "calls": 2687,
+            "ratio": 0.41,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 446,
-            "known_call_oi": 940
+            "known_put_oi": 1103,
+            "known_call_oi": 2687
           },
           {
             "expiration": "2026-11-18",
-            "dte": 15,
-            "puts": 0,
-            "calls": 0,
-            "ratio": null,
+            "dte": 14,
+            "puts": 253,
+            "calls": 404,
+            "ratio": 0.626,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 0,
-            "known_call_oi": 0
+            "known_put_oi": 253,
+            "known_call_oi": 404
           },
           {
             "expiration": "2026-11-20",
-            "dte": 17,
-            "puts": 285517,
-            "calls": 278821,
+            "dte": 16,
+            "puts": 288722,
+            "calls": 281900,
             "ratio": 1.024,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 285517,
-            "known_call_oi": 278821
+            "known_put_oi": 288722,
+            "known_call_oi": 281900
           },
           {
             "expiration": "2026-11-27",
-            "dte": 24,
-            "puts": 23007,
-            "calls": 43579,
-            "ratio": 0.528,
+            "dte": 23,
+            "puts": 25385,
+            "calls": 45028,
+            "ratio": 0.564,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 23007,
-            "known_call_oi": 43579
+            "known_put_oi": 25385,
+            "known_call_oi": 45028
           },
           {
             "expiration": "2026-12-04",
-            "dte": 31,
-            "puts": 9152,
-            "calls": 15785,
+            "dte": 30,
+            "puts": 10956,
+            "calls": 18886,
             "ratio": 0.58,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 9152,
-            "known_call_oi": 15785
+            "known_put_oi": 10956,
+            "known_call_oi": 18886
           },
           {
             "expiration": "2026-12-11",
-            "dte": 38,
-            "puts": 2192,
-            "calls": 1855,
-            "ratio": 1.182,
+            "dte": 37,
+            "puts": 2425,
+            "calls": 3160,
+            "ratio": 0.767,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 2192,
-            "known_call_oi": 1855
+            "known_put_oi": 2425,
+            "known_call_oi": 3160
           },
           {
             "expiration": "2026-12-18",
-            "dte": 45,
-            "puts": 375367,
-            "calls": 422451,
-            "ratio": 0.889,
+            "dte": 44,
+            "puts": 377012,
+            "calls": 424638,
+            "ratio": 0.888,
             "unknown_oi_contracts": 0,
-            "known_put_oi": 375367,
-            "known_call_oi": 422451
+            "known_put_oi": 377012,
+            "known_call_oi": 424638
           }
         ]
       },
       "default_scope": "near_term",
-      "ratio": 1.444,
-      "total_put_oi": 315662,
-      "total_call_oi": 218538
+      "ratio": 1.368,
+      "total_put_oi": 360136,
+      "total_call_oi": 263238
     }
   },
   "vols": {
@@ -4780,13 +4791,13 @@
     "uncertainty": "No calibrated price-touch probabilities or directional confidence supplied."
   },
   "liquidity": {
-    "adv20_usd": 13881489808.14,
+    "adv20_usd": 13895876654.39,
     "bid_ask": {
-      "bid": 398.09,
-      "ask": 398.2,
-      "mid": 398.145,
-      "spread_abs": 0.11,
-      "spread_pct": 0.028
+      "bid": 380.3,
+      "ask": 380.66,
+      "mid": 380.48,
+      "spread_abs": 0.36,
+      "spread_pct": 0.095
     }
   },
   "option_origins": [
@@ -4810,27 +4821,27 @@
             "expiration": "2026-11-04",
             "status": "observed",
             "reason": "requested_identity_observed",
-            "aggregate_oi": 4419,
-            "gamma_usd_millions": 473.5362490852851,
+            "aggregate_oi": 6724,
+            "gamma_usd_millions": 516.8754342014977,
             "observed_contracts": [
               {
                 "strike": 370.0,
                 "option_type": "put",
-                "oi": 4419,
-                "gamma": 0.00676,
+                "oi": 6724,
+                "gamma": 0.00531,
                 "bid": 0.3,
                 "ask": 0.32,
                 "last": 0.3,
-                "bid_date": "1793739600000",
-                "ask_date": "1793739600000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739599384",
                 "symbol": "TSLA261104P00370000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-04",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.8484
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.825
               }
             ]
           },
@@ -4838,27 +4849,27 @@
             "expiration": "2026-11-06",
             "status": "observed",
             "reason": "requested_identity_observed",
-            "aggregate_oi": 4500,
-            "gamma_usd_millions": 582.0833874438,
+            "aggregate_oi": 4387,
+            "gamma_usd_millions": 461.0711207528449,
             "observed_contracts": [
               {
                 "strike": 370.0,
                 "option_type": "put",
-                "oi": 4500,
-                "gamma": 0.00816,
+                "oi": 4387,
+                "gamma": 0.00726,
                 "bid": 1.36,
                 "ask": 1.39,
                 "last": 1.34,
-                "bid_date": "1793739600000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739576031",
                 "symbol": "TSLA261106P00370000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-06",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.675
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.698
               }
             ]
           },
@@ -4866,27 +4877,27 @@
             "expiration": "2026-11-09",
             "status": "observed",
             "reason": "requested_identity_observed",
-            "aggregate_oi": 428,
-            "gamma_usd_millions": 55.76967566365139,
+            "aggregate_oi": 479,
+            "gamma_usd_millions": 52.70026166681601,
             "observed_contracts": [
               {
                 "strike": 370.0,
                 "option_type": "put",
-                "oi": 428,
-                "gamma": 0.00822,
+                "oi": 479,
+                "gamma": 0.0076,
                 "bid": 1.94,
                 "ask": 1.99,
                 "last": 1.91,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739568559",
                 "symbol": "TSLA261109P00370000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-09",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.543
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.544
               }
             ]
           }
@@ -4936,7 +4947,7 @@
           "forward_sessions": 5,
           "coordinate": 370.0,
           "tolerance_abs": 2.953050000000003,
-          "history_first_session": "2025-09-29",
+          "history_first_session": "2025-09-30",
           "history_last_session": "2026-11-03",
           "contact_count": 17,
           "completed_count": 17,
@@ -5023,27 +5034,27 @@
             "expiration": "2026-11-04",
             "status": "observed",
             "reason": "requested_identity_observed",
-            "aggregate_oi": 2219,
-            "gamma_usd_millions": 997.9279126430054,
+            "aggregate_oi": 2618,
+            "gamma_usd_millions": 1037.3089033201666,
             "observed_contracts": [
               {
                 "strike": 395.0,
                 "option_type": "put",
-                "oi": 2219,
-                "gamma": 0.02837,
+                "oi": 2618,
+                "gamma": 0.02737,
                 "bid": 4.1,
                 "ask": 4.2,
                 "last": 4.18,
-                "bid_date": "1793739600000",
-                "ask_date": "1793740044000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739596015",
                 "symbol": "TSLA261104P00395000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-04",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.669
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.683
               }
             ]
           },
@@ -5051,27 +5062,27 @@
             "expiration": "2026-11-06",
             "status": "observed",
             "reason": "requested_identity_observed",
-            "aggregate_oi": 3323,
-            "gamma_usd_millions": 991.362512954073,
+            "aggregate_oi": 3339,
+            "gamma_usd_millions": 859.4326361069569,
             "observed_contracts": [
               {
                 "strike": 395.0,
                 "option_type": "put",
-                "oi": 3323,
-                "gamma": 0.01882,
+                "oi": 3339,
+                "gamma": 0.01778,
                 "bid": 7.1,
                 "ask": 7.2,
                 "last": 7.12,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739599000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739594451",
                 "symbol": "TSLA261106P00395000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-06",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.603
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.612
               }
             ]
           },
@@ -5079,27 +5090,27 @@
             "expiration": "2026-11-09",
             "status": "observed",
             "reason": "requested_identity_observed",
-            "aggregate_oi": 482,
-            "gamma_usd_millions": 125.68847959431224,
+            "aggregate_oi": 521,
+            "gamma_usd_millions": 117.96091643125762,
             "observed_contracts": [
               {
                 "strike": 395.0,
                 "option_type": "put",
-                "oi": 482,
-                "gamma": 0.01645,
+                "oi": 521,
+                "gamma": 0.01564,
                 "bid": 8.25,
                 "ask": 8.45,
                 "last": 8.0,
-                "bid_date": "1793739599000",
-                "ask_date": "1793739600000",
+                "bid_date": "1793791800000",
+                "ask_date": "1793791800000",
                 "trade_date": "1793739300124",
                 "symbol": "TSLA261109P00395000",
                 "root_symbol": "TSLA",
                 "expiration_date": "2026-11-09",
                 "contract_size": 100.0,
                 "multiplier_basis": "provider_contract_size",
-                "greeks_updated_at": "2026-11-03 19:59:08",
-                "greeks_smv_vol": 0.489
+                "greeks_updated_at": "2026-11-03 21:00:05",
+                "greeks_smv_vol": 0.4934
               }
             ]
           }
@@ -5149,7 +5160,7 @@
           "forward_sessions": 5,
           "coordinate": 395.0,
           "tolerance_abs": 2.953050000000003,
-          "history_first_session": "2025-09-29",
+          "history_first_session": "2025-09-30",
           "history_last_session": "2026-11-03",
           "contact_count": 20,
           "completed_count": 19,
@@ -5248,9 +5259,9 @@
       "status": "available",
       "observation_reason": "exact_origin_observed",
       "level": 368.3151,
-      "observed_at": "2026-11-03T21:07:44.148816+00:00",
+      "observed_at": "2026-11-04T11:35:29.456054+00:00",
       "observation_scope": {
-        "history_first_session": "2025-09-29",
+        "history_first_session": "2025-09-30",
         "history_last_session": "2026-11-03",
         "method": "exact_dated_formation",
         "range_pool_sessions": 126,
@@ -5328,7 +5339,7 @@
               "forward_sessions": 5,
               "coordinate": 368.3151,
               "tolerance_abs": 2.953050000000003,
-              "history_first_session": "2025-09-29",
+              "history_first_session": "2025-09-30",
               "history_last_session": "2026-11-03",
               "contact_count": 19,
               "completed_count": 19,
